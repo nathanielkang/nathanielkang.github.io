@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
     </style>
 </head>
@@ -16,66 +16,119 @@
     <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
         <div class="text-2xl font-bold tracking-tighter text-blue-900">SOCAL <span class="text-blue-500">LAB</span></div>
         <div class="space-x-8 font-medium">
-            <a href="#about" class="hover:text-blue-600 transition">About</a>
+            <a href="#about" class="hover:text-blue-600 transition">About PI</a>
             <a href="#research" class="hover:text-blue-600 transition">Research</a>
             <a href="#publications" class="hover:text-blue-600 transition">Publications</a>
             <a href="#join" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Join Us</a>
         </div>
     </nav>
 
-    <header class="hero-gradient text-white py-24 px-6 text-center">
-        <h1 class="text-5xl font-extrabold mb-4">SOCAL Lab</h1>
-        <p class="text-xl mb-6 opacity-90 italic">Statistical Optimization & Collaborative AI Learning</p>
-        <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
-            <p class="text-lg">Led by <strong>Prof. Nathaniel Kang</strong>. Incoming Assistant Professor at <strong>Kyungpook National University (KNU)</strong>.</p>
-            <p class="mt-2 text-blue-200">Hometown: Irvine, CA | Alumnus of UCLA, NTU, and Yonsei</p>
+    <header class="hero-gradient text-white py-32 px-6 text-center">
+        <h1 class="text-6xl font-extrabold mb-4 tracking-tight">SOCAL Lab</h1>
+        <p class="text-2xl mb-8 opacity-90 font-light">Statistical Optimization & Collaborative AI Learning</p>
+        <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-white/20 shadow-2xl">
+            <p class="text-xl mb-2">Led by <strong>Prof. Nathaniel Kang</strong> [cite: 1]</p>
+            <p class="text-lg opacity-80">Assistant Professor at Northern Arizona University & Incoming at KNU </p>
+            <div class="mt-4 pt-4 border-t border-white/10 text-blue-100 text-sm tracking-wide font-semibold">
+                IRVINE, CA &bull; UCLA &bull; YONSEI UNIVERSITY [cite: 4, 8, 53]
+            </div>
         </div>
     </header>
 
-    <section id="about" class="py-20 px-6 max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8 text-center">About the PI</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <p class="text-gray-700 leading-relaxed mb-4">
-                    I am an Assistant Professor at <strong>Northern Arizona University (NAU)</strong> and will soon join the <strong>School of Computer Science at KNU</strong> in March 2026. My research bridges the gap between statistical theory and deep learning.
+                <h2 class="text-4xl font-bold mb-6 text-blue-900">About the PI</h2>
+                <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                    I am an Assistant Professor at <strong>Northern Arizona University (NAU)</strong> and am honored to join the <strong>School of Computer Science at Kyungpook National University (KNU)</strong> in 2026. My research focuses on the intersection of statistical theory and robust machine learning, with extensive experience in the US and Korean academic sectors[cite: 35, 53].
                 </p>
-                <ul class="space-y-2 text-sm">
-                    <li>🎓 <strong>PhD:</strong> Statistics & Data Science, Yonsei University</li>
-                    <li>🎓 <strong>MS:</strong> Engineering, UCLA</li>
-                    <li>🎓 <strong>BS:</strong> UCLA & National Taiwan University</li>
-                </ul>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center text-xs">PHD</div>
+                        <div>
+                            <p class="font-bold">Yonsei University</p>
+                            <p class="text-sm text-gray-500">Statistics and Data Science [cite: 4, 5]</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center text-xs">MS</div>
+                        <div>
+                            <p class="font-bold">University of California, Los Angeles (UCLA)</p>
+                            <p class="text-sm text-gray-500">Master of Science in Engineering [cite: 8, 9]</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center text-xs">BA</div>
+                        <div>
+                            <p class="font-bold">UCLA & National Taiwan University</p>
+                            <p class="text-sm text-gray-500">International Business & Statistics [cite: 11, 12, 13]</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-8 text-blue-600 font-semibold italic">Hometown: Irvine, California, USA [cite: 2]</p>
             </div>
-            <div class="bg-gray-200 h-64 rounded-2xl flex items-center justify-center italic text-gray-500">
-                [Place your professional headshot here]
+            <div class="relative">
+                <div class="absolute -inset-4 bg-blue-500/10 rounded-full blur-3xl"></div>
+                <div class="bg-white p-4 rounded-3xl shadow-xl border border-gray-100 relative">
+                    <div class="aspect-square bg-gray-100 rounded-2xl flex items-center justify-center italic text-gray-400 text-center p-4">
+                        [Upload Headshot to GitHub and replace this placeholder]
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="font-bold text-blue-900">Nathaniel Kang</p>
+                        <p class="text-sm text-gray-500 text-xs">Irvine Native | Statistics & AI Expert [cite: 2]</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="research" class="bg-white py-20 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12">Research Pillars</h2>
+    <section id="research" class="bg-white py-24 px-6 border-y border-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Research Pillars</h2>
+                <p class="text-gray-500">Pushing the boundaries of private, robust, and aligned intelligence.</p>
+            </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition">
-                    <div class="text-blue-500 text-4xl mb-4">🔒</div>
-                    <h3 class="font-bold text-xl mb-2">Federated Learning</h3>
-                    <p class="text-sm text-gray-600">Developing robust calibration weighting methods for non-IID data privacy.</p>
+                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 hover:scale-105 transition shadow-sm">
+                    <div class="text-4xl mb-6">🌐</div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Federated Learning</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Developing robust approaches to non-IID data privacy and calibration weighting in IoT networks[cite: 6, 18, 20].</p>
                 </div>
-                <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition">
-                    <div class="text-blue-500 text-4xl mb-4">⚖️</div>
-                    <h3 class="font-bold text-xl mb-2">AI Alignment</h3>
-                    <p class="text-sm text-gray-600">Measuring value drift in public sector AI and auditing alignment principles.</p>
+                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 hover:scale-105 transition shadow-sm">
+                    <div class="text-4xl mb-6">🎯</div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">AI Alignment</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Measuring value drift in public sector AI and auditing alignment principles[cite: 6, 25, 39].</p>
                 </div>
-                <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition">
-                    <div class="text-blue-500 text-4xl mb-4">📊</div>
-                    <h3 class="font-bold text-xl mb-2">Imbalanced Data</h3>
-                    <p class="text-sm text-gray-600">Statistical optimization for robust regression on imbalanced tabular data.</p>
+                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 hover:scale-105 transition shadow-sm">
+                    <div class="text-4xl mb-6">📊</div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Imbalanced Data</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Statistical optimization and robust regression for imbalanced tabular and mixed-frequency data[cite: 6, 17, 47].</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-gray-500 text-sm">
-        <p>&copy; 2026 SOCAL Lab @ KNU. Built with passion from Irvine to Daegu.</p>
+    <section id="publications" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center text-blue-900">Selected Publications</h2>
+        <div class="space-y-6">
+            <div class="p-6 bg-white rounded-2xl border-l-4 border-blue-600 shadow-sm">
+                <p class="text-sm text-blue-600 font-bold mb-1">Applied Soft Computing (2025) [cite: 16]</p>
+                <p class="font-medium text-gray-800">"Generalized additive models for mixed-data regression using informal data" [cite: 16]</p>
+            </div>
+            <div class="p-6 bg-white rounded-2xl border-l-4 border-blue-600 shadow-sm">
+                <p class="text-sm text-blue-600 font-bold mb-1">Pattern Recognition (2025) [cite: 17]</p>
+                <p class="font-medium text-gray-800">"Calibrated mixup for imbalanced regression on tabular data" [cite: 17]</p>
+            </div>
+            <div class="p-6 bg-white rounded-2xl border-l-4 border-blue-600 shadow-sm">
+                <p class="text-sm text-blue-600 font-bold mb-1">IEEE Internet of Things Journal (2025) [cite: 19]</p>
+                <p class="font-medium text-gray-800">"Optimizing federated learning: Addressing key challenges in real-world applications" [cite: 19]</p>
+            </div>
+        </div>
+        <div class="mt-12 text-center">
+            <a href="https://scholar.google.com/citations?user=h2iPQ0AAAAAJ" class="text-blue-600 font-bold hover:underline transition">View all on Google Scholar &rarr;</a>
+        </div>
+    </section>
+
     <section id="join" class="py-24 px-6 bg-slate-50">
         <div class="max-w-5xl mx-auto">
             <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100 grid md:grid-cols-5">
@@ -83,40 +136,35 @@
                 <div class="md:col-span-3 p-12 lg:p-16">
                     <h2 class="text-4xl font-extrabold text-blue-900 mb-6">Join the SOCAL Lab</h2>
                     <p class="text-gray-600 mb-8 leading-relaxed">
-                        We are looking for motivated <strong>MS and PhD students</strong> for Fall 2026. At SOCAL Lab, you will work on high-impact research at the intersection of Statistics and AI, with a focus on building private, robust, and aligned systems.
+                        We are looking for motivated <strong>MS and PhD students</strong> for Fall 2026. Join a research group with international reach, led by a PI with significant US academic and professional leadership[cite: 53, 54, 60].
                     </p>
                     
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <span class="text-blue-500 mr-3">✔</span>
-                            <p class="text-sm text-gray-700"><strong>Global Environment:</strong> Mentorship from a PI with elite US/Taiwan/Korea training (UCLA, NTU, Yonsei).</p>
+                            <p class="text-sm text-gray-700"><strong>Global Mentorship:</strong> Direct guidance from an Assistant Professor with roots in Irvine, CA[cite: 2, 54].</p>
                         </div>
                         <div class="flex items-start">
                             <span class="text-blue-500 mr-3">✔</span>
-                            <p class="text-sm text-gray-700"><strong>Research Excellence:</strong> Focus on publishing in top journals like Pattern Recognition and IEEE IoT-J.</p>
-                        </div>
-                        <div class="flex items-start">
-                            <span class="text-blue-500 mr-3">✔</span>
-                            <p class="text-sm text-gray-700"><strong>Technical Training:</strong> Gain deep expertise in PyTorch, Federated Learning, and AI Governance.</p>
+                            <p class="text-sm text-gray-700"><strong>US Elite Pedigree:</strong> Leverage a research network built at UCLA and NAU[cite: 8, 53].</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="md:col-span-2 bg-blue-900 p-12 lg:p-16 text-white flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold mb-6">How to Apply</h3>
-                    <p class="text-blue-200 text-sm mb-8">Please send an email with the following documents:</p>
-                    <ul class="text-sm space-y-3 mb-10 opacity-90">
-                        <li>• CV (English)</li>
-                        <li>• Academic Transcripts</li>
-                        <li>• Brief Statement of Interest</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-6 text-center">How to Apply</h3>
+                    <p class="text-blue-200 text-sm mb-8 text-center">Email your CV and Transcripts to:</p>
                     <a href="mailto:natekang@yonsei.ac.kr" class="block text-center bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 rounded-xl transition duration-300 shadow-lg">
-                        Send Application
+                        Apply Now
                     </a>
+                    <p class="mt-6 text-center text-xs text-blue-300 opacity-70">natekang@yonsei.ac.kr [cite: 2]</p>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
+
+    <footer class="py-12 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 SOCAL Lab @ Kyungpook National University. Built with passion from Irvine to Daegu.</p>
     </footer>
 
 </body>
