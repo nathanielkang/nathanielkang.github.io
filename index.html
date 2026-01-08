@@ -9,6 +9,7 @@
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .if-badge { background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 6px; font-weight: bold; font-size: 0.75rem; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -40,92 +41,131 @@
             <div>
                 <h2 class="text-4xl font-bold mb-6 text-blue-900">About the PI</h2>
                 <p class="text-gray-700 leading-relaxed mb-6 text-lg">
-                    I am an Assistant Professor at <strong>Northern Arizona University (NAU)</strong> and am excited to join the <strong>School of Computer Science at Kyungpook National University (KNU)</strong> in 2026. My research focuses on the intersection of statistical theory and robust machine learning.
+                    I am an Assistant Professor at <strong>Northern Arizona University (NAU)</strong> and am excited to join the <strong>School of Computer Science at Kyungpook National University (KNU)</strong> in 2026. My research bridges the gap between statistical theory and robust machine learning.
                 </p>
-                <div class="space-y-4">
+                <div class="space-y-4 text-sm">
                     <div class="flex items-start space-x-4">
-                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center text-xs">PHD</div>
+                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center">PHD</div>
                         <div>
                             <p class="font-bold">Yonsei University</p>
-                            <p class="text-sm text-gray-500">Statistics and Data Science</p>
+                            <p class="text-gray-500">Statistics and Data Science</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center text-xs">MS</div>
+                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center">MS</div>
                         <div>
                             <p class="font-bold">University of California, Los Angeles (UCLA)</p>
-                            <p class="text-sm text-gray-500">Master of Science in Engineering</p>
+                            <p class="text-gray-500">Master of Science in Engineering</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center text-xs">BA</div>
+                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center">BA</div>
                         <div>
                             <p class="font-bold">UCLA & National Taiwan University</p>
-                            <p class="text-sm text-gray-500">Bachelor of Arts</p>
+                            <p class="text-gray-500">International Business & Statistics</p>
                         </div>
                     </div>
                 </div>
                 <p class="mt-8 text-blue-600 font-semibold italic">Hometown: Irvine, California, USA</p>
             </div>
             <div class="relative">
-                <div class="absolute -inset-4 bg-blue-500/10 rounded-full blur-3xl"></div>
-                <div class="bg-white p-4 rounded-3xl shadow-xl border border-gray-100 relative">
-                    <div class="aspect-square bg-gray-100 rounded-2xl flex items-center justify-center italic text-gray-400">
-                        [Headshot Placeholder]
+                <div class="bg-white p-4 rounded-3xl shadow-xl border border-gray-100 text-center">
+                    <div class="aspect-square bg-gray-100 rounded-2xl flex items-center justify-center italic text-gray-400 mb-4">
+                        [Headshot]
                     </div>
-                    <div class="mt-4 text-center">
-                        <p class="font-bold text-blue-900">Nathaniel Kang</p>
-                        <p class="text-sm text-gray-500 text-xs">Irvine Native | Statistics & AI Expert</p>
-                    </div>
+                    <p class="font-bold text-blue-900 text-lg tracking-tight">Nathaniel Kang, Ph.D.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="research" class="bg-white py-24 px-6 border-y border-gray-100">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-blue-900 mb-4">Research Pillars</h2>
-                <p class="text-gray-500">Focusing on private, robust, and aligned intelligent systems.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 hover:scale-105 transition shadow-sm">
-                    <div class="text-4xl mb-6">🌐</div>
-                    <h3 class="text-xl font-bold mb-3 text-blue-900">Federated Learning</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Privacy-preserving collaborative learning, calibration weighting, and addressing data heterogeneity.</p>
-                </div>
-                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 hover:scale-105 transition shadow-sm">
-                    <div class="text-4xl mb-6">🎯</div>
-                    <h3 class="text-xl font-bold mb-3 text-blue-900">AI Alignment</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Developing frameworks to measure value drift in AI systems and public sector procurement.</p>
-                </div>
-                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 hover:scale-105 transition shadow-sm">
-                    <div class="text-4xl mb-6">📊</div>
-                    <h3 class="text-xl font-bold mb-3 text-blue-900">Statistical Learning</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Robust regression and optimization for imbalanced tabular and mixed-frequency data.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="publications" class="py-24 px-6 bg-white border-y border-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center text-blue-900">Publications</h2>
+            
+            <div class="space-y-8">
+                <h3 class="text-xl font-bold text-gray-400 uppercase tracking-widest border-b pb-2 mb-6">Peer-Reviewed Journals</h3>
 
-    <section id="publications" class="py-24 px-6 max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold mb-12 text-center text-blue-900">Selected Publications</h2>
-        <div class="space-y-6">
-            <div class="p-6 bg-white rounded-2xl border-l-4 border-blue-600 shadow-sm">
-                <p class="text-sm text-blue-600 font-bold mb-1">Applied Soft Computing (2025)</p>
-                <p class="font-medium text-gray-800">"Generalized additive models for mixed-data regression using informal data"</p>
+                <div class="group">
+                    <div class="flex flex-wrap items-center gap-3 mb-1">
+                        <span class="text-blue-600 font-bold">2025</span>
+                        <span class="if-badge">IF: 10.6</span>
+                        <span class="text-sm font-semibold text-gray-500 italic">IEEE Internet of Things Journal</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition">Optimizing federated learning: Addressing key challenges in real-world applications</p>
+                    <p class="text-sm text-gray-600 mt-1"><strong>N. Kang</strong>, Y. Kim, J. Im</p>
+                </div>
+
+                <div class="group">
+                    <div class="flex flex-wrap items-center gap-3 mb-1">
+                        <span class="text-blue-600 font-bold">2025</span>
+                        <span class="if-badge">IF: 8.2</span>
+                        <span class="text-sm font-semibold text-gray-500 italic">Applied Soft Computing Journal</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition">Generalized additive models for mixed-data regression using informal data</p>
+                    <p class="text-sm text-gray-600 mt-1"><strong>N. Kang</strong>, H. Kim, J. Im</p>
+                </div>
+
+                <div class="group">
+                    <div class="flex flex-wrap items-center gap-3 mb-1">
+                        <span class="text-blue-600 font-bold">2025</span>
+                        <span class="if-badge">IF: 8.0</span>
+                        <span class="text-sm font-semibold text-gray-500 italic">Pattern Recognition</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition">Calibrated mixup for imbalanced regression on tabular data</p>
+                    <p class="text-sm text-gray-600 mt-1"><strong>N. Kang</strong>, K. Lee, J. Im</p>
+                </div>
+
+                <div class="group">
+                    <div class="flex flex-wrap items-center gap-3 mb-1">
+                        <span class="text-blue-600 font-bold">2025</span>
+                        <span class="text-sm font-semibold text-gray-500 italic">Expert Systems</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition">Re-sampling calibrated SNN loss: A robust approach to non-IID data in federated learning</p>
+                    <p class="text-sm text-gray-600 mt-1"><strong>N. Kang</strong>, J. Im</p>
+                </div>
+
+                <div class="group">
+                    <div class="flex flex-wrap items-center gap-3 mb-1">
+                        <span class="text-blue-600 font-bold">2024</span>
+                        <span class="if-badge">IF: 7.2</span>
+                        <span class="text-sm font-semibold text-gray-500 italic">IEEE Transactions on Big Data</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition">Online news-based economic sentiment index</p>
+                    <p class="text-sm text-gray-600 mt-1"><strong>N. Kang</strong>, D. Min, Y. Cho, D. W. Ko, H. H. Kim, J. Y. Choeh, J. Im</p>
+                </div>
+
+                <div class="group">
+                    <div class="flex flex-wrap items-center gap-3 mb-1">
+                        <span class="text-blue-600 font-bold">2024</span>
+                        <span class="text-sm font-semibold text-gray-500 italic">IEEE Intl. Conf. on Big Data</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition">Overcoming data imbalance in federated learning with calibration weighting</p>
+                    <p class="text-sm text-gray-600 mt-1"><strong>N. Kang</strong>, Y. Lim, J. Im</p>
+                </div>
             </div>
-            <div class="p-6 bg-white rounded-2xl border-l-4 border-blue-600 shadow-sm">
-                <p class="text-sm text-blue-600 font-bold mb-1">Pattern Recognition (2025)</p>
-                <p class="font-medium text-gray-800">"Calibrated mixup for imbalanced regression on tabular data"</p>
+
+            <div class="mt-20 space-y-8">
+                <h3 class="text-xl font-bold text-gray-400 uppercase tracking-widest border-b pb-2 mb-6">Under Review / Pipeline</h3>
+                
+                <div class="group opacity-75">
+                    <div class="flex flex-wrap items-center gap-3 mb-1">
+                        <span class="if-badge">IF: 17.7</span>
+                        <span class="text-sm font-semibold text-gray-500 italic">Nature Communications</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 italic">TC-TS: Temporal Patterns and Cross-sectional Structure Preserving Time Series Synthesis</p>
+                    <p class="text-sm text-gray-600 mt-1">C. Lee, <strong>N. Kang</strong>, J. Kim, J. Im (2026 est.)</p>
+                </div>
+
+                <div class="group opacity-75">
+                    <div class="flex flex-wrap items-center gap-3 mb-1">
+                        <span class="if-badge">IF: 8.4</span>
+                        <span class="text-sm font-semibold text-gray-500 italic">Government Information Quarterly</span>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 italic">Auditing Alignment: A Framework for Measuring Value Drift in Public Sector AI Procurement</p>
+                    <p class="text-sm text-gray-600 mt-1"><strong>N. Kang</strong>, J. Im (2026 est.)</p>
+                </div>
             </div>
-            <div class="p-6 bg-white rounded-2xl border-l-4 border-blue-600 shadow-sm">
-                <p class="text-sm text-blue-600 font-bold mb-1">IEEE Internet of Things Journal (2025)</p>
-                <p class="font-medium text-gray-800">"Optimizing federated learning: Addressing key challenges in real-world applications"</p>
-            </div>
-        </div>
-        <div class="mt-12 text-center">
-            <a href="https://scholar.google.com/citations?user=h2iPQ0AAAAAJ" class="text-blue-600 font-bold hover:underline transition">View all on Google Scholar &rarr;</a>
         </div>
     </section>
 
@@ -135,32 +175,27 @@
                 <div class="md:col-span-3 p-12 lg:p-16">
                     <h2 class="text-4xl font-extrabold text-blue-900 mb-6">Join the SOCAL Lab</h2>
                     <p class="text-gray-600 mb-8 leading-relaxed">
-                        We are looking for motivated <strong>MS and PhD students</strong> for Fall 2026 at KNU. Join an international research environment led by a PI with US elite training.
+                        We are looking for motivated <strong>MS and PhD students</strong> for Fall 2026. Join a global research group led by a PI with elite US academic experience.
                     </p>
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <span class="text-blue-500 mr-3">✔</span>
-                            <p class="text-sm text-gray-700"><strong>US Elite Pedigree:</strong> Mentorship from an Assistant Professor with roots in Irvine, CA and training at UCLA.</p>
-                        </div>
-                        <div class="flex items-start">
-                            <span class="text-blue-500 mr-3">✔</span>
-                            <p class="text-sm text-gray-700"><strong>Research Impact:</strong> Opportunities to publish in top-tier CS and Statistics journals.</p>
+                            <p class="text-sm text-gray-700"><strong>Global Mentorship:</strong> Direct guidance from a Professor with roots in Irvine, CA and training at UCLA.</p>
                         </div>
                     </div>
                 </div>
                 <div class="md:col-span-2 bg-blue-900 p-12 lg:p-16 text-white flex flex-col justify-center text-center">
                     <h3 class="text-2xl font-bold mb-6">How to Apply</h3>
-                    <p class="text-blue-200 text-sm mb-8">Email your CV and Transcripts to:</p>
-                    <a href="mailto:natekang@yonsei.ac.kr" class="block bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 rounded-xl transition duration-300 shadow-lg">
-                        Apply Now
-                    </a>
+                    <p class="text-blue-200 text-sm mb-8">Email CV and Transcripts to:</p>
+                    <a href="mailto:natekang@yonsei.ac.kr" class="block text-center bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 rounded-xl shadow-lg">Apply Now</a>
+                    <p class="mt-4 text-xs opacity-70">natekang@yonsei.ac.kr</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-gray-500 text-sm">
-        <p>&copy; 2026 SOCAL Lab @ Kyungpook National University. Built with passion from Irvine to Daegu.</p>
+    <footer class="py-12 text-center text-gray-400 text-sm">
+        <p>&copy; 2026 SOCAL Lab @ Kyungpook National University. From Irvine to Daegu.</p>
     </footer>
 
 </body>
