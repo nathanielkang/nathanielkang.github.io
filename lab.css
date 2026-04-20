@@ -310,31 +310,31 @@ body {
   font-weight: 400;
   color: #cbd5e1;
 }
+/* Outer card spans hero width; inner block is centered — avoids %width + fit-content quirks in some browsers */
 .hero-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: fit-content;
-  max-width: min(100%, 40rem);
+  justify-content: center;
+  width: 100%;
+  max-width: min(100%, 44rem);
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1.75rem;
   padding: 1.25rem 1.5rem;
-  text-align: center;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-2xl);
   backdrop-filter: blur(12px);
 }
-.hero-card strong {
-  display: block;
-  width: 100%;
+.hero-card__inner {
   text-align: center;
+  max-width: 38rem;
+}
+.hero-card strong {
   font-size: 1.18rem;
   color: #fff;
 }
 .hero-card .sub {
   margin-top: 0.35rem;
-  width: 100%;
-  text-align: center;
   font-size: 1.02rem;
   color: #94a3b8;
 }
