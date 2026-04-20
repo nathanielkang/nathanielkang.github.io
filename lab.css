@@ -250,6 +250,9 @@ body {
   z-index: 1;
   max-width: 52rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero-badge {
   display: inline-flex;
@@ -285,6 +288,9 @@ body {
 }
 .mesh-hero h1 {
   margin: 0 0 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(2.5rem, 6.2vw, 3.9rem);
@@ -297,19 +303,19 @@ body {
 }
 .mesh-hero .tagline {
   margin: 0 0 1.75rem;
+  width: 100%;
+  max-width: 36rem;
+  text-align: center;
   font-size: clamp(1.1rem, 2.6vw, 1.42rem);
   font-weight: 400;
   color: #cbd5e1;
-  max-width: 36rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 .hero-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: fit-content;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: min(100%, 40rem);
   margin-bottom: 1.75rem;
   padding: 1.25rem 1.5rem;
   text-align: center;
@@ -319,11 +325,16 @@ body {
   backdrop-filter: blur(12px);
 }
 .hero-card strong {
+  display: block;
+  width: 100%;
+  text-align: center;
   font-size: 1.18rem;
   color: #fff;
 }
 .hero-card .sub {
   margin-top: 0.35rem;
+  width: 100%;
+  text-align: center;
   font-size: 1.02rem;
   color: #94a3b8;
 }
