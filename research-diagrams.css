@@ -1,0 +1,307 @@
+/* Research page — publication-style git / graph figures */
+.research-diagram {
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+.research-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  shape-rendering: geometricPrecision;
+}
+
+.research-diagram .rd-anno {
+  pointer-events: none;
+}
+
+.research-diagram .rd-svg-h {
+  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  fill: #e2e8f0;
+}
+
+.research-diagram .rd-svg-l {
+  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  fill: #94a3b8;
+}
+
+.research-diagram .rd-svg-l--muted {
+  fill: #94a3b8;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.research-diagram .rd-icon {
+  stroke: #94a3b8;
+  stroke-width: 1.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.research-diagram .rd-icon--fl {
+  stroke: #7dd3fc;
+  opacity: 0.95;
+}
+
+.research-diagram .rd-icon--ir {
+  stroke: #c4b5fd;
+  opacity: 0.9;
+}
+
+.research-diagram .rd-ir-tail-callout {
+  pointer-events: none;
+}
+
+.research-diagram .rd-ir-tail-callout__box {
+  fill: rgba(91, 33, 182, 0.22);
+  stroke: rgba(196, 181, 253, 0.9);
+  stroke-width: 1.5;
+}
+
+.research-diagram .rd-ir-tail-callout__label {
+  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  fill: #ede9fe;
+}
+
+.research-diagram .rd-icon--gov {
+  stroke: #fda4af;
+  opacity: 0.95;
+}
+
+.research-diagram .rd-icon--gov-lg {
+  stroke-width: 1.55;
+}
+
+.research-diagram .rd-gov-panel {
+  fill: rgba(255, 255, 255, 0.04);
+  stroke: rgba(251, 164, 184, 0.35);
+  stroke-width: 1.35;
+}
+
+.research-diagram .rd-gov-panel--hi {
+  fill: rgba(255, 255, 255, 0.055);
+  stroke: rgba(251, 113, 133, 0.55);
+  stroke-width: 1.5;
+}
+
+.research-diagram .rd-gov-icon-fill {
+  fill: rgba(251, 113, 133, 0.14);
+  stroke: #fda4af;
+  stroke-width: 1.35;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.research-diagram .rd-gov-icon-line {
+  fill: none;
+  stroke: #fecdd3;
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@keyframes rd-path-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.rd-path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 960;
+  stroke-dashoffset: 960;
+  animation: rd-path-draw 2.35s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.rd-path--ghost {
+  stroke: rgba(148, 163, 184, 0.14);
+  stroke-width: 1.15;
+  stroke-dasharray: 6 10;
+  opacity: 0.85;
+  animation: none;
+  stroke-dashoffset: 0;
+}
+
+.rd-gov-divider {
+  stroke: rgba(251, 113, 133, 0.22);
+  stroke-width: 1.05;
+  stroke-dasharray: 10 14;
+}
+
+.rd-path--rail {
+  stroke: rgba(71, 85, 105, 0.45);
+  stroke-width: 1.35;
+  stroke-dasharray: 960;
+  stroke-dashoffset: 960;
+  animation: rd-path-draw 1.9s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.rd-path--neon-fl {
+  stroke: url(#flStroke);
+  stroke-width: 2.35;
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.45));
+}
+
+.rd-path--neon-ir {
+  stroke: url(#irStroke);
+  stroke-width: 2.45;
+  filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.45));
+}
+
+.rd-path--neon-gov {
+  stroke: url(#govStroke);
+  stroke-width: 2.55;
+  filter: drop-shadow(0 0 8px rgba(251, 113, 133, 0.42));
+}
+
+@keyframes rd-node-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.rd-node {
+  opacity: 0;
+  animation: rd-node-in 0.55s ease forwards;
+}
+
+@keyframes rd-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.rd-node--pulse {
+  animation:
+    rd-node-in 0.55s ease forwards,
+    rd-pulse 2.4s ease-in-out 1.4s infinite;
+}
+
+@keyframes rd-shimmer {
+  to {
+    stroke-dashoffset: -180;
+  }
+}
+
+.rd-shimmer {
+  fill: none;
+  pointer-events: none;
+  stroke-linecap: round;
+  stroke-width: 2.2;
+  stroke-dasharray: 14 22;
+  stroke-dashoffset: 0;
+  opacity: 0.38;
+  animation: rd-shimmer 2.8s linear infinite;
+}
+
+.rd-shimmer--fl {
+  stroke: #7dd3fc;
+}
+
+.research-diagram .rd-shimmer--fl-up {
+  stroke: #a5b4fc;
+  opacity: 0.32;
+}
+.rd-shimmer--ir {
+  stroke: #e9d5ff;
+}
+.rd-shimmer--gov {
+  stroke: #fecdd3;
+}
+
+.rd-hist-bars {
+  opacity: 0.92;
+}
+
+/* Tail synthetic layer: scaleY anchored at bar bottom (50% 100%) so mass grows *up* toward higher frequency (SVG +y is down; histogram baseline is translate y=318). */
+@keyframes rd-synth-grow {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  48% {
+    transform: scale(1, 1.62);
+  }
+}
+
+.research-diagram .rd-hist-synth {
+  pointer-events: none;
+}
+
+.research-diagram .rd-synth-rect {
+  fill: url(#irSynthFill);
+  stroke: rgba(196, 181, 253, 0.72);
+  stroke-width: 1.1;
+}
+
+.research-diagram .rd-synth-pulse {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: rd-synth-grow 2.85s ease-in-out infinite;
+}
+
+.rd-ir-density {
+  filter: drop-shadow(0 0 6px rgba(192, 132, 252, 0.38));
+}
+
+@keyframes rd-bar {
+  0%,
+  100% {
+    opacity: 0.28;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+
+.rd-bar {
+  animation: rd-bar 2.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rd-mote {
+    display: none;
+  }
+  .rd-path,
+  .rd-path--rail {
+    animation: none;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+  .rd-shimmer {
+    animation: none;
+    opacity: 0.18;
+  }
+  .rd-node,
+  .rd-node--pulse {
+    opacity: 1;
+    animation: none;
+  }
+  .rd-bar {
+    animation: none;
+    opacity: 0.45;
+  }
+  .research-diagram .rd-synth-pulse {
+    animation: none;
+    transform: scale(1, 1.28);
+  }
+}

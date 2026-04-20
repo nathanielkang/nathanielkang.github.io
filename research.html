@@ -1,103 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | SOCAL Lab</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); }
-    </style>
-</head>
-<body class="bg-slate-900 text-gray-100">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | SOCAL Lab — KNU</title>
+  <meta name="description" content="SOCAL Lab research program: federated learning and privacy, imbalanced statistical learning, and AI alignment with governance. Kyungpook National University.">
+  <!-- Canonical manuscript list + paths: sibling folder KNU/Research/docs/PAPER_MASTER_INVENTORY.md and INDEX.md -->
 
-    <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50 text-gray-900">
-        <div class="text-2xl font-bold tracking-tighter text-blue-900"><a href="index.html">SOCAL <span class="text-blue-500">LAB</span></a></div>
-        <div class="space-x-8 font-medium">
-            <a href="index.html#about" class="hover:text-blue-600 transition text-sm">About</a>
-            <a href="research.html" class="text-blue-600 transition text-sm">Research</a>
-            <a href="index.html#publications" class="hover:text-blue-600 transition text-sm">Publications</a>
-            <a href="index.html#join" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">Join Us</a>
-        </div>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE88Q89RCG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TE88Q89RCG');
+  </script>
+
+  <meta property="og:title" content="Research | SOCAL Lab">
+  <meta property="og:description" content="Federated learning, imbalanced regression, and trustworthy AI — research program at SOCAL Lab, KNU.">
+  <meta property="og:image" content="https://nathanielkang.github.io/preview.png">
+  <meta property="og:url" content="https://nathanielkang.github.io/research.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research | SOCAL Lab">
+  <meta name="twitter:description" content="Three research themes: federated learning & privacy, imbalanced learning, alignment & governance.">
+  <meta name="twitter:image" content="https://nathanielkang.github.io/preview.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lab.css">
+  <link rel="stylesheet" href="research-diagrams.css">
+</head>
+<body class="theme-dark">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="site-nav__brand" href="index.html">SOCAL<span>LAB</span></a>
+      <div class="site-nav__links">
+        <a href="index.html#about">About</a>
+        <a href="research.html" style="color:#93c5fd">Research</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#join">Join</a>
+      </div>
+      <a class="site-nav__cta" href="index.html#join">Join us</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-panel-r" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-panel-r" class="mobile-panel">
+      <a href="index.html#about">About</a>
+      <a href="research.html">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a class="mobile-panel__cta" href="index.html#join">Join SOCAL Lab</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="research-hero research-hero--lux" aria-labelledby="research-page-title">
+      <div class="research-hero__grid" aria-hidden="true"></div>
+      <div class="inner">
+        <p class="research-hero__kicker">SOCAL Lab · Kyungpook National University</p>
+        <h1 id="research-page-title" class="font-display research-hero__title">Research program</h1>
+        <p class="research-hero__deck">Our work addresses reliability gaps in contemporary machine learning: decentralized data, limited supervision, heavy-tailed behavior, and governance constraints that must track rapid deployment.</p>
+        <div class="research-hero__shine" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <nav class="research-pill-nav" aria-label="On this page">
+      <div class="research-pill-nav__inner">
+        <a href="#theme-fl"><span class="num">01</span> Federated &amp; privacy</a>
+        <a href="#theme-ir"><span class="num">02</span> Imbalanced learning</a>
+        <a href="#theme-align"><span class="num">03</span> Alignment &amp; governance</a>
+      </div>
     </nav>
 
-    <header class="hero-gradient py-24 px-6 text-center border-b border-white/10">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl font-extrabold mb-6 tracking-tight">Research Pillars</h1>
-            <p class="text-xl text-blue-200 font-light leading-relaxed">
-                Our mission is to bridge the reliability gap in modern AI by addressing data scarcity, decentralization, and governance challenges through rigorous statistical optimization.
-            </p>
+    <section id="theme-fl" class="research-block research-block--lux">
+      <div class="research-block__glow research-block__glow--blue" aria-hidden="true"></div>
+      <div class="research-grid wrap research-grid--lux">
+        <div class="research-grid__media">
+          <div class="research-frame research-frame--blue">
+            <figure class="research-svg-figure research-diagram">
+              <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cap-fl">
+                <title id="cap-fl">Federated learning is bidirectional: the central server distributes global model weights to clients; clients train on private local data and send model updates back for secure aggregation.</title>
+                <defs>
+                  <linearGradient id="flStroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="0.45" stop-color="#38bdf8"/><stop offset="1" stop-color="#818cf8"/></linearGradient>
+                  <radialGradient id="flBg" cx="50%" cy="22%" r="78%"><stop offset="0" stop-color="#1d4ed8"/><stop offset="0.45" stop-color="#0f172a"/><stop offset="1" stop-color="#020617"/></radialGradient>
+                  <pattern id="flGrid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="rgba(148,163,184,0.08)" stroke-width="0.45"/></pattern>
+                  <filter id="flBloom" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+                <rect width="720" height="400" fill="url(#flBg)"/>
+                <rect width="720" height="400" fill="url(#flGrid)" opacity="0.55"/>
+                <path class="rd-path--ghost" d="M360 172 Q220 255 72 330 M360 172 Q500 255 648 330" fill="none"/>
+                <path class="rd-path rd-path--rail" style="animation-delay:0s" d="M360 88 L360 172" stroke="#475569"/>
+                <path class="rd-path rd-path--neon-fl" style="animation-delay:0.04s" d="M360 172 Q360 262 72 330"/>
+                <path class="rd-path rd-path--neon-fl" style="animation-delay:0.12s" d="M360 172 Q340 248 228 332"/>
+                <path class="rd-path rd-path--neon-fl" style="animation-delay:0.2s" d="M360 172 Q360 278 360 346"/>
+                <path class="rd-path rd-path--neon-fl" style="animation-delay:0.28s" d="M360 172 Q380 248 492 332"/>
+                <path class="rd-path rd-path--neon-fl" style="animation-delay:0.36s" d="M360 172 Q360 262 648 330"/>
+                <path class="rd-shimmer rd-shimmer--fl" d="M360 172 Q360 262 72 330"/>
+                <path class="rd-shimmer rd-shimmer--fl" d="M360 172 Q360 262 648 330" style="animation-delay:0.4s"/>
+                <path class="rd-shimmer rd-shimmer--fl rd-shimmer--fl-up" d="M72 330 Q360 262 360 172" style="animation-delay:0.2s"/>
+                <path class="rd-shimmer rd-shimmer--fl rd-shimmer--fl-up" d="M648 330 Q360 262 360 172" style="animation-delay:0.65s"/>
+                <path class="rd-shimmer rd-shimmer--fl rd-shimmer--fl-up" d="M360 346 Q360 278 360 172" style="animation-delay:0.45s"/>
+                <g class="rd-node" style="animation-delay:0.95s"><circle cx="360" cy="88" r="18" fill="#020617" stroke="url(#flStroke)" stroke-width="2.6"/><circle cx="360" cy="88" r="7" fill="#38bdf8" opacity="0.35"/></g>
+                <g class="rd-node" style="animation-delay:1.02s"><circle cx="72" cy="330" r="11" fill="#0f172a" stroke="#38bdf8" stroke-width="2.1"/></g>
+                <g class="rd-node" style="animation-delay:1.06s"><circle cx="228" cy="332" r="9" fill="#0f172a" stroke="#7dd3fc" stroke-width="1.75"/></g>
+                <g class="rd-node" style="animation-delay:1.1s"><circle cx="360" cy="346" r="9" fill="#0f172a" stroke="#7dd3fc" stroke-width="1.75"/></g>
+                <g class="rd-node" style="animation-delay:1.14s"><circle cx="492" cy="332" r="9" fill="#0f172a" stroke="#7dd3fc" stroke-width="1.75"/></g>
+                <g class="rd-node" style="animation-delay:1.18s"><circle cx="648" cy="330" r="11" fill="#0f172a" stroke="#a5b4fc" stroke-width="2.1"/></g>
+                <path id="mFL0_out" d="M360 106 L360 172 Q360 262 72 330" fill="none" stroke="none"/>
+                <path id="mFL0_in" d="M72 330 Q360 262 360 172 L360 106" fill="none" stroke="none"/>
+                <path id="mFL1_out" d="M360 106 L360 172 Q360 262 648 330" fill="none" stroke="none"/>
+                <path id="mFL1_in" d="M648 330 Q360 262 360 172 L360 106" fill="none" stroke="none"/>
+                <path id="mFLc_out" d="M360 106 L360 172 Q360 278 360 346" fill="none" stroke="none"/>
+                <path id="mFLc_in" d="M360 346 Q360 278 360 172 L360 106" fill="none" stroke="none"/>
+                <g class="rd-fl-motes" aria-hidden="true">
+                  <circle class="rd-mote rd-mote--out" r="3.2" fill="#ecfeff" filter="url(#flBloom)" opacity="0.95"><animateMotion dur="3.4s" repeatCount="indefinite" rotate="auto"><mpath href="#mFL0_out"/></animateMotion></circle>
+                  <circle class="rd-mote rd-mote--in" r="3.1" fill="#c4b5fd" filter="url(#flBloom)" opacity="0.9"><animateMotion dur="3.4s" repeatCount="indefinite" begin="-1.7s" rotate="auto"><mpath href="#mFL0_in"/></animateMotion></circle>
+                  <circle class="rd-mote rd-mote--out" r="3" fill="#e0f2fe" filter="url(#flBloom)" opacity="0.92"><animateMotion dur="3.6s" repeatCount="indefinite" begin="-0.6s" rotate="auto"><mpath href="#mFL1_out"/></animateMotion></circle>
+                  <circle class="rd-mote rd-mote--in" r="2.9" fill="#a5b4fc" filter="url(#flBloom)" opacity="0.88"><animateMotion dur="3.6s" repeatCount="indefinite" begin="-2.4s" rotate="auto"><mpath href="#mFL1_in"/></animateMotion></circle>
+                  <circle class="rd-mote rd-mote--out" r="2.7" fill="#cffafe" filter="url(#flBloom)" opacity="0.9"><animateMotion dur="2.75s" repeatCount="indefinite" begin="-1.1s" rotate="auto"><mpath href="#mFLc_out"/></animateMotion></circle>
+                  <circle class="rd-mote rd-mote--in" r="2.6" fill="#c7d2fe" filter="url(#flBloom)" opacity="0.85"><animateMotion dur="2.75s" repeatCount="indefinite" begin="-2.48s" rotate="auto"><mpath href="#mFLc_in"/></animateMotion></circle>
+                </g>
+                <g class="rd-anno">
+                  <text x="360" y="52" text-anchor="middle" class="rd-svg-h">Central server</text>
+                  <text x="360" y="368" text-anchor="middle" class="rd-svg-l">Federated clients · private local data</text>
+                  <text x="360" y="388" text-anchor="middle" class="rd-svg-l--muted">Global weights down · local updates up · secure aggregation</text>
+                </g>
+              </svg>
+            </figure>
+          </div>
         </div>
-    </header>
-
-    <section class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <img src="FL.png" alt="Federated Learning Architecture" class="rounded-3xl shadow-2xl border border-white/10 bg-white/5 p-4">
-            </div>
-            <div class="order-1 md:order-2">
-                <div class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Pillar 01</div>
-                <h2 class="text-3xl font-bold mb-6 text-white">Federated Learning & Privacy</h2>
-                <p class="text-blue-300 font-bold mb-4 italic">"Data is never identical."</p>
-                <p class="text-gray-400 leading-relaxed mb-6">
-                    Real-world Federated Learning faces massive performance drops because local datasets are highly skewed (Non-IID). We develop robust statistical frameworks to bridge this gap, ensuring that global models remain representative and secure without ever touching raw private data.
-                </p>
-                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
-                    <p class="text-xs text-gray-500 font-bold uppercase mb-2">Featured Publication</p>
-                    <p class="text-sm font-bold text-gray-200">Optimizing federated learning: Addressing key challenges in real-world applications</p>
-                    <p class="text-xs text-gray-400 mt-1 italic">IEEE Internet of Things Journal, 2025</p>
-                </div>
-            </div>
+        <div class="research-grid__text">
+          <span class="pillar-label">Theme 01</span>
+          <h2 class="font-display">Federated learning &amp; privacy</h2>
+          <blockquote class="research-quote">“Data is never identical.”</blockquote>
+          <p class="body">Real federated learning breaks when local clients are wildly non-IID. We build statistical tools so global models stay representative and secure — without ever requiring raw private data in one place.</p>
+          <div class="featured-pub featured-pub--lux">
+            <div class="label">Featured publication</div>
+            <div class="title">Optimizing federated learning: Addressing key challenges in real-world applications</div>
+            <div class="venue">IEEE Internet of Things Journal, 2025</div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="py-24 px-6 bg-slate-800/50">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Pillar 02</div>
-                <h2 class="text-3xl font-bold mb-6 text-white">Imbalanced Statistical Learning</h2>
-                <p class="text-blue-300 font-bold mb-4 italic">"Focusing on the high-impact outliers."</p>
-                <p class="text-gray-400 leading-relaxed mb-6">
-                    Standard models are inherently biased towards the majority. We utilize high-fidelity synthetic data generation to enhance imbalanced regression (IR), preventing critical rare events from being treated as noise and ensuring robust performance in the "long-tail" of data distribution.
-                </p>
-                <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
-                    <p class="text-xs text-gray-500 font-bold uppercase mb-2">Featured Publication</p>
-                    <p class="text-sm font-bold text-gray-200">Calibrated mixup for imbalanced regression on tabular data</p>
-                    <p class="text-xs text-gray-400 mt-1 italic">Pattern Recognition, 2025</p>
-                </div>
-            </div>
-            <div>
-                <img src="IR.jpg" alt="Imbalanced Regression Visualization" class="rounded-3xl shadow-2xl border border-white/10 bg-white/5 p-4">
-            </div>
+    <section id="theme-ir" class="research-block research-block--lux alt">
+      <div class="research-block__glow research-block__glow--violet" aria-hidden="true"></div>
+      <div class="research-grid wrap research-grid--lux">
+        <div class="research-grid__text">
+          <span class="pillar-label">Theme 02</span>
+          <h2 class="font-display">Imbalanced statistical learning</h2>
+          <blockquote class="research-quote">“The tail is not noise.”</blockquote>
+          <p class="body">Classical models chase the majority. We use calibration, mixup, and high-fidelity synthesis so imbalanced regression stays faithful to rare but high-impact regions of the distribution.</p>
+          <div class="featured-pub featured-pub--lux">
+            <div class="label">Featured publication</div>
+            <div class="title">Calibrated mixup for imbalanced regression on tabular data</div>
+            <div class="venue">Pattern Recognition, 2025</div>
+          </div>
         </div>
+        <div class="research-grid__media">
+          <div class="research-frame research-frame--violet">
+            <figure class="research-svg-figure research-diagram">
+              <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cap-ir">
+                <title id="cap-ir">Histogram of a skewed response with a heavy right tail; translucent bars show synthetic data boosting mass in rare bins—mixup and synthesis improve tail coverage.</title>
+                <defs>
+                  <linearGradient id="irStroke" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e9d5ff"/><stop offset="1" stop-color="#c084fc"/></linearGradient>
+                  <linearGradient id="irSynthFill" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#c4b5fd" stop-opacity="0.15"/><stop offset="0.55" stop-color="#e9d5ff" stop-opacity="0.55"/><stop offset="1" stop-color="#faf5ff" stop-opacity="0.7"/></linearGradient>
+                  <linearGradient id="irHistFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a78bfa" stop-opacity="0.42"/><stop offset="1" stop-color="#4c1d95" stop-opacity="0.06"/></linearGradient>
+                  <radialGradient id="irBg" cx="50%" cy="20%" r="80%"><stop offset="0" stop-color="#5b21b6"/><stop offset="0.55" stop-color="#0f172a"/><stop offset="1" stop-color="#020617"/></radialGradient>
+                  <pattern id="irGrid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="rgba(196,181,253,0.06)" stroke-width="0.45"/></pattern>
+                </defs>
+                <rect width="720" height="400" fill="url(#irBg)"/>
+                <rect width="720" height="400" fill="url(#irGrid)" opacity="0.45"/>
+                <path d="M72 96 L72 318 L676 318" fill="none" stroke="rgba(148,163,184,0.4)" stroke-width="1.2" stroke-linecap="square"/>
+                <path fill="url(#irHistFill)" d="M 76 318 L 94.5 100 L 117.0 120.0 L 139.5 136.0 L 162.0 150.0 L 184.5 166.0 L 207.0 180.0 L 229.5 194.0 L 252.0 208.0 L 274.5 222.0 L 297.0 234.0 L 319.5 246.0 L 342.0 256.0 L 364.5 266.0 L 387.0 274.0 L 409.5 282.0 L 432.0 288.0 L 454.5 293.0 L 477.0 298.0 L 499.5 302.0 L 522.0 305.0 L 544.5 308.0 L 567.0 310.0 L 589.5 312.0 L 612.0 313.0 L 634.5 314.0 L 657.0 315.0 L 668 318 Z"/>
+                <g class="rd-hist-synth" aria-hidden="true">
+                  <g class="rd-synth-wrap" transform="translate(454.5,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-25" width="13" height="25" rx="1.5" style="animation-delay:0s"/></g>
+                  <g class="rd-synth-wrap" transform="translate(477,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-20" width="13" height="20" rx="1.5" style="animation-delay:0.09s"/></g>
+                  <g class="rd-synth-wrap" transform="translate(499.5,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-16" width="13" height="16" rx="1.5" style="animation-delay:0.18s"/></g>
+                  <g class="rd-synth-wrap" transform="translate(522,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-13" width="13" height="13" rx="1.5" style="animation-delay:0.27s"/></g>
+                  <g class="rd-synth-wrap" transform="translate(544.5,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-10" width="13" height="10" rx="1.5" style="animation-delay:0.36s"/></g>
+                  <g class="rd-synth-wrap" transform="translate(567,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-8" width="13" height="8" rx="1.5" style="animation-delay:0.45s"/></g>
+                  <g class="rd-synth-wrap" transform="translate(589.5,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-6" width="13" height="6" rx="1.5" style="animation-delay:0.54s"/></g>
+                  <g class="rd-synth-wrap" transform="translate(612,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-5" width="13" height="5" rx="1.5" style="animation-delay:0.63s"/></g>
+                  <g class="rd-synth-wrap" transform="translate(634.5,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-4" width="13" height="4" rx="1.5" style="animation-delay:0.72s"/></g>
+                  <g class="rd-synth-wrap" transform="translate(657,318)"><rect class="rd-synth-rect rd-synth-pulse" x="-6.5" y="-3" width="13" height="3" rx="1.5" style="animation-delay:0.81s"/></g>
+                </g>
+                <g class="rd-hist-bars">
+                  <rect class="rd-bar rd-hist" x="88.0" y="100.0" width="13" height="218" rx="1.5" fill="#7c3aed" style="animation-delay:0.000s"/><rect class="rd-bar rd-hist" x="110.5" y="120.0" width="13" height="198" rx="1.5" fill="#8b5cf6" style="animation-delay:0.032s"/><rect class="rd-bar rd-hist" x="133.0" y="136.0" width="13" height="182" rx="1.5" fill="#a78bfa" style="animation-delay:0.064s"/><rect class="rd-bar rd-hist" x="155.5" y="150.0" width="13" height="168" rx="1.5" fill="#c084fc" style="animation-delay:0.096s"/><rect class="rd-bar rd-hist" x="178.0" y="166.0" width="13" height="152" rx="1.5" fill="#e9d5ff" style="animation-delay:0.128s"/><rect class="rd-bar rd-hist" x="200.5" y="180.0" width="13" height="138" rx="1.5" fill="#7c3aed" style="animation-delay:0.160s"/><rect class="rd-bar rd-hist" x="223.0" y="194.0" width="13" height="124" rx="1.5" fill="#8b5cf6" style="animation-delay:0.192s"/><rect class="rd-bar rd-hist" x="245.5" y="208.0" width="13" height="110" rx="1.5" fill="#a78bfa" style="animation-delay:0.224s"/><rect class="rd-bar rd-hist" x="268.0" y="222.0" width="13" height="96" rx="1.5" fill="#c084fc" style="animation-delay:0.256s"/><rect class="rd-bar rd-hist" x="290.5" y="234.0" width="13" height="84" rx="1.5" fill="#e9d5ff" style="animation-delay:0.288s"/><rect class="rd-bar rd-hist" x="313.0" y="246.0" width="13" height="72" rx="1.5" fill="#7c3aed" style="animation-delay:0.320s"/><rect class="rd-bar rd-hist" x="335.5" y="256.0" width="13" height="62" rx="1.5" fill="#8b5cf6" style="animation-delay:0.352s"/><rect class="rd-bar rd-hist" x="358.0" y="266.0" width="13" height="52" rx="1.5" fill="#a78bfa" style="animation-delay:0.384s"/><rect class="rd-bar rd-hist" x="380.5" y="274.0" width="13" height="44" rx="1.5" fill="#c084fc" style="animation-delay:0.416s"/><rect class="rd-bar rd-hist" x="403.0" y="282.0" width="13" height="36" rx="1.5" fill="#e9d5ff" style="animation-delay:0.448s"/><rect class="rd-bar rd-hist" x="425.5" y="288.0" width="13" height="30" rx="1.5" fill="#7c3aed" style="animation-delay:0.480s"/><rect class="rd-bar rd-hist" x="448.0" y="293.0" width="13" height="25" rx="1.5" fill="#8b5cf6" style="animation-delay:0.512s"/><rect class="rd-bar rd-hist" x="470.5" y="298.0" width="13" height="20" rx="1.5" fill="#a78bfa" style="animation-delay:0.544s"/><rect class="rd-bar rd-hist" x="493.0" y="302.0" width="13" height="16" rx="1.5" fill="#c084fc" style="animation-delay:0.576s"/><rect class="rd-bar rd-hist" x="515.5" y="305.0" width="13" height="13" rx="1.5" fill="#e9d5ff" style="animation-delay:0.608s"/><rect class="rd-bar rd-hist" x="538.0" y="308.0" width="13" height="10" rx="1.5" fill="#7c3aed" style="animation-delay:0.640s"/><rect class="rd-bar rd-hist" x="560.5" y="310.0" width="13" height="8" rx="1.5" fill="#8b5cf6" style="animation-delay:0.672s"/><rect class="rd-bar rd-hist" x="583.0" y="312.0" width="13" height="6" rx="1.5" fill="#a78bfa" style="animation-delay:0.704s"/><rect class="rd-bar rd-hist" x="605.5" y="313.0" width="13" height="5" rx="1.5" fill="#c084fc" style="animation-delay:0.736s"/><rect class="rd-bar rd-hist" x="628.0" y="314.0" width="13" height="4" rx="1.5" fill="#e9d5ff" style="animation-delay:0.768s"/><rect class="rd-bar rd-hist" x="650.5" y="315.0" width="13" height="3" rx="1.5" fill="#7c3aed" style="animation-delay:0.800s"/>
+                </g>
+                <g class="rd-ir-tail-callout" aria-hidden="true">
+                  <rect class="rd-ir-tail-callout__box" x="436" y="248" width="234" height="78" rx="12"/>
+                  <text x="553" y="272" text-anchor="middle" class="rd-ir-tail-callout__label">Heavy right tail</text>
+                </g>
+                <path class="rd-ir-density" d="M 94.5 100.0 L 117.0 120.0 L 139.5 136.0 L 162.0 150.0 L 184.5 166.0 L 207.0 180.0 L 229.5 194.0 L 252.0 208.0 L 274.5 222.0 L 297.0 234.0 L 319.5 246.0 L 342.0 256.0 L 364.5 266.0 L 387.0 274.0 L 409.5 282.0 L 432.0 288.0 L 454.5 293.0 L 477.0 298.0 L 499.5 302.0 L 522.0 305.0 L 544.5 308.0 L 567.0 310.0 L 589.5 312.0 L 612.0 313.0 L 634.5 314.0 L 657.0 315.0" fill="none" stroke="url(#irStroke)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+                <path class="rd-shimmer rd-shimmer--ir" d="M 94.5 100.0 L 117.0 120.0 L 139.5 136.0 L 162.0 150.0 L 184.5 166.0 L 207.0 180.0 L 229.5 194.0 L 252.0 208.0 L 274.5 222.0 L 297.0 234.0 L 319.5 246.0 L 342.0 256.0 L 364.5 266.0 L 387.0 274.0 L 409.5 282.0 L 432.0 288.0 L 454.5 293.0 L 477.0 298.0 L 499.5 302.0 L 522.0 305.0 L 544.5 308.0 L 567.0 310.0 L 589.5 312.0 L 612.0 313.0 L 634.5 314.0 L 657.0 315.0"/>
+                <g class="rd-anno">
+                  <g class="rd-icon rd-icon--ir" transform="translate(612,12) scale(1.2)" aria-hidden="true">
+                    <rect x="2" y="14" width="5" height="10" rx="0.5"/>
+                    <rect x="10" y="10" width="5" height="14" rx="0.5"/>
+                    <rect x="18" y="6" width="5" height="18" rx="0.5"/>
+                    <rect x="26" y="12" width="5" height="12" rx="0.5"/>
+                  </g>
+                  <text x="38" y="208" class="rd-svg-l" transform="rotate(-90 38 208)" text-anchor="middle" dominant-baseline="middle">Empirical frequency</text>
+                  <text x="380" y="352" text-anchor="middle" class="rd-svg-l">Outcome / target value →</text>
+                </g>
+              </svg>
+            </figure>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto border-b border-white/5">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <img src="AI_Alignment.png" alt="AI Alignment Framework" class="rounded-3xl shadow-2xl border border-white/10 bg-white/5 p-4">
-            </div>
-            <div class="order-1 md:order-2">
-                <div class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Pillar 03</div>
-                <h2 class="text-3xl font-bold mb-6 text-white">AI Alignment & Safety Governance</h2>
-                <p class="text-blue-300 font-bold mb-4 italic">"Securing trustworthy intelligence."</p>
-                <p class="text-gray-400 leading-relaxed mb-8">
-                    Governance cannot keep pace with AI velocity. We propose auditing frameworks for AI in the public sector and novel privacy matrices for LLMs, ensuring that as models grow more powerful, they remain aligned with human values and organizational data privacy standards.
-                </p>
-                <div class="flex gap-4">
-                    <span class="px-3 py-1 bg-white/10 rounded-lg text-xs font-mono text-gray-400">Public Auditing</span>
-                    <span class="px-3 py-1 bg-white/10 rounded-lg text-xs font-mono text-gray-400">LLM Privacy</span>
-                    <span class="px-3 py-1 bg-white/10 rounded-lg text-xs font-mono text-gray-400">Matrix Proposal</span>
-                </div>
-            </div>
+    <section id="theme-align" class="research-block research-block--lux">
+      <div class="research-block__glow research-block__glow--rose" aria-hidden="true"></div>
+      <div class="research-grid wrap research-grid--lux">
+        <div class="research-grid__media">
+          <div class="research-frame research-frame--rose">
+            <figure class="research-svg-figure research-diagram">
+              <svg viewBox="0 0 720 408" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cap-gov">
+                <title id="cap-gov">Institutional AI governance: public-sector institutions, safety controls, risk and compliance, and auditable records.</title>
+                <defs>
+                  <radialGradient id="govBg" cx="50%" cy="22%" r="92%">
+                    <stop offset="0" stop-color="#881337"/>
+                    <stop offset="0.42" stop-color="#0f172a"/>
+                    <stop offset="1" stop-color="#020617"/>
+                  </radialGradient>
+                  <linearGradient id="govFloor" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0" stop-color="rgba(251,113,133,0.08)"/>
+                    <stop offset="1" stop-color="rgba(251,113,133,0)"/>
+                  </linearGradient>
+                </defs>
+                <rect width="720" height="408" fill="url(#govBg)"/>
+                <ellipse cx="360" cy="300" rx="280" ry="120" fill="url(#govFloor)" opacity="0.85"/>
+                <text x="360" y="54" text-anchor="middle" class="rd-svg-h">Governance &amp; accountability</text>
+                <!-- Four equal panels: institutions · safety · compliance · audit -->
+                <g aria-hidden="true">
+                  <rect x="36" y="82" width="144" height="208" rx="22" class="rd-gov-panel"/>
+                  <g transform="translate(108, 158)">
+                    <path class="rd-gov-icon-fill" d="M-34 26 L0 -22 L34 26 V48 H-34 Z"/>
+                    <rect x="-30" y="26" width="60" height="36" rx="3" fill="rgba(15,23,42,0.55)" stroke="#fda4af" stroke-width="1.2"/>
+                    <path class="rd-gov-icon-line" d="M-18 34v18M-2 34v18M14 34v18M-26 34h52"/>
+                  </g>
+                  <text x="108" y="278" text-anchor="middle" class="rd-svg-l">Public institutions</text>
+                </g>
+                <g aria-hidden="true">
+                  <rect x="204" y="82" width="144" height="208" rx="22" class="rd-gov-panel"/>
+                  <g transform="translate(276, 156)">
+                    <path class="rd-gov-icon-fill" d="M0 -34 C22 -34 38 -14 38 8 C38 34 0 52 0 52 C0 52 -38 34 -38 8 C-38 -14 -22 -34 0 -34 Z"/>
+                    <path class="rd-gov-icon-line" d="M0 -12v28M-14 2h28"/>
+                  </g>
+                  <text x="276" y="278" text-anchor="middle" class="rd-svg-l">Safety controls</text>
+                </g>
+                <g aria-hidden="true">
+                  <rect x="372" y="82" width="144" height="208" rx="22" class="rd-gov-panel"/>
+                  <g transform="translate(444, 160)">
+                    <path class="rd-gov-icon-line" d="M0 -28v56"/>
+                    <path class="rd-gov-icon-line" d="M-32 -28h64"/>
+                    <path class="rd-gov-icon-line" d="M-32 -28 L-40 8M-32 -28 L-24 8M32 -28 L40 8M32 -28 L24 8"/>
+                    <ellipse class="rd-gov-icon-fill" cx="-36" cy="10" rx="16" ry="5"/>
+                    <ellipse class="rd-gov-icon-fill" cx="36" cy="10" rx="16" ry="5"/>
+                    <path class="rd-gov-icon-line" d="M-52 10h32M20 10h32"/>
+                  </g>
+                  <text x="444" y="278" text-anchor="middle" class="rd-svg-l">Risk &amp; compliance</text>
+                </g>
+                <g aria-hidden="true">
+                  <rect x="540" y="82" width="144" height="208" rx="22" class="rd-gov-panel rd-gov-panel--hi"/>
+                  <g transform="translate(612, 158)">
+                    <rect x="-34" y="-38" width="68" height="76" rx="6" class="rd-gov-icon-fill"/>
+                    <path class="rd-gov-icon-line" d="M-10 -38v14l24 0"/>
+                    <path class="rd-gov-icon-line" d="M-22 -10h44M-22 4h36M-22 18h40"/>
+                    <circle cx="18" cy="-46" r="5" fill="rgba(251,113,133,0.35)" stroke="#fda4af" stroke-width="1"/>
+                  </g>
+                  <text x="612" y="278" text-anchor="middle" class="rd-svg-l">Audit trail</text>
+                </g>
+                <g class="rd-anno">
+                  <text x="360" y="352" text-anchor="middle" class="rd-svg-l--muted">Policy · procurement · post-deployment accountability</text>
+                </g>
+              </svg>
+            </figure>
+          </div>
         </div>
+        <div class="research-grid__text">
+          <span class="pillar-label">Theme 03</span>
+          <h2 class="font-display">AI alignment &amp; safety governance</h2>
+          <blockquote class="research-quote">“Trust has to scale with capability.”</blockquote>
+          <p class="body">Policy and procurement move slowly; models do not. We study auditing for public-sector AI and privacy-aware evaluation for LLMs so organizations can ship powerful systems without losing accountability.</p>
+          <div class="tag-row tag-row--lux">
+            <span>Public auditing</span>
+            <span>LLM privacy</span>
+            <span>Deployment risk</span>
+          </div>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer class="py-12 text-center text-gray-500 text-xs">
-        <p>&copy; 2026 SOCAL Lab @ Kyungpook National University. Focused on Statistical Reliability.</p>
-    </footer>
+  <footer class="site-footer">
+    <p>&copy; 2026 SOCAL Lab · Kyungpook National University</p>
+    <p style="margin-top:0.5rem"><a href="index.html">Home</a> · <a href="index.html#join">Join the lab</a></p>
+  </footer>
 
+  <script>
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var panel = document.getElementById('mobile-panel-r');
+    if (!btn || !panel) return;
+    btn.addEventListener('click', function () {
+      var open = !panel.classList.contains('is-open');
+      panel.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    panel.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        panel.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

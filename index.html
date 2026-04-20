@@ -1,321 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOCAL Lab | Prof. Nathaniel Kang</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOCAL Lab | Prof. Nathaniel Kang — KNU</title>
+  <meta name="description" content="SOCAL Lab at Kyungpook National University: statistical machine learning, federated learning, data privacy, and synthetic data. Prospective Ph.D., M.S., and undergraduate researchers are welcome to inquire about open positions.">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE88Q89RCG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE88Q89RCG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TE88Q89RCG');
+  </script>
 
-      gtag('config', 'G-TE88Q89RCG');
-    </script>
+  <meta property="og:title" content="SOCAL Lab | Prof. Nathaniel Kang">
+  <meta property="og:description" content="Statistical Optimization & Collaborative AI Learning at KNU. Graduate and undergraduate researchers: actively recruiting.">
+  <meta property="og:image" content="https://nathanielkang.github.io/preview.png">
+  <meta property="og:url" content="https://nathanielkang.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SOCAL Lab | Prof. Nathaniel Kang">
+  <meta name="twitter:description" content="Statistical machine learning & AI at KNU. Prospective students welcome — open recruitment.">
+  <meta name="twitter:image" content="https://nathanielkang.github.io/preview.png">
 
-    <meta property="og:title" content="SOCAL Lab | Prof. Nathaniel Kang">
-    <meta property="og:description" content="Statistical Optimization & Collaborative AI Learning at KNU. Recruiting for Spring 2026.">
-    <meta property="og:image" content="https://nathanielkang.github.io/preview.png">
-    <meta property="og:url" content="https://nathanielkang.github.io/">
-    <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lab.css">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://nathanielkang.github.io/preview.png">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); }
-        .if-badge { background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 6px; font-weight: bold; font-size: 0.75rem; }
-    </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "SOCAL Lab",
+        "url": "https://nathanielkang.github.io/",
+        "parentOrganization": {
+          "@type": "CollegeOrUniversity",
+          "name": "Kyungpook National University"
+        },
+        "description": "Statistical Optimization and Collaborative AI Learning research group."
+      },
+      {
+        "@type": "Person",
+        "name": "Nathaniel Kang",
+        "alternateName": "강네이트",
+        "jobTitle": "Assistant Professor",
+        "email": "natekang@knu.ac.kr",
+        "url": "https://nathanielkang.github.io/",
+        "sameAs": ["https://scholar.google.com/citations?user=h2iPQ0AAAAAJ"],
+        "worksFor": { "@type": "Organization", "name": "Kyungpook National University" }
+      }
+    ]
+  }
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
-        <div class="text-2xl font-bold tracking-tighter text-blue-900"><a href="index.html">SOCAL <span class="text-blue-500">LAB</span></a></div>
-        <div class="space-x-8 font-medium">
-            <a href="#about" class="hover:text-blue-600 transition text-sm">About</a>
-            <a href="research.html" class="hover:text-blue-600 transition text-sm">Research</a>
-            <a href="#publications" class="hover:text-blue-600 transition text-sm">Publications</a>
-            <a href="#join" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">Join Us</a>
-        </div>
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="site-nav__brand" href="index.html">SOCAL<span>LAB</span></a>
+      <div class="site-nav__links">
+        <a href="#about">About</a>
+        <a href="research.html">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#join">Join</a>
+      </div>
+      <a class="site-nav__cta" href="#join">Join us</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </nav>
+    <div id="mobile-panel" class="mobile-panel">
+      <a href="#about">About</a>
+      <a href="research.html">Research</a>
+      <a href="#publications">Publications</a>
+      <a class="mobile-panel__cta" href="#join">Join SOCAL Lab</a>
+    </div>
+  </header>
 
-    <header class="hero-gradient text-white py-32 px-6 text-center border-b border-white/10">
-        <h1 class="text-6xl font-extrabold mb-4 tracking-tight">SOCAL Lab</h1>
-        <p class="text-2xl mb-8 opacity-90 font-light text-blue-100">Statistical Optimization & Collaborative AI Learning</p>
-        <div class="max-w-3xl mx-auto bg-white/5 backdrop-blur-lg p-8 rounded-3xl border border-white/10 shadow-2xl">
-            <p class="text-xl mb-2"><strong>Prof. Nathaniel Kang (강네이트) </strong></p>
-            <p class="text-lg opacity-80 font-medium">Assistant Professor</p>
-            <p class="text-md opacity-70">IT 대학 컴퓨터학부 | College of IT, School of Computer Science, KNU</p>
+  <main id="main">
+    <section class="mesh-hero" aria-labelledby="hero-title">
+      <div class="mesh-hero__inner">
+        <div class="hero-badge"><span class="hero-badge__dot" aria-hidden="true"></span> Actively recruiting</div>
+        <h1 id="hero-title" class="font-display">Where statistics meets AI</h1>
+        <p class="tagline"><strong class="font-display" style="color:#fff">SOCAL Lab</strong> — Statistical Optimization &amp; Collaborative AI Learning at <span lang="ko">경북대학교</span> (KNU).</p>
+        <div class="hero-card">
+          <strong>Prof. Nathaniel Kang <span lang="ko">(강네이트)</span></strong>
+          <div class="sub">Assistant Professor · <span lang="ko">IT대학 컴퓨터학부</span> · School of Computer Science, KNU</div>
         </div>
-    </header>
-
-    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-12 items-center">
-            
-            <div class="md:col-span-2">
-                <h2 class="text-4xl font-bold mb-6 text-blue-900">About the PI</h2>
-                <p class="text-gray-700 leading-relaxed mb-6 text-lg">
-                    I am an Assistant Professor at the <strong>IT 대학 컴퓨터학부 (College of IT, School of Computer Science)</strong>, Kyungpook National University, joining in March 2026. Prior to KNU, I gained valuable research experience as a Postdoctoral Fellow at Yonsei University (Statistics) and as a Researcher at UCLA. My goal is to share this global perspective on statistical machine learning, bridging foundational theory with secure AI applications, and I am dedicated to growing alongside students who are eager to explore the future of trustworthy intelligence.
-                </p>
-                
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center">PHD</div>
-                        <div>
-                            <p class="font-bold text-gray-900">Yonsei University</p>
-                            <p class="text-gray-500 text-xs">Statistics and Data Science</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center">MS</div>
-                        <div>
-                            <p class="font-bold text-gray-900">University of California, Los Angeles (UCLA)</p>
-                            <p class="text-gray-500 text-xs">Master of Science in Engineering</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600 font-bold w-12 text-center">BS</div>
-                        <div>
-                            <p class="font-bold text-gray-900">UCLA & NTU</p>
-                            <p class="text-gray-500 text-xs">Computer Science / Statistics</p>
-                        </div>
-                    </div>
-                </div>
-                <p class="mt-8 text-blue-600 font-medium italic text-sm">Hometown: Irvine, California, USA</p>
-            </div>
-
-            <div class="bg-white p-5 rounded-3xl shadow-xl border border-gray-100 text-center relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-full bg-blue-50 opacity-50 -z-10"></div>
-                <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative z-10 shadow-sm">
-                    <img src="kang-Nathaniel-id-0.jpg?v=2" alt="Nathaniel Kang" class="w-full h-full object-cover">
-                </div>
-                <p class="font-bold text-blue-900 text-lg relative z-10">Nathaniel Kang, Ph.D.</p>
-                <p class="text-xs text-gray-500 uppercase tracking-widest mt-1 relative z-10">Kyungpook National University</p>
-            </div>
-            
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="mailto:natekang@knu.ac.kr?subject=SOCAL%20Lab%20—%20Prospective%20Student">Email to apply</a>
+          <a class="btn btn--ghost" href="research.html">Explore research</a>
         </div>
+      </div>
     </section>
 
-    <section id="publications" class="py-24 px-6 bg-white border-y border-gray-100">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center text-blue-900 uppercase tracking-tighter">Publications</h2>
-            
-            <div class="space-y-10">
-                <div>
-                    <h3 class="text-gray-400 font-bold mb-6 border-b pb-2">2025</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="if-badge">IF: 10.6</span>
-                                <span class="text-sm font-semibold text-gray-500 italic">IEEE Internet of Things Journal</span>
-                            </div>
-                            <p class="font-bold text-gray-900">Optimizing federated learning: Addressing key challenges in real-world applications</p>
-                            <p class="text-sm text-gray-600">N. Kang, Y. Kim, J. Im</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="if-badge">IF: 8.2</span>
-                                <span class="text-sm font-semibold text-gray-500 italic">Applied Soft Computing</span>
-                            </div>
-                            <p class="font-bold text-gray-900">Generalized additive models for mixed-data regression using informal data</p>
-                            <p class="text-sm text-gray-600">N. Kang, H. Kim, J. Im</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="if-badge">IF: 8.0</span>
-                                <span class="text-sm font-semibold text-gray-500 italic">Pattern Recognition</span>
-                            </div>
-                            <p class="font-bold text-gray-900">Calibrated mixup for imbalanced regression on tabular data</p>
-                            <p class="text-sm text-gray-600">N. Kang, K. Lee, J. Im</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="if-badge">IF: 2.3</span>
-                                <span class="text-sm font-semibold text-gray-500 italic">Expert Systems</span>
-                            </div>
-                            <p class="font-bold text-gray-900">Re-sampling calibrated SNN loss: A robust approach to non-IID data in federated learning</p>
-                            <p class="text-sm text-gray-600">N. Kang, J. Im</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-gray-400 font-bold mb-6 border-b pb-2">2024</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="if-badge">IF: 7.2</span>
-                                <span class="text-sm font-semibold text-gray-500 italic">IEEE Transactions on Big Data</span>
-                            </div>
-                            <p class="font-bold text-gray-900">Online news-based economic sentiment index</p>
-                            <p class="text-sm text-gray-600">N. Kang, D. Min, Y. Cho, D. W. Ko, H. H. Kim, J. Y. Choeh, J. Im</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center">
-                <a href="https://scholar.google.com/citations?user=h2iPQ0AAAAAJ" class="text-blue-600 font-bold hover:underline text-sm">Full list on Google Scholar &rarr;</a>
-            </div>
-
-            <div class="mt-20 space-y-10">
-                <h3 class="text-xl font-bold text-gray-400 uppercase tracking-widest border-b pb-2 mb-8">Working Papers</h3>
-
-                <div>
-                    <h4 class="text-lg font-bold text-blue-900 mb-6">Under Review (Journals)</h4>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="text-sm font-semibold text-gray-500 italic">IEEE Transactions on Dependable and Secure Computing</span>
-                            </div>
-                            <p class="font-bold text-gray-900 italic">Calibrating Non-IID Federated Models with Conditional Cryptographic Privacy</p>
-                            <p class="text-sm text-gray-600">N. Kang, J. Im</p>
-                        </div>
-
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="text-sm font-semibold text-gray-500 italic">Computers & Security</span>
-                            </div>
-                            <p class="font-bold text-gray-900 italic">Rethinking LLM Security Through the Lens of Deployment Configuration</p>
-                            <p class="text-sm text-gray-600">N. Kang, J. Im</p>
-                        </div>
-
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="text-sm font-semibold text-gray-500 italic">IEEE Transactions on Big Data</span>
-                            </div>
-                            <p class="font-bold text-gray-900 italic">Improving Temporal Consistency in Text-Based Indices with Rank-Informed Calibration</p>
-                            <p class="text-sm text-gray-600">N. Kang, J. Kim, Y. Lim, J. Jang, J. Im</p>
-                        </div>
-
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="text-sm font-semibold text-gray-500 italic">Government Information Quarterly</span>
-                            </div>
-                            <p class="font-bold text-gray-900 italic">Measuring the Implementation Gap: A Framework for Auditing Policy Erosion in Public Sector Technology Procurement</p>
-                            <p class="text-sm text-gray-600">N. Kang</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-bold text-blue-900 mb-6">Under Review (Conferences)</h4>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="text-sm font-semibold text-gray-500 italic">Under Double-Blind Review</span>
-                            </div>
-                            <p class="font-bold text-gray-900 italic">FedSynth: Federated Differentially Private Tabular Data Synthesis</p>
-                            <p class="text-sm text-gray-600">N. Kang</p>
-                        </div>
-
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="text-sm font-semibold text-gray-500 italic">Under Double-Blind Review</span>
-                            </div>
-                            <p class="font-bold text-gray-900 italic">LLMSynth: LLM-Augmented Constraint Discovery for High-Fidelity Tabular Data Synthesis [Scalable Data Science]</p>
-                            <p class="text-sm text-gray-600">N. Kang</p>
-                        </div>
-
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="text-sm font-semibold text-gray-500 italic">Under Double-Blind Review</span>
-                            </div>
-                            <p class="font-bold text-gray-900 italic">ProtoIR: Prototype-Guided Statistical Learning for Imbalanced Regression</p>
-                            <p class="text-sm text-gray-600">N. Kang</p>
-                        </div>
-
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="text-sm font-semibold text-gray-500 italic">Under Double-Blind Review</span>
-                            </div>
-                            <p class="font-bold text-gray-900 italic">CopulaCalib: Correlation-Preserving Calibration for Imbalanced Regression on Tabular Data</p>
-                            <p class="text-sm text-gray-600">N. Kang</p>
-                        </div>
-
-                        <div>
-                            <div class="flex items-center gap-3 mb-1">
-                                <span class="text-sm font-semibold text-gray-500 italic">Under Double-Blind Review</span>
-                            </div>
-                            <p class="font-bold text-gray-900 italic">Conditional Diffusion Models for Imbalanced Tabular Regression</p>
-                            <p class="text-sm text-gray-600">N. Kang</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="section" style="padding-top:0;padding-bottom:2.5rem">
+      <div class="wrap">
+        <div class="recruit-strip">
+          <p><span class="hl">Open recruitment</span> — <strong>Ph.D., M.S., and undergraduate researchers</strong> are sought in federated learning, data privacy, and synthetic data.</p>
+          <small lang="ko">석·박사 및 학부연구생 모집 · 지원 상시 환영</small>
         </div>
+      </div>
+    </div>
+
+    <section id="about" class="section section--tight-top">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="section__eyebrow">Principal investigator</p>
+          <h2 class="section__title">About the PI</h2>
+          <p class="section__lead">From Irvine and Seoul to Daegu — bridging rigorous statistics with secure, real-world AI.</p>
+        </div>
+        <div class="about-grid">
+          <div class="prose">
+            <p>
+              I am an Assistant Professor at the <strong lang="ko">IT대학 컴퓨터학부</strong> (College of IT, School of Computer Science), Kyungpook National University, starting March 2026. Before KNU, I was a Postdoctoral Fellow in Statistics at Yonsei University and a Researcher at UCLA.
+            </p>
+            <p>
+              My group works on <strong>federated &amp; privacy-aware learning</strong>, <strong>robust learning under imbalance</strong>, and <strong>governance for modern AI systems</strong> — always with a statistical lens. If you want rigorous methods, funded projects, and direct faculty mentorship, I would be glad to hear from you.
+            </p>
+            <div class="edu-row">
+              <span class="edu-badge">PhD</span>
+              <div><strong>Yonsei University</strong><br><span style="color:#64748b;font-size:0.88rem">Statistics and Data Science</span></div>
+            </div>
+            <div class="edu-row">
+              <span class="edu-badge">MS</span>
+              <div><strong>University of California, Los Angeles</strong><br><span style="color:#64748b;font-size:0.88rem">Master of Science in Engineering</span></div>
+            </div>
+            <div class="edu-row">
+              <span class="edu-badge">BS</span>
+              <div><strong>UCLA &amp; NTU</strong><br><span style="color:#64748b;font-size:0.88rem">Computer Science / Statistics</span></div>
+            </div>
+            <p style="margin-top:1.25rem;font-weight:600;color:var(--accent);font-size:0.95rem">Hometown: Irvine, California, USA</p>
+          </div>
+          <aside class="portrait-card float-slow">
+            <div class="portrait-card__img">
+              <img src="kang-Nathaniel-id-0.jpg?v=2" width="480" height="480" alt="Portrait of Nathaniel Kang">
+            </div>
+            <div class="portrait-card__cap">
+              <strong>Nathaniel Kang, Ph.D.</strong>
+              <span>Kyungpook National University</span>
+            </div>
+          </aside>
+        </div>
+      </div>
     </section>
 
-    <section id="join" class="py-24 px-6 bg-slate-50 border-t border-gray-100">
-        <div class="max-w-6xl mx-auto">
-            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100 grid md:grid-cols-5">
-                
-                <div class="md:col-span-3 p-12 lg:p-16 text-left">
-                    <h2 class="text-4xl font-extrabold text-blue-900 mb-2">Prospective Students</h2>
-                    <p class="text-lg text-blue-600 font-bold mb-6">연구실 학생 모집 (2026 Spring)</p>
-                    
-                    <p class="text-gray-700 mb-3 leading-relaxed font-medium">
-                        I am looking for self-motivated students to join SOCAL Lab. We value proactive thinkers who take ownership of their research and are eager to target top-tier conferences.
-                    </p>
-                    <p class="text-gray-500 mb-8 text-sm leading-relaxed">
-                        SOCAL 연구실과 함께할 열정적이고 자기주도적인 학생을 모집합니다. 실제 산업 문제를 해결하고 최고 수준의 연구 성과를 목표로 하는 연구원을 기다립니다. 학부연구생, 석사 및 박사 과정 연구원을 모집하고 있습니다.
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <span class="text-blue-500 mr-3 mt-1">✔</span>
-                            <div>
-                                <p class="text-sm text-gray-800 font-bold">Full Financial Support</p>
-                                <p class="text-sm text-gray-600">Eligible for the Brain Korea (BK) scholarship. We provide comprehensive funding to cover tuition and living expenses through dedicated lab research grants.</p>
-                                <p class="text-xs text-gray-400 mt-1">BK(Brain Korea) 장학금 지원 및 연구실 자체 연구비를 통한 전폭적인 재정 지원(등록금 및 생활비 보장).</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <span class="text-blue-500 mr-3 mt-1">✔</span>
-                            <div>
-                                <p class="text-sm text-gray-800 font-bold">Dedicated High-Performance Compute</p>
-                                <p class="text-sm text-gray-600">Zero-wait time for experiments. Students have direct access to internal lab nodes featuring the latest <strong>NVIDIA RTX 5090 (32GB GDDR7, 21,760 CUDA cores)</strong>.</p>
-                                <p class="text-xs text-gray-400 mt-1">공용 서버 대기 없이 즉각적인 대규모 모델 학습이 가능한 최신 RTX 5090 전용 컴퓨팅 인프라 제공.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <span class="text-blue-500 mr-3 mt-1">✔</span>
-                            <div>
-                                <p class="text-sm text-gray-800 font-bold">Real-World Projects & Career Growth</p>
-                                <p class="text-sm text-gray-600">Engage in well-funded government AI projects, building highly employable skills for top-tier Korean tech giants and research institutes.</p>
-                                <p class="text-xs text-gray-400 mt-1">정부 지원 대형 AI 프로젝트 참여를 통해 국내 최고 수준의 IT 기업 및 연구소 진출을 위한 실무 역량 강화.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:col-span-2 bg-blue-900 p-12 lg:p-16 text-white flex flex-col justify-center text-center">
-                    <h3 class="text-2xl font-bold mb-2">How to Apply</h3>
-                    <p class="text-blue-300 text-sm mb-8">지원 방법</p>
-                    
-                    <div class="mb-8">
-                        <p class="text-blue-100 text-sm mb-2">Please send your CV to my email:</p>
-                        <p class="text-white font-bold text-lg tracking-wide border-b border-blue-500/30 pb-1 inline-block">
-                            natekang@knu.ac.kr
-                        </p>
-                    </div>
-
-                    <a href="mailto:natekang@knu.ac.kr" class="block text-center bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:-translate-y-1">
-                        Send Email Now
-                    </a>
-                    <p class="mt-6 text-[10px] opacity-60 uppercase tracking-widest">IT 대학 컴퓨터학부 &bull; KNU</p>
-                </div>
-            </div>
+    <section id="research" class="section section--research-showcase" aria-labelledby="research-heading">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="section__eyebrow">Research program</p>
+          <h2 id="research-heading" class="section__title">What we work on</h2>
+          <p class="section__lead">Three threads — one goal: models and systems you can trust when data are messy, private, or rare.</p>
         </div>
+        <div class="pillars pillars--fancy">
+          <a class="pillar-card pillar-card--fl" href="research.html#theme-fl">
+            <span class="pillar-card__index" aria-hidden="true">01</span>
+            <span class="pillar-card__icon-wrap" aria-hidden="true">
+              <svg class="pillar-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </span>
+            <h3>Federated learning &amp; privacy</h3>
+            <p>Robust aggregation and learning when local data are non-IID and never leave the device.</p>
+            <span class="pillar-card__more">See details <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="pillar-card pillar-card--ir" href="research.html#theme-ir">
+            <span class="pillar-card__index" aria-hidden="true">02</span>
+            <span class="pillar-card__icon-wrap" aria-hidden="true">
+              <svg class="pillar-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l3-3 3 3 7-7"/></svg>
+            </span>
+            <h3>Imbalanced &amp; tabular ML</h3>
+            <p>Calibration, synthesis, and regression when the tail of the distribution matters most.</p>
+            <span class="pillar-card__more">See details <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="pillar-card pillar-card--gov" href="research.html#theme-align">
+            <span class="pillar-card__index" aria-hidden="true">03</span>
+            <span class="pillar-card__icon-wrap" aria-hidden="true">
+              <svg class="pillar-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <h3>Alignment &amp; governance</h3>
+            <p>Auditing and privacy frameworks as LLMs and public-sector AI scale in the wild.</p>
+            <span class="pillar-card__more">See details <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <footer class="py-12 text-center text-gray-400 text-xs">
-        <p>&copy; 2026 SOCAL Lab @ Kyungpook National University. From Irvine to Daegu.</p>
-    </footer>
+    <section id="publications" class="section section--pubs">
+      <div class="wrap" style="max-width:720px">
+        <div class="section__head">
+          <p class="section__eyebrow">Scholarship</p>
+          <h2 class="section__title">Publications</h2>
+          <p class="section__lead">Selected peer-reviewed work. Full bibliography on Google Scholar.</p>
+        </div>
 
+        <h3 class="pub-year">2025</h3>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="if-badge">IF 10.6</span><span class="venue">IEEE Internet of Things Journal</span></div>
+          <h3 class="pub-title">Optimizing federated learning: Addressing key challenges in real-world applications</h3>
+          <p class="pub-authors">N. Kang, Y. Kim, J. Im</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="if-badge">IF 8.2</span><span class="venue">Applied Soft Computing</span></div>
+          <h3 class="pub-title">Generalized additive models for mixed-data regression using informal data</h3>
+          <p class="pub-authors">N. Kang, H. Kim, J. Im</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="if-badge">IF 8.0</span><span class="venue">Pattern Recognition</span></div>
+          <h3 class="pub-title">Calibrated mixup for imbalanced regression on tabular data</h3>
+          <p class="pub-authors">N. Kang, K. Lee, J. Im</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="if-badge">IF 2.3</span><span class="venue">Expert Systems</span></div>
+          <h3 class="pub-title">Re-sampling calibrated SNN loss: A robust approach to non-IID data in federated learning</h3>
+          <p class="pub-authors">N. Kang, J. Im</p>
+        </article>
+
+        <h3 class="pub-year">2024</h3>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="if-badge">IF 7.2</span><span class="venue">IEEE Transactions on Big Data</span></div>
+          <h3 class="pub-title">Online news-based economic sentiment index</h3>
+          <p class="pub-authors">N. Kang, D. Min, Y. Cho, D. W. Ko, H. H. Kim, J. Y. Choeh, J. Im</p>
+        </article>
+
+        <a class="scholar-link" href="https://scholar.google.com/citations?user=h2iPQ0AAAAAJ">Full list on Google Scholar →</a>
+
+        <h3 class="subsec-title">Working papers</h3>
+        <p style="color:#64748b;font-size:0.92rem;margin:0 0 0.35rem">Manuscripts under review or in active revision for resubmission — titles may change with revision.</p>
+        <p style="color:#64748b;font-size:0.82rem;margin:0 0 1rem;line-height:1.55"><strong>Journals:</strong> venues name the current submission target and may change after revision or resubmission. <strong>Conferences:</strong> while a paper is under anonymous (double-blind) review, we do <em>not</em> list the conference or track name on this page.</p>
+
+        <h4 class="pub-year" style="margin-top:0.5rem;font-size:0.8rem">Under review (journals)</h4>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">IEEE Transactions on Dependable and Secure Computing</span></div>
+          <h3 class="pub-title"><em>Calibrating Non-IID Federated Models with Conditional Cryptographic Privacy</em></h3>
+          <p class="pub-authors">N. Kang, J. Im</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Engineering Applications of Artificial Intelligence</span></div>
+          <h3 class="pub-title"><em>Not All Large Language Model Deployments Are Created Equal: A Taxonomy-Driven Survey of Security, Defense, and Governance</em></h3>
+          <p class="pub-authors">N. Kang, J. Im</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Government Information Quarterly</span></div>
+          <h3 class="pub-title"><em>Measuring the Implementation Gap: A Framework for Auditing Policy Erosion in Public Sector Technology Procurement</em></h3>
+          <p class="pub-authors">N. Kang, J. Im</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Neurocomputing</span></div>
+          <h3 class="pub-title"><em>Orchestrating Federated Tabular Synthesis at Scale with Fault-Tolerant Pipeline Execution</em></h3>
+          <p class="pub-authors">N. Kang</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Neurocomputing</span></div>
+          <h3 class="pub-title"><em>CrossSynth: Federated Differentially Private Tabular Data Synthesis with Cross-Party Correlation Preservation</em></h3>
+          <p class="pub-authors">N. Kang</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Knowledge-Based Systems</span></div>
+          <h3 class="pub-title"><em>One Privacy Budget to Rule Them All: Synthesizing Multi-Table Databases Under Differential Privacy</em></h3>
+          <p class="pub-authors">N. Kang</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Applied Intelligence</span></div>
+          <h3 class="pub-title"><em>Making Gradient Boosting Care About Rare Targets</em></h3>
+          <p class="pub-authors">N. Kang</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Data &amp; Knowledge Engineering</span></div>
+          <h3 class="pub-title"><em>LLMSynth: LLM-Augmented Semantic Constraint Discovery for High-Fidelity Neural Tabular Data Augmentation</em></h3>
+          <p class="pub-authors">N. Kang</p>
+        </article>
+
+        <h4 class="pub-year" style="margin-top:1rem;font-size:0.8rem">In revision (journals)</h4>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Expert Systems with Applications</span></div>
+          <h3 class="pub-title"><em>Improving Temporal Consistency in Text-Based Indices with Rank-Informed Calibration</em></h3>
+          <p class="pub-authors">N. Kang, J. Kim, Y. Lim, J. Jang, J. Im</p>
+        </article>
+
+        <h4 class="pub-year" style="margin-top:1rem;font-size:0.8rem">Under review (conferences)</h4>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Peer review — venue withheld (anonymity)</span></div>
+          <h3 class="pub-title"><em>FedSynth: Federated Differentially Private Tabular Data Synthesis</em></h3>
+          <p class="pub-authors">N. Kang</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Peer review — venue withheld (anonymity)</span></div>
+          <h3 class="pub-title"><em>ProtoIR: Prototype-Guided Statistical Learning for Imbalanced Regression</em></h3>
+          <p class="pub-authors">N. Kang</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Peer review — venue withheld (anonymity)</span></div>
+          <h3 class="pub-title"><em>CopulaCalib: Correlation-Preserving Calibration for Imbalanced Regression on Tabular Data</em></h3>
+          <p class="pub-authors">N. Kang</p>
+        </article>
+        <article class="pub-item">
+          <div class="pub-meta"><span class="venue">Peer review — venue withheld (anonymity)</span></div>
+          <h3 class="pub-title"><em>Conditional Diffusion Models for Imbalanced Tabular Regression</em></h3>
+          <p class="pub-authors">N. Kang</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="join" class="section section--join">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="section__eyebrow">Join the lab</p>
+          <h2 class="section__title">Prospective students</h2>
+          <p class="section__lead">SOCAL Lab is <strong>actively recruiting Ph.D., M.S., and undergraduate researchers</strong>. If you are motivated, collegial, and serious about statistical machine learning and its applications in modern AI systems, please get in touch — I read every message.</p>
+        </div>
+
+        <div class="join-shell">
+          <div class="join-main">
+            <h3 class="font-display" style="margin:0 0 0.5rem;font-size:1.65rem;font-weight:800;color:var(--ink)">What we offer</h3>
+            <p style="margin:0 0 1.25rem;color:#475569;font-size:1.02rem;line-height:1.65">
+              The lab emphasizes <strong>close collaboration between students and faculty</strong>: well-scoped projects, dedicated compute, and support for strong venues in both <em>machine learning</em> and <em>application-focused outlets</em> where the ideas fit best.
+            </p>
+            <p lang="ko" style="margin:0 0 1.5rem;color:#64748b;font-size:0.95rem;line-height:1.65">
+              연구실에서는 교수와 학생이 가깝게 협력하는 분위기를 가장 중요하게 생각합니다. 연구 과제는 범위를 분명히 정해 진행하고, 실험에는 전용 연산 자원을 쓰며, 논문은 연구 내용에 맞는 학회나 저널을 함께 고르고 다듬어 나가고자 합니다. 관심 있으시면 부담 없이 메일 주시면, 보내주신 내용을 꼼꼼히 읽고 답드리겠습니다.
+            </p>
+            <ul class="join-list">
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Full financial support</strong>
+                  <span>BK scholarship eligibility and lab support for tuition and living expenses where applicable.</span>
+                  <span class="ko" lang="ko">BK(Brain Korea) 장학금 지원 및 연구실 연구비를 통한 재정 지원.</span>
+                </div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Dedicated compute</strong>
+                  <span>Lab nodes for large experiments — including access to high-memory NVIDIA RTX 5090 GPUs for model training.</span>
+                  <span class="ko" lang="ko">대규모 실험을 위한 전용 GPU 워크스테이션 (RTX 5090 등).</span>
+                </div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Real projects, real impact</strong>
+                  <span>Government-backed AI projects — experience that transfers to top industry labs and research institutes.</span>
+                  <span class="ko" lang="ko">정부 지원 AI 프로젝트 참여로 실무 역량 강화.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <aside class="join-aside" aria-labelledby="apply-heading">
+            <h3 id="apply-heading" class="font-display" style="margin:0 0 0.35rem;font-size:1.5rem;font-weight:800;color:#fff">How to apply</h3>
+            <p style="margin:0 0 1.25rem;color:#93c5fd;font-size:0.9rem" lang="ko">지원 방법</p>
+            <p style="margin:0;font-size:0.95rem;color:#cbd5e1">Send your CV and a short note on what excites you:</p>
+            <p style="margin:0.75rem 0 0;font-size:1.15rem;font-weight:800;word-break:break-all">
+              <a href="mailto:natekang@knu.ac.kr?subject=SOCAL%20Lab%20—%20Prospective%20Student" style="color:#fff">natekang@knu.ac.kr</a>
+            </p>
+            <a class="btn-mail" href="mailto:natekang@knu.ac.kr?subject=SOCAL%20Lab%20—%20Prospective%20Student">Write email now</a>
+            <p style="margin-top:1.5rem;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.65">IT대학 컴퓨터학부 · KNU</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 SOCAL Lab · Kyungpook National University · From Irvine to Daegu</p>
+    <p style="margin-top:0.5rem"><a href="https://scholar.google.com/citations?user=h2iPQ0AAAAAJ">Google Scholar</a></p>
+  </footer>
+
+  <script>
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var panel = document.getElementById('mobile-panel');
+    if (!btn || !panel) return;
+    btn.addEventListener('click', function () {
+      var open = !panel.classList.contains('is-open');
+      panel.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    panel.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        panel.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
