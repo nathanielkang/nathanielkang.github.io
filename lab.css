@@ -1519,7 +1519,54 @@ body.theme-dark {
   }
 }
 
-/* Prospective students (prospective.html) — figure grid */
+/* Prospective students (prospective.html) */
+.site-nav__links a[aria-current="page"] {
+  color: var(--accent);
+  background: rgba(37, 99, 235, 0.08);
+}
+.mobile-panel a[aria-current="page"] {
+  color: #fff;
+  background: rgba(59, 130, 246, 0.35);
+}
+.prospect-hero {
+  position: relative;
+  padding: clamp(3.25rem, 8vw, 4.75rem) 1.5rem clamp(2.75rem, 6vw, 3.5rem);
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 42%, #f1f5f9 100%);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+}
+.prospect-hero__kicker {
+  margin: 0 0 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+.prospect-hero__title {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: #0f172a;
+  line-height: 1.12;
+}
+.prospect-hero__deck {
+  margin: 0 auto;
+  max-width: 38rem;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: #475569;
+}
+.prospect-subh {
+  margin-top: 1.35rem;
+  margin-bottom: 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+.prospect-subh:first-of-type {
+  margin-top: 0.25rem;
+}
 .prospect-figures {
   display: grid;
   gap: 1.75rem;
@@ -1533,13 +1580,11 @@ body.theme-dark {
 }
 .prospect-figure {
   margin: 0;
-  background: rgba(15, 23, 42, 0.55);
-  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: #fff;
+  border: 1px solid rgba(148, 163, 184, 0.35);
   border-radius: 1rem;
   padding: 0.75rem 0.75rem 1rem;
-}
-.theme-dark .prospect-figure {
-  background: rgba(15, 23, 42, 0.72);
+  box-shadow: var(--shadow-soft);
 }
 .prospect-figure img {
   display: block;
@@ -1551,12 +1596,12 @@ body.theme-dark {
   margin-top: 0.75rem;
   font-size: 0.88rem;
   line-height: 1.45;
-  color: #94a3b8;
+  color: #64748b;
 }
 .prospect-topic-list {
   margin: 0.35rem 0 0;
   padding-left: 1.15rem;
-  color: #cbd5e1;
+  color: #334155;
   line-height: 1.55;
 }
 .prospect-topic-list li {

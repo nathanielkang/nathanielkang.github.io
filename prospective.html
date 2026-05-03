@@ -27,9 +27,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="lab.css?v=20260422-prospect">
+  <link rel="stylesheet" href="lab.css?v=20260423-prospect">
 </head>
-<body class="theme-dark">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header>
@@ -38,7 +38,7 @@
       <div class="site-nav__links">
         <a href="index.html#about">About</a>
         <a href="research.html">Research</a>
-        <a href="prospective.html" style="color:#93c5fd">Prospective students</a>
+        <a href="prospective.html" aria-current="page">Prospective students</a>
         <a href="index.html#publications">Publications</a>
         <a href="index.html#join">Join</a>
       </div>
@@ -52,20 +52,18 @@
     <div id="mobile-panel-p" class="mobile-panel">
       <a href="index.html#about">About</a>
       <a href="research.html">Research</a>
-      <a href="prospective.html">Prospective students</a>
+      <a href="prospective.html" aria-current="page">Prospective students</a>
       <a href="index.html#publications">Publications</a>
       <a class="mobile-panel__cta" href="index.html#join">Join SOCAL Lab</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="research-hero research-hero--lux" aria-labelledby="prospective-title">
-      <div class="research-hero__grid" aria-hidden="true"></div>
-      <div class="inner">
-        <p class="research-hero__kicker">SOCAL Lab · Kyungpook National University</p>
-        <h1 id="prospective-title" class="font-display research-hero__title">Prospective students</h1>
-        <p class="research-hero__deck">Statistical Optimization &amp; Collaborative AI Learning (SOCAL Lab), Department of Computer Science and Engineering. <strong>Principal investigator:</strong> Nathaniel Kang — <a href="mailto:natekang@knu.ac.kr" style="color:#bae6fd">natekang@knu.ac.kr</a> · <a href="https://nathanielkang.github.io/" style="color:#bae6fd">nathanielkang.github.io</a></p>
-        <div class="research-hero__shine" aria-hidden="true"></div>
+    <section class="prospect-hero" aria-labelledby="prospective-title">
+      <div class="wrap" style="max-width:44rem;margin:0 auto;text-align:center">
+        <p class="prospect-hero__kicker">SOCAL Lab · Kyungpook National University</p>
+        <h1 id="prospective-title" class="prospect-hero__title font-display">Prospective students</h1>
+        <p class="prospect-hero__deck">Statistical Optimization &amp; Collaborative AI Learning (SOCAL Lab), Department of Computer Science and Engineering, Kyungpook National University.</p>
       </div>
     </section>
 
@@ -109,7 +107,7 @@
           <h2 id="areas-heading" class="section__title">Representative directions</h2>
         </div>
         <div class="prose">
-          <h3 style="font-size:1.05rem;margin-top:1.25rem;color:#e2e8f0">1. Federated learning (data privacy)</h3>
+          <h3 class="prospect-subh">1. Federated learning (data privacy)</h3>
           <p>Collaborative learning when raw records cannot be centralized, with emphasis on statistical behavior under client heterogeneity and privacy constraints.</p>
           <ul class="prospect-topic-list">
             <li>Federated optimization and aggregation under <strong>non-IID</strong> partitions and <strong>distribution shift</strong>.</li>
@@ -117,7 +115,7 @@
             <li><strong>Communication- and computation-aware</strong> federated training under realistic deployment constraints (dropouts, stragglers).</li>
           </ul>
 
-          <h3 style="font-size:1.05rem;margin-top:1.5rem;color:#e2e8f0">2. Synthetic data</h3>
+          <h3 class="prospect-subh">2. Synthetic data</h3>
           <p>Generation and augmentation of <strong>tabular</strong> structured data when direct release of sensitive spreadsheets is restricted, including federated and differentially private synthesis.</p>
           <ul class="prospect-topic-list">
             <li><strong>High-fidelity tabular synthesis</strong> with semantic or structural constraints (including LLM-assisted constraint discovery where appropriate).</li>
@@ -125,7 +123,7 @@
             <li><strong>Augmentation and resampling</strong> to improve coverage in <strong>low-density / tail</strong> regions, with evaluation beyond headline averages.</li>
           </ul>
 
-          <h3 style="font-size:1.05rem;margin-top:1.5rem;color:#e2e8f0">3. AI alignment (LLM)</h3>
+          <h3 class="prospect-subh">3. AI alignment (LLM)</h3>
           <p>Evaluation- and governance-oriented work on <strong>large language models</strong> in institutional settings, emphasizing measurable risk and accountability.</p>
           <ul class="prospect-topic-list">
             <li><strong>Privacy-aware evaluation</strong> and auditing workflows for deployed or procured LLM systems.</li>
