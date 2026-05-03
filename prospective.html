@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prospective students — SOCAL Lab | KNU</title>
+  <meta name="description" content="SOCAL Lab at KNU: research directions in federated learning (data privacy), synthetic data, and AI alignment (LLM), plus expectations and how to inquire about Ph.D., M.S., and undergraduate positions.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE88Q89RCG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TE88Q89RCG');
+  </script>
+
+  <meta property="og:title" content="Prospective students — SOCAL Lab">
+  <meta property="og:description" content="Research threads, expectations, and how to contact Prof. Nathaniel Kang about joining SOCAL Lab at Kyungpook National University.">
+  <meta property="og:image" content="https://nathanielkang.github.io/preview.png">
+  <meta property="og:url" content="https://nathanielkang.github.io/prospective.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prospective students — SOCAL Lab">
+  <meta name="twitter:description" content="Federated learning, synthetic data, AI alignment (LLM) — recruiting Ph.D., M.S., and undergraduate researchers at KNU.">
+  <meta name="twitter:image" content="https://nathanielkang.github.io/preview.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lab.css?v=20260422-prospect">
+</head>
+<body class="theme-dark">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="site-nav__brand" href="index.html">SOCAL<span>LAB</span></a>
+      <div class="site-nav__links">
+        <a href="index.html#about">About</a>
+        <a href="research.html">Research</a>
+        <a href="prospective.html" style="color:#93c5fd">Prospective students</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#join">Join</a>
+      </div>
+      <a class="site-nav__cta" href="index.html#join">Join us</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-panel-p" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-panel-p" class="mobile-panel">
+      <a href="index.html#about">About</a>
+      <a href="research.html">Research</a>
+      <a href="prospective.html">Prospective students</a>
+      <a href="index.html#publications">Publications</a>
+      <a class="mobile-panel__cta" href="index.html#join">Join SOCAL Lab</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="research-hero research-hero--lux" aria-labelledby="prospective-title">
+      <div class="research-hero__grid" aria-hidden="true"></div>
+      <div class="inner">
+        <p class="research-hero__kicker">SOCAL Lab · Kyungpook National University</p>
+        <h1 id="prospective-title" class="font-display research-hero__title">Prospective students</h1>
+        <p class="research-hero__deck">Statistical Optimization &amp; Collaborative AI Learning (SOCAL Lab), Department of Computer Science and Engineering. <strong>Principal investigator:</strong> Nathaniel Kang — <a href="mailto:natekang@knu.ac.kr" style="color:#bae6fd">natekang@knu.ac.kr</a> · <a href="https://nathanielkang.github.io/" style="color:#bae6fd">nathanielkang.github.io</a></p>
+        <div class="research-hero__shine" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight-top" aria-labelledby="overview-heading">
+      <div class="wrap" style="max-width:760px">
+        <div class="section__head">
+          <p class="section__eyebrow">Overview</p>
+          <h2 id="overview-heading" class="section__title">Mission and fit</h2>
+        </div>
+        <div class="prose">
+          <p>SOCAL Lab develops statistically principled methods for settings where standard machine learning pipelines degrade: decentralized and privacy-sensitive data, long-tailed and imbalanced regimes, and deployment of large language models under accountability constraints. We recruit motivated Ph.D., M.S., and undergraduate researchers who are prepared to combine careful theory, reproducible experimentation, and clear scientific communication.</p>
+          <p>The <strong>topic lists below are illustrative research threads</strong> intended to help you articulate your interests in an inquiry email. They are <strong>not</strong> a guarantee of immediate openings on every thread; thesis and project directions are determined jointly based on fit, feasibility, and funding.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="figures-heading">
+      <div class="wrap" style="max-width:1100px">
+        <div class="section__head">
+          <p class="section__eyebrow">Visual primer</p>
+          <h2 id="figures-heading" class="section__title">Two recurring settings</h2>
+          <p class="section__lead">Centralized vs. federated learning (raw rows stay local); synthetic augmentation to improve utility in low-density tail regions of tabular targets.</p>
+        </div>
+        <div class="prospect-figures">
+          <figure class="prospect-figure">
+            <img src="img/openlab_soccal_fig03_centralized_vs_fl.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Comparison of centralized learning, where raw tabular data from multiple clients are sent to a central datacenter, and federated learning, where raw data remain on local devices and only model updates are aggregated at a central server.">
+            <figcaption>Centralized vs. federated learning: only model updates—not full raw rows—are aggregated centrally when local silos must be protected.</figcaption>
+          </figure>
+          <figure class="prospect-figure">
+            <img src="img/openlab_soccal_fig05_synthetic_tail.png" width="1536" height="855" loading="lazy" decoding="async" alt="Normalized target distribution with original data and synthetic tail boost in the low-density tail, and a before-and-after comparison of model utility in rare regions after synthetic augmentation.">
+            <figcaption>Synthetic tail augmentation: enriching sparse regions of the target distribution to improve model behavior where the original sample is thin.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight-top" aria-labelledby="areas-heading">
+      <div class="wrap" style="max-width:760px">
+        <div class="section__head">
+          <p class="section__eyebrow">Research areas</p>
+          <h2 id="areas-heading" class="section__title">Representative directions</h2>
+        </div>
+        <div class="prose">
+          <h3 style="font-size:1.05rem;margin-top:1.25rem;color:#e2e8f0">1. Federated learning (data privacy)</h3>
+          <p>Collaborative learning when raw records cannot be centralized, with emphasis on statistical behavior under client heterogeneity and privacy constraints.</p>
+          <ul class="prospect-topic-list">
+            <li>Federated optimization and aggregation under <strong>non-IID</strong> partitions and <strong>distribution shift</strong>.</li>
+            <li><strong>Privacy-preserving</strong> federated protocols (e.g., differential privacy, secure aggregation, and risk-aware design) and their interaction with model utility.</li>
+            <li><strong>Communication- and computation-aware</strong> federated training under realistic deployment constraints (dropouts, stragglers).</li>
+          </ul>
+
+          <h3 style="font-size:1.05rem;margin-top:1.5rem;color:#e2e8f0">2. Synthetic data</h3>
+          <p>Generation and augmentation of <strong>tabular</strong> structured data when direct release of sensitive spreadsheets is restricted, including federated and differentially private synthesis.</p>
+          <ul class="prospect-topic-list">
+            <li><strong>High-fidelity tabular synthesis</strong> with semantic or structural constraints (including LLM-assisted constraint discovery where appropriate).</li>
+            <li><strong>Federated</strong> or <strong>cross-party</strong> synthesis preserving correlations while limiting disclosure of raw private tables.</li>
+            <li><strong>Augmentation and resampling</strong> to improve coverage in <strong>low-density / tail</strong> regions, with evaluation beyond headline averages.</li>
+          </ul>
+
+          <h3 style="font-size:1.05rem;margin-top:1.5rem;color:#e2e8f0">3. AI alignment (LLM)</h3>
+          <p>Evaluation- and governance-oriented work on <strong>large language models</strong> in institutional settings, emphasizing measurable risk and accountability.</p>
+          <ul class="prospect-topic-list">
+            <li><strong>Privacy-aware evaluation</strong> and auditing workflows for deployed or procured LLM systems.</li>
+            <li><strong>Security, defense, and governance</strong> perspectives on heterogeneous LLM deployments (structured surveys and taxonomies).</li>
+            <li><strong>Policy–implementation gaps</strong> in public-sector technology procurement and post-deployment accountability.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight-top" aria-labelledby="expect-heading">
+      <div class="wrap" style="max-width:760px">
+        <div class="section__head">
+          <p class="section__eyebrow">Expectations</p>
+          <h2 id="expect-heading" class="section__title">Mindset and preparation</h2>
+        </div>
+        <div class="prose">
+          <p><strong>Mindset and conduct.</strong> We expect members to be <strong>self-motivated</strong> and <strong>determined</strong>: research progress depends on sustained initiative through ambiguous phases of a project. <strong>Communication skills</strong> are essential—clear writing and spoken explanation of assumptions, limitations, and empirical findings are part of the research product, not an afterthought.</p>
+          <p><strong>Technical preparation.</strong> A strong foundation in <strong>probability and statistics</strong> and <strong>scientific programming</strong> (e.g., Python; version control; reproducible experimental workflows) is required for most projects. Coursework or equivalent experience in <strong>machine learning</strong>, <strong>numerical linear algebra / optimization</strong>, and <strong>deep learning</strong> is highly beneficial, depending on the thread. Students should expect to read primary literature critically and to iterate on experiments with disciplined logging and evaluation protocols.</p>
+          <p><strong>Collaboration.</strong> The lab values collegiality, intellectual honesty about negative or null results, and respect for privacy and data-use agreements in applied work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight-top section--join" aria-labelledby="inquire-heading">
+      <div class="wrap" style="max-width:760px">
+        <div class="section__head">
+          <p class="section__eyebrow">Next step</p>
+          <h2 id="inquire-heading" class="section__title">How to inquire</h2>
+        </div>
+        <div class="prose">
+          <p>Email <a href="mailto:natekang@knu.ac.kr?subject=SOCAL%20Lab%20%E2%80%94%20Prospective%20Student" style="color:var(--accent)">natekang@knu.ac.kr</a> with subject line <strong>SOCAL Lab — Prospective Student</strong>. Include (i) your <strong>CV or transcript summary</strong>, (ii) <strong>one or two</strong> topic bullets above that best match your interests, and (iii) a short paragraph on <strong>prior research or implementation experience</strong> (course projects are welcome) and <strong>what you hope to learn</strong> in a 6–12 month horizon.</p>
+          <p style="margin-top:1rem"><a class="btn btn--primary" href="mailto:natekang@knu.ac.kr?subject=SOCAL%20Lab%20%E2%80%94%20Prospective%20Student">Email to apply</a> <a class="btn btn--ghost" href="research.html">Research program</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 SOCAL Lab · Kyungpook National University</p>
+    <p style="margin-top:0.5rem"><a href="index.html">Home</a> · <a href="research.html">Research</a> · <a href="index.html#join">Join the lab</a></p>
+  </footer>
+
+  <script>
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var panel = document.getElementById('mobile-panel-p');
+    if (!btn || !panel) return;
+    btn.addEventListener('click', function () {
+      var open = !panel.classList.contains('is-open');
+      panel.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    panel.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        panel.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
