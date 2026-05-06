@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="lab.css?v=20260423-prospect">
+  <link rel="stylesheet" href="lab.css?v=20260424-prospect">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -89,12 +89,16 @@
         </div>
         <div class="prospect-figures">
           <figure class="prospect-figure">
-            <img src="img/openlab_soccal_fig03_centralized_vs_fl.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Comparison of centralized learning, where raw tabular data from multiple clients are sent to a central datacenter, and federated learning, where raw data remain on local devices and only model updates are aggregated at a central server.">
-            <figcaption>Centralized vs. federated learning: only model updates—not full raw rows—are aggregated centrally when local silos must be protected.</figcaption>
+            <button type="button" class="prospect-figure__trigger" aria-label="Open larger view: centralized vs. federated learning">
+              <img src="img/openlab_soccal_fig03_centralized_vs_fl.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Comparison of centralized learning, where raw tabular data from multiple clients are sent to a central datacenter, and federated learning, where raw data remain on local devices and only model updates are aggregated at a central server.">
+            </button>
+            <figcaption>Centralized vs. federated learning: only model updates—not full raw rows—are aggregated centrally when local silos must be protected. <span class="prospect-figure__hint">Click image to enlarge.</span></figcaption>
           </figure>
           <figure class="prospect-figure">
-            <img src="img/openlab_soccal_fig05_synthetic_tail.png" width="1536" height="855" loading="lazy" decoding="async" alt="Normalized target distribution with original data and synthetic tail boost in the low-density tail, and a before-and-after comparison of model utility in rare regions after synthetic augmentation.">
-            <figcaption>Synthetic tail augmentation: enriching sparse regions of the target distribution to improve model behavior where the original sample is thin.</figcaption>
+            <button type="button" class="prospect-figure__trigger" aria-label="Open larger view: synthetic tail augmentation">
+              <img src="img/openlab_soccal_fig05_synthetic_tail.png" width="1536" height="855" loading="lazy" decoding="async" alt="Normalized target distribution with original data and synthetic tail boost in the low-density tail, and a before-and-after comparison of model utility in rare regions after synthetic augmentation.">
+            </button>
+            <figcaption>Synthetic tail augmentation: enriching sparse regions of the target distribution to improve model behavior where the original sample is thin. <span class="prospect-figure__hint">Click image to enlarge.</span></figcaption>
           </figure>
         </div>
       </div>
@@ -141,9 +145,11 @@
           <h2 id="expect-heading" class="section__title">Mindset and preparation</h2>
         </div>
         <div class="prose">
-          <p><strong>Mindset and conduct.</strong> We expect members to be <strong>self-motivated</strong> and <strong>determined</strong>: research progress depends on sustained initiative through ambiguous phases of a project. <strong>Communication skills</strong> are essential—clear writing and spoken explanation of assumptions, limitations, and empirical findings are part of the research product, not an afterthought.</p>
-          <p><strong>Technical preparation.</strong> A strong foundation in <strong>probability and statistics</strong> and <strong>scientific programming</strong> (e.g., Python; version control; reproducible experimental workflows) is required for most projects. Coursework or equivalent experience in <strong>machine learning</strong>, <strong>numerical linear algebra / optimization</strong>, and <strong>deep learning</strong> is highly beneficial, depending on the thread. Students should expect to read primary literature critically and to iterate on experiments with disciplined logging and evaluation protocols.</p>
-          <p><strong>Collaboration.</strong> The lab values collegiality, intellectual honesty about negative or null results, and respect for privacy and data-use agreements in applied work.</p>
+          <ul class="prospect-expect-list">
+            <li><strong>Mindset and conduct.</strong> We expect members to be <strong>self-motivated</strong> and <strong>determined</strong>: research progress depends on sustained initiative through ambiguous phases of a project. <strong>Communication skills</strong> are essential—clear writing and spoken explanation of assumptions, limitations, and empirical findings are part of the research product, not an afterthought.</li>
+            <li><strong>Technical preparation.</strong> A strong foundation in <strong>probability and statistics</strong> and <strong>scientific programming</strong> (e.g., Python) is required for most projects. Coursework or equivalent experience in <strong>machine learning</strong>, <strong>numerical linear algebra / optimization</strong>, and <strong>deep learning</strong> is highly beneficial, depending on the thread. Students should expect to read primary literature critically and to iterate on experiments with disciplined logging and evaluation protocols.</li>
+            <li><strong>Collaboration.</strong> The lab values collegiality, intellectual honesty about negative or null results, and respect for privacy and data-use agreements in applied work.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -161,6 +167,13 @@
       </div>
     </section>
   </main>
+
+  <dialog id="prospect-lightbox" class="prospect-lightbox" aria-label="Enlarged figure">
+    <div class="prospect-lightbox__panel">
+      <button type="button" class="prospect-lightbox__close" aria-label="Close">&times;</button>
+      <img id="prospect-lightbox-img" class="prospect-lightbox__img" src="" alt="">
+    </div>
+  </dialog>
 
   <footer class="site-footer">
     <p>&copy; 2026 SOCAL Lab · Kyungpook National University</p>
@@ -184,6 +197,29 @@
         btn.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
+    });
+  })();
+  (function () {
+    var dlg = document.getElementById('prospect-lightbox');
+    var imgEl = document.getElementById('prospect-lightbox-img');
+    if (!dlg || !imgEl) return;
+    var closeBtn = dlg.querySelector('.prospect-lightbox__close');
+    document.querySelectorAll('.prospect-figure__trigger').forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var im = trigger.querySelector('img');
+        if (!im) return;
+        imgEl.src = im.currentSrc || im.src;
+        imgEl.alt = im.alt || '';
+        if (typeof dlg.showModal === 'function') dlg.showModal();
+      });
+    });
+    dlg.addEventListener('close', function () {
+      imgEl.removeAttribute('src');
+      imgEl.alt = '';
+    });
+    if (closeBtn) closeBtn.addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg) dlg.close();
     });
   })();
   </script>
