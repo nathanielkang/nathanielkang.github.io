@@ -1621,6 +1621,36 @@ body.theme-dark {
   font-size: 0.8rem;
   color: #94a3b8;
 }
+.prospect-handout {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  background: #fff;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+.prospect-handout__link {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+.prospect-handout__link:hover {
+  text-decoration: underline;
+}
+.prospect-handout__link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+.prospect-handout__meta {
+  display: inline-block;
+  margin-left: 0.25rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
 .prospect-lightbox {
   padding: 0;
   border: none;
