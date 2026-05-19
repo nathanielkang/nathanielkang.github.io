@@ -725,6 +725,12 @@ body {
   background: linear-gradient(135deg, #fef3c7, #fde68a);
   border-radius: 0.35rem;
 }
+.pub-status {
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #b45309;
+}
 .venue {
   font-size: 0.85rem;
   font-weight: 600;
