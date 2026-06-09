@@ -405,6 +405,20 @@ body {
   font-weight: 600;
   color: var(--slate);
 }
+.recruit-strip__follow {
+  width: 100%;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: #64748b !important;
+}
+.recruit-strip__follow a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.recruit-strip__follow a:hover {
+  text-decoration: underline;
+}
 .recruit-strip .hl {
   color: var(--accent);
 }
