@@ -1772,3 +1772,51 @@ body.theme-dark {
 .prospect-topic-list li {
   margin-bottom: 0.35rem;
 }
+
+/* Members (members.html) */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.member-card {
+  padding: 1.25rem 1rem 1.35rem;
+  background: #fff;
+  border: 1px solid #e8eef4;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+.member-card__photo {
+  width: 9.5rem;
+  height: 9.5rem;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e2e8f0;
+  background: #f8fafc;
+}
+.member-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.member-card__name {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+.member-card__name-ko {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+.member-card__role {
+  margin: 0.5rem 0 0;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.45;
+}
