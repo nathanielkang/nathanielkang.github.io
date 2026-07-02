@@ -3,7 +3,7 @@
   if (!carousels.length) return;
 
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var INTERVAL = 5500;
+  var INTERVAL = 4000;
 
   carousels.forEach(function (carousel) {
     var slides = carousel.querySelectorAll('.atmosphere-carousel__slide');
