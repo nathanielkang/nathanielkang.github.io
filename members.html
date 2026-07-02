@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="lab.css?v=20260702-atmosphere">
+  <link rel="stylesheet" href="lab.css?v=20260702-carousel">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -62,14 +62,36 @@
 
   <main id="main">
     <section class="prospect-hero" aria-labelledby="members-title">
-      <div class="wrap" style="max-width:44rem;margin:0 auto;text-align:center">
+      <div class="wrap prospect-hero__intro">
         <p class="prospect-hero__kicker">SOCAL Lab · Kyungpook National University</p>
         <h1 id="members-title" class="prospect-hero__title font-display">Members</h1>
         <p class="prospect-hero__deck">Current members of the Statistical Optimization &amp; Collaborative AI Learning research group.</p>
         <p lang="ko" class="prospect-hero__deck" style="margin-top:0.5rem;font-size:0.95rem;color:#64748b">연구실 구성원</p>
-        <figure class="page-atmosphere">
-          <img src="img/socal-photo-imbalanced-tail.png" width="1920" height="1080" loading="eager" decoding="async" alt="Research workspace with a monitor showing a skewed regression target histogram, tail-boost augmentation, and diffusion sampling notation.">
-        </figure>
+      </div>
+      <div class="wrap atmosphere-carousel-wrap">
+        <div class="atmosphere-carousel" role="region" aria-roledescription="carousel" aria-label="Mathematics and statistics">
+          <div class="atmosphere-carousel__viewport">
+            <figure class="atmosphere-carousel__slide is-active">
+              <img src="img/atmosphere/socal-atmosphere-svd.png" width="1920" height="1080" decoding="async" alt="Singular value decomposition: A equals U Sigma V transpose, on a concrete university corridor at golden hour.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-chebyshev.png" width="1920" height="1080" decoding="async" alt="Chebyshev inequality: probability that X deviates from the mean by at least k standard deviations is at most one over k squared, on a snow-covered campus path.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-clt.png" width="1920" height="1080" decoding="async" alt="Central limit theorem: standardized sample mean converges to a standard normal distribution, over a dusk campus skyline.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-cauchy-schwarz.png" width="1920" height="1080" decoding="async" alt="Cauchy–Schwarz inequality: absolute inner product at most product of norms, inside a spiral concrete atrium.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-spectral.png" width="1920" height="1080" decoding="async" alt="Eigenvalue equation Av equals lambda v and spectral theorem for symmetric matrices, in a glass atrium with rainbow light.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-bayes.png" width="1920" height="1080" decoding="async" alt="Bayes theorem: posterior probability equals likelihood times prior divided by evidence, on rain-streaked glass at night.">
+            </figure>
+          </div>
+          <div class="atmosphere-carousel__dots" role="tablist" aria-label="Choose slide"></div>
+        </div>
       </div>
     </section>
 
@@ -109,6 +131,14 @@
             <p class="member-card__name-ko" lang="ko">황준성</p>
             <p class="member-card__role">Undergraduate researcher <span lang="ko">(학부연구생)</span></p>
           </article>
+          <article class="member-card">
+            <div class="member-card__photo">
+              <img src="img/members/jinhyun-kwon.png" width="320" height="320" loading="lazy" decoding="async" alt="Portrait of Jinhyun Kwon">
+            </div>
+            <h3 class="member-card__name font-display">Jinhyun Kwon</h3>
+            <p class="member-card__name-ko" lang="ko">권진현</p>
+            <p class="member-card__role">Undergraduate researcher <span lang="ko">(학부연구생)</span></p>
+          </article>
         </div>
       </div>
     </section>
@@ -139,5 +169,6 @@
     });
   })();
   </script>
+  <script src="atmosphere-carousel.js?v=20260702"></script>
 </body>
 </html>

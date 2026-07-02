@@ -1616,6 +1616,76 @@ body.theme-dark {
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(148, 163, 184, 0.35);
 }
+.prospect-hero__intro {
+  max-width: 44rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.atmosphere-carousel-wrap {
+  max-width: 1100px;
+  margin: clamp(1.75rem, 4vw, 2.5rem) auto 0;
+  padding: 0 1.5rem;
+}
+.atmosphere-carousel {
+  position: relative;
+}
+.atmosphere-carousel__viewport {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: #0f172a;
+}
+.atmosphere-carousel__slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  pointer-events: none;
+}
+.atmosphere-carousel__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.atmosphere-carousel__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.atmosphere-carousel__dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+.atmosphere-carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  background: rgba(148, 163, 184, 0.45);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.atmosphere-carousel__dot.is-active {
+  background: #2563eb;
+  transform: scale(1.15);
+}
+.atmosphere-carousel__dot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere-carousel__slide {
+    transition: none;
+  }
+}
 .prospect-subh {
   margin-top: 1.35rem;
   margin-bottom: 0.35rem;
