@@ -1888,3 +1888,16 @@ body.theme-dark {
   color: #475569;
   line-height: 1.45;
 }
+.alumni-list {
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: #334155;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+.alumni-list span[lang="ko"] {
+  margin-left: 0.45rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
