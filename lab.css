@@ -1892,6 +1892,7 @@ body.theme-dark {
   color: #475569;
   line-height: 1.45;
 }
+.member-name-list,
 .alumni-list {
   margin: 0.25rem 0 0;
   padding: 0;
@@ -1900,6 +1901,7 @@ body.theme-dark {
   font-size: 1.02rem;
   line-height: 1.7;
 }
+.member-name-list span[lang="ko"],
 .alumni-list span[lang="ko"] {
   margin-left: 0.45rem;
   color: #64748b;
