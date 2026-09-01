@@ -1871,6 +1871,9 @@ body.theme-dark {
   object-position: center 42%;
   transform: scale(1.65);
 }
+.member-card__photo--chansol img {
+  object-position: center 28%;
+}
 .member-card__name {
   margin: 0;
   font-size: 1.15rem;
