@@ -1872,7 +1872,8 @@ body.theme-dark {
   transform: scale(1.65);
 }
 .member-card__photo--chansol img {
-  object-position: center 28%;
+  object-position: center 40%;
+  transform: scale(1.35) translateY(-12%);
 }
 .member-card__name {
   margin: 0;
