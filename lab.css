@@ -1903,18 +1903,24 @@ body.theme-dark {
 }
 .member-name-list,
 .alumni-list {
-  margin: 0.25rem 0 0;
+  margin: 0.35rem 0 0;
   padding: 0;
   list-style: none;
   color: #334155;
-  font-size: 1.02rem;
-  line-height: 1.7;
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+.member-name-list li,
+.alumni-list li {
+  margin: 0.35rem 0;
 }
 .member-name-list span[lang="ko"],
 .alumni-list span[lang="ko"] {
-  margin-left: 0.45rem;
+  margin-left: 0.5rem;
   color: #64748b;
-  font-size: 0.95rem;
+  font-size: 1.08rem;
+  font-weight: 500;
 }
 
 .author-me {
