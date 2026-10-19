@@ -2099,3 +2099,18 @@ body.theme-dark {
   margin: 0.2rem 0 0;
   color: #64748b;
 }
+.pi-subh {
+  margin: 1.35rem 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c2410c;
+}
+.pi-cv {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #334155;
+  line-height: 1.65;
+}
+.pi-cv li { margin: 0.15rem 0; }
