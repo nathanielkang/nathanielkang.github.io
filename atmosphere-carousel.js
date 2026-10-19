@@ -3,10 +3,10 @@
   if (!carousels.length) return;
 
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var INTERVAL = 4000;
 
   carousels.forEach(function (carousel) {
     var slides = carousel.querySelectorAll('.atmosphere-carousel__slide');
+    var interval = parseInt(carousel.getAttribute('data-interval'), 10) || 3000;
     if (!slides.length) return;
 
     var current = 0;
@@ -33,7 +33,7 @@
     function startAutoplay() {
       if (timer) clearInterval(timer);
       if (!reducedMotion) {
-        timer = setInterval(next, INTERVAL);
+        timer = setInterval(next, interval);
       }
     }
 

@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="lab.css?v=20261019-home">
+  <link rel="stylesheet" href="lab.css?v=20261019-align">
 
   <script type="application/ld+json">
   {
@@ -88,11 +88,35 @@
 
   <main id="main">
     <section class="lab-hero" aria-labelledby="hero-title">
-      <div class="lab-hero__shade"></div>
-      <div class="lab-hero__inner">
-        <p class="lab-hero__kicker">Kyungpook National University · CSE</p>
-        <h1 id="hero-title" class="font-display">SOCAL Lab</h1>
-        <p class="lab-hero__sub">Statistical Optimization &amp; Collaborative AI Learning</p>
+      <div class="lab-hero__frame">
+        <div class="atmosphere-carousel lab-hero__carousel" data-interval="3000" role="region" aria-roledescription="carousel" aria-label="Mathematics and statistics">
+          <div class="atmosphere-carousel__viewport">
+            <figure class="atmosphere-carousel__slide is-active">
+              <img src="img/atmosphere/socal-atmosphere-svd.png" width="1920" height="1080" alt="Singular value decomposition on a university corridor at golden hour.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-chebyshev.png" width="1920" height="1080" alt="Chebyshev inequality on a snow-covered campus path.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-clt.png" width="1920" height="1080" alt="Central limit theorem over a dusk campus skyline.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-cauchy-schwarz.png" width="1920" height="1080" alt="Cauchy-Schwarz inequality inside a spiral concrete atrium.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-spectral.png" width="1920" height="1080" alt="Spectral theorem in a glass atrium.">
+            </figure>
+            <figure class="atmosphere-carousel__slide">
+              <img src="img/atmosphere/socal-atmosphere-bayes.png" width="1920" height="1080" alt="Bayes theorem on rain-streaked glass at night.">
+            </figure>
+          </div>
+        </div>
+        <div class="lab-hero__shade"></div>
+        <div class="lab-hero__inner">
+          <p class="lab-hero__kicker">Kyungpook National University · CSE</p>
+          <h1 id="hero-title" class="font-display">SOCAL Lab</h1>
+          <p class="lab-hero__sub">Statistical Optimization &amp; Collaborative AI Learning</p>
+        </div>
       </div>
     </section>
 
@@ -127,7 +151,7 @@
         </div>
         <div class="news-grid">
           <a class="news-card" href="publications.html">
-            <img src="img/news/thumb-neurips.png" width="640" height="640" alt="NeurIPS 2026">
+            <img src="img/logos/NeurIPS_logo.png" width="1000" height="448" alt="NeurIPS">
             <div class="news-card__body">
               <p class="news-card__venue">NeurIPS 2026 · Poster</p>
               <h3>Taming the Tails</h3>
@@ -135,7 +159,7 @@
             </div>
           </a>
           <a class="news-card" href="publications.html">
-            <img src="img/news/thumb-uai.png" width="640" height="640" alt="UAI 2026">
+            <img src="img/logos/uailogo_square.png" width="200" height="200" alt="UAI">
             <div class="news-card__body">
               <p class="news-card__venue">UAI 2026 · Poster</p>
               <h3>Conditional diffusion for tabular regression</h3>
@@ -143,7 +167,7 @@
             </div>
           </a>
           <a class="news-card" href="publications.html">
-            <img src="img/news/thumb-neurocomputing.png" width="640" height="640" alt="Neurocomputing">
+            <img src="img/logos/neurocomputing.jpg" width="576" height="768" alt="Neurocomputing journal cover">
             <div class="news-card__body">
               <p class="news-card__venue">Neurocomputing</p>
               <h3>Rare but critical</h3>
@@ -161,6 +185,7 @@
     <p style="margin-top:0.5rem"><a href="https://scholar.google.com/citations?hl=en&user=JAi7yE0AAAAJ">Google Scholar</a></p>
   </footer>
 
+  <script src="atmosphere-carousel.js?v=20261019-hero"></script>
   <script>
   (function () {
     var btn = document.querySelector('.nav-toggle');

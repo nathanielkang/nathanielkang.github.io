@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="lab.css?v=20261019-home">
+  <link rel="stylesheet" href="lab.css?v=20261019-align">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -64,31 +64,6 @@
         <p class="prospect-hero__kicker">SOCAL Lab · Kyungpook National University</p>
         <h1 id="prospective-title" class="prospect-hero__title font-display">Prospective students</h1>
       </div>
-      <div class="wrap atmosphere-carousel-wrap">
-        <div class="atmosphere-carousel" role="region" aria-roledescription="carousel" aria-label="Mathematics and statistics">
-          <div class="atmosphere-carousel__viewport">
-            <figure class="atmosphere-carousel__slide is-active">
-              <img src="img/atmosphere/socal-atmosphere-svd.png" width="1920" height="1080" decoding="async" alt="Singular value decomposition: A equals U Sigma V transpose, on a concrete university corridor at golden hour.">
-            </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-chebyshev.png" width="1920" height="1080" decoding="async" alt="Chebyshev inequality: probability that X deviates from the mean by at least k standard deviations is at most one over k squared, on a snow-covered campus path.">
-            </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-clt.png" width="1920" height="1080" decoding="async" alt="Central limit theorem: standardized sample mean converges to a standard normal distribution, over a dusk campus skyline.">
-            </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-cauchy-schwarz.png" width="1920" height="1080" decoding="async" alt="Cauchy–Schwarz inequality: absolute inner product at most product of norms, inside a spiral concrete atrium.">
-            </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-spectral.png" width="1920" height="1080" decoding="async" alt="Eigenvalue equation Av equals lambda v and spectral theorem for symmetric matrices, in a glass atrium with rainbow light.">
-            </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-bayes.png" width="1920" height="1080" decoding="async" alt="Bayes theorem: posterior probability equals likelihood times prior divided by evidence, on rain-streaked glass at night.">
-            </figure>
-          </div>
-          <div class="atmosphere-carousel__dots" role="tablist" aria-label="Choose slide"></div>
-        </div>
-      </div>
     </section>
 
     <section class="section section--tight-top" aria-labelledby="overview-heading">
@@ -114,13 +89,13 @@
         <div class="prospect-figures">
           <figure class="prospect-figure">
             <button type="button" class="prospect-figure__trigger" aria-label="Open larger view: centralized vs. federated learning">
-              <img src="img/openlab_soccal_fig03_centralized_vs_fl.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Comparison of centralized learning, where raw tabular data from multiple clients are sent to a central datacenter, and federated learning, where raw data remain on local devices and only model updates are aggregated at a central server.">
+              <img src="img/openlab_soccal_fig_fl_privacy_v23.jpg" width="1024" height="512" loading="lazy" decoding="async" alt="Where the data move: centralized learning pools raw records; federated learning keeps each site's data local and exchanges model updates.">
             </button>
             <figcaption>Centralized vs. federated learning: only model updates—not full raw rows—are aggregated centrally when local silos must be protected. <span class="prospect-figure__hint">Click image to enlarge.</span></figcaption>
           </figure>
           <figure class="prospect-figure">
             <button type="button" class="prospect-figure__trigger" aria-label="Open larger view: synthetic tail augmentation">
-              <img src="img/openlab_soccal_fig05_synthetic_tail.png" width="1536" height="855" loading="lazy" decoding="async" alt="Normalized target distribution with original data and synthetic tail boost in the low-density tail, and a before-and-after comparison of model utility in rare regions after synthetic augmentation.">
+              <img src="img/openlab_soccal_fig_synthetic_imbalance_v23.jpg" width="1024" height="512" loading="lazy" decoding="async" alt="Synthetic data for rare cases: extra support for a rare class in classification, and for scarce target regions in regression.">
             </button>
             <figcaption>Synthetic tail augmentation: enriching sparse regions of the target distribution to improve model behavior where the original sample is thin. <span class="prospect-figure__hint">Click image to enlarge.</span></figcaption>
           </figure>
@@ -266,6 +241,5 @@
     });
   })();
   </script>
-  <script src="atmosphere-carousel.js?v=20260702c"></script>
 </body>
 </html>
