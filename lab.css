@@ -2114,3 +2114,47 @@ body.theme-dark {
   line-height: 1.65;
 }
 .pi-cv li { margin: 0.15rem 0; }
+
+.research-jumps {
+  margin: 1rem 0 0;
+  font-weight: 700;
+}
+.paper-block {
+  margin-top: 1.75rem;
+}
+.paper-block h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.paper-block h3 a { color: inherit; }
+.paper-block__venue {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c2410c;
+}
+.paper-block p {
+  margin: 0.75rem 0 0;
+  color: #334155;
+  line-height: 1.7;
+}
+.paper-block__fig {
+  margin: 1rem 0 0;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+}
+.paper-block__fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.paper-block__more {
+  font-weight: 800;
+}
