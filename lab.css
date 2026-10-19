@@ -756,15 +756,15 @@ body > header {
   border-radius: 0.35rem;
 }
 .venue {
-  font-size: 0.85rem;
-  font-weight: 600;
-  font-style: italic;
-  color: #64748b;
+  font-size: 1.05rem;
+  font-weight: 800;
+  font-style: normal;
+  color: var(--ink);
 }
 .pub-title {
   margin: 0;
-  font-weight: 700;
-  font-size: 1.06rem;
+  font-weight: 400;
+  font-size: 1.02rem;
   color: var(--ink);
   line-height: 1.4;
 }
@@ -792,7 +792,9 @@ body > header {
 }
 .pub-meta .pub-note {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--ink);
 }
 .subsec-title {
   margin: 2.5rem 0 1rem;
