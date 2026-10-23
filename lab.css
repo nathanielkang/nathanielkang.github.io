@@ -79,13 +79,12 @@ body > header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: #fff;
   border-bottom: 1px solid rgba(148, 163, 184, 0.2);
 }
 .site-nav {
-  position: static;
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,7 +92,7 @@ body > header {
   padding: 0.85rem 1.25rem;
   max-width: 1200px;
   margin: 0 auto;
-  background: transparent;
+  background: #fff;
   border-bottom: none;
 }
 .site-nav__brand {
@@ -186,11 +185,10 @@ body > header {
   display: none;
   position: fixed;
   inset: 0;
-  top: 0;
-  z-index: 40;
-  padding: 5rem 1.5rem 2rem;
-  background: rgba(7, 11, 20, 0.92);
-  backdrop-filter: blur(8px);
+  z-index: 1;
+  padding: 5.25rem 1.25rem 2rem;
+  overflow-y: auto;
+  background: #0b1220;
   flex-direction: column;
   gap: 0.5rem;
 }
