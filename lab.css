@@ -183,17 +183,26 @@ body > header {
 
 .mobile-panel {
   display: none;
+}
+.mobile-panel.is-open {
+  display: flex;
   position: fixed;
-  inset: 0;
-  z-index: 1;
-  padding: 5.25rem 1.25rem 2rem;
+  top: 4.6rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  padding: 1.25rem;
   overflow-y: auto;
   background: #0b1220;
   flex-direction: column;
   gap: 0.5rem;
 }
-.mobile-panel.is-open {
-  display: flex;
+@media (min-width: 900px) {
+  .mobile-panel,
+  .mobile-panel.is-open {
+    display: none !important;
+  }
 }
 .mobile-panel a {
   padding: 1rem 1.1rem;

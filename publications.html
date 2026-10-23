@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="lab.css?v=20261023-nav">
+  <link rel="stylesheet" href="lab.css?v=20261023-nav2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -43,14 +43,14 @@
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </nav>
-    <div id="mobile-panel-pub" class="mobile-panel">
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html" aria-current="page">Publications</a>
-      <a href="members.html">Members</a>
-      <a href="prospective.html">Prospective</a>
-    </div>
   </header>
+  <div id="mobile-panel-pub" class="mobile-panel" hidden>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html" aria-current="page">Publications</a>
+    <a href="members.html">Members</a>
+    <a href="prospective.html">Prospective</a>
+  </div>
   <main id="main">
     <section class="section section--pubs">
       <div class="wrap" style="max-width:1040px">
@@ -184,6 +184,7 @@
     btn.addEventListener('click', function () {
       var open = !panel.classList.contains('is-open');
       panel.classList.toggle('is-open', open);
+      panel.hidden = !open;
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       document.body.style.overflow = open ? 'hidden' : '';
     });
