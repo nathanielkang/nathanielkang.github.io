@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | SOCAL Lab — KNU</title>
-  <meta name="description" content="SOCAL Lab research program: federated learning and privacy, imbalanced data, and AI alignment (LLM). Kyungpook National University.">
+  <meta name="description" content="SOCAL Lab research program: statistical methods for tabular data — federated learning and privacy, imbalanced regression, and AI alignment. Kyungpook National University.">
   <!-- Canonical manuscript list + paths: sibling folder KNU/Research/docs/PAPER_MASTER_INVENTORY.md and INDEX.md -->
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE88Q89RCG"></script>
@@ -16,13 +16,13 @@
   </script>
 
   <meta property="og:title" content="Research | SOCAL Lab">
-  <meta property="og:description" content="Federated learning, imbalanced data, and AI alignment (LLM) — research program at SOCAL Lab, KNU.">
+  <meta property="og:description" content="Statistical methods for tabular data: federated learning, imbalanced regression, and AI alignment — SOCAL Lab, KNU.">
   <meta property="og:image" content="https://nathanielkang.github.io/preview.png">
   <meta property="og:url" content="https://nathanielkang.github.io/research.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Research | SOCAL Lab">
-  <meta name="twitter:description" content="Three research themes: federated learning & privacy, imbalanced data, AI alignment (LLM).">
+  <meta name="twitter:description" content="Three research themes: federated learning and privacy, imbalanced regression, and AI alignment.">
   <meta name="twitter:image" content="https://nathanielkang.github.io/preview.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,8 +64,8 @@
       <div class="wrap">
         <p class="section__eyebrow">SOCAL Lab · Kyungpook National University</p>
         <h1 id="research-page-title" class="section__title">Research</h1>
-        <p class="section__lead">Three lines of work: federated learning when tables cannot be pooled, imbalanced regression when the rare target matters, and how deployed language models are governed.</p>
-        <p class="research-jumps"><a href="#theme-fl">01 Federated learning</a> · <a href="#theme-ir">02 Imbalanced data</a> · <a href="#theme-align">03 AI alignment</a></p>
+        <p class="section__lead">The lab develops statistical methods for tabular data across three lines of work: federated learning when tables cannot be pooled, imbalanced regression when the rare target matters, and AI alignment for deployed language models.</p>
+        <p class="research-jumps"><a href="#theme-fl">01 Federated learning &amp; privacy</a> · <a href="#theme-ir">02 Imbalanced regression</a> · <a href="#theme-align">03 AI alignment</a></p>
       </div>
     </section>
 
@@ -73,11 +73,11 @@
       <div class="wrap">
         <p class="section__eyebrow">Theme 01</p>
         <h2 id="fl-heading" class="section__title">Federated learning &amp; privacy</h2>
-        <p class="section__lead">Parties keep their tables. What moves is a compressed summary, not the rows.</p>
+        <p class="section__lead">When tables cannot leave a site, we develop statistical methods that share compressed, privacy-preserving summaries and synthesize usable tables without pooling the rows.</p>
         <article class="paper-block">
           <h3><a href="https://doi.org/10.1016/j.neucom.2026.134052">Orchestrating Federated Tabular Synthesis at Scale with Fault-Tolerant Pipeline Execution</a></h3>
           <p class="paper-block__venue">Neurocomputing</p>
-          <p>Each party agent sends compressed, noise-perturbed marginals across a trust boundary. A coordinator holds the party registry, checkpoints, and workload, and passes the aggregated marginals to a synthesis engine: a diffusion model, a workload-guided loss, and a marginal cache. A quality monitor scores total variation, downstream utility, and workload error, and can request a retry. Checkpoints let a failed stage resume without restarting the run.</p>
+          <p>Each client keeps its table and sends only compressed, noise-perturbed column summaries across an institutional boundary. A coordinator holds the party list, checkpoints, and analysis workload, then feeds the aggregated summaries to a synthesis engine built from a diffusion model, a workload-guided loss, and a cached set of those summaries. A quality monitor scores how close the synthetic table is to the real one, how well it supports downstream tasks, and how well it matches the workload; if a stage fails, checkpoints let the run resume instead of starting over.</p>
           <figure class="paper-block__fig">
             <img src="img/research/fedforge-architecture.png" width="1392" height="610" alt="FedForge architecture: party agents send perturbed marginals to a coordinator, which drives a synthesis engine and a quality monitor, with checkpoints between stages." loading="lazy" decoding="async">
           </figure>
@@ -88,12 +88,12 @@
     <section id="theme-ir" class="section section--tight-top" aria-labelledby="ir-heading">
       <div class="wrap">
         <p class="section__eyebrow">Theme 02</p>
-        <h2 id="ir-heading" class="section__title">Imbalanced data</h2>
-        <p class="section__lead">A single loss, averaged over the whole sample, is dominated by the dense part of the target.</p>
+        <h2 id="ir-heading" class="section__title">Imbalanced regression</h2>
+        <p class="section__lead">A loss averaged over the whole sample is dominated by the dense part of the target. We develop statistical methods that reweight rare regions and generate additional tail rows so imbalanced tabular regression does not ignore the cases that matter.</p>
         <article class="paper-block">
           <h3><a href="publications.html">Taming the Tails: Why Distributionally Robust Optimization Needs New Theory for Imbalanced Regression</a></h3>
           <p class="paper-block__venue">NeurIPS 2026 · Poster</p>
-          <p>A single robustness radius is set by the dense region. TC-DRO bins the target and lets the radius grow as local density falls. The dual is solved inside each bin and returns a weight on every sample. Rare bins receive weights above the empirical-risk weight of 1, and training is weighted stochastic gradient descent with those weights.</p>
+          <p>A single robustness radius is usually set by the dense region, so ordinary DRO still underfits the tail. TC-DRO partitions the target into bins and lets that radius grow as local density falls. Inside each bin it solves a small dual problem that assigns a training weight to every sample. Rare bins receive weights larger than the usual uniform weight, and the model is trained by weighted stochastic gradient descent.</p>
           <figure class="paper-block__fig">
             <img src="img/research/tcdro-framework.png" width="1600" height="408" alt="TC-DRO pipeline: imbalanced data, target partitioning, a per-bin dual, adaptive weights, and weighted SGD." loading="lazy" decoding="async">
           </figure>
@@ -101,7 +101,7 @@
         <article class="paper-block">
           <h3><a href="https://proceedings.mlr.press/v337/kang26a.html">Conditional Diffusion Models for Imbalanced Tabular Regression</a></h3>
           <p class="paper-block__venue">UAI 2026 · Poster</p>
-          <p>A relevance function marks target regions the empirical density under-represents. The denoiser is conditioned on the target by a scale-and-shift layer, and the noise-prediction loss is multiplied by that relevance weight. Generation draws a rare target, runs the reverse process, mixes those rows with copies of real rare rows, and keeps the highest-scoring candidates.</p>
+          <p>A relevance score marks target values that the training density underrepresents. The denoiser is conditioned on the target (scale-and-shift of its features), and that score multiplies the noise-prediction loss. To generate data, the method draws a rare target, runs the reverse diffusion process, mixes the new rows with copies of real rare rows, and keeps the highest-scoring candidates.</p>
           <figure class="paper-block__fig">
             <img src="img/research/uai-pipeline.jpg" width="820" height="446" alt="UAI pipeline: a relevance function over the target, FiLM-conditioned diffusion, and a hybrid quality filter that mixes synthetic and real rare rows." loading="lazy" decoding="async">
           </figure>
@@ -112,12 +112,12 @@
     <section id="theme-align" class="section section--tight-top" aria-labelledby="align-heading">
       <div class="wrap">
         <p class="section__eyebrow">Theme 03</p>
-        <h2 id="align-heading" class="section__title">AI alignment (LLM)</h2>
-        <p class="section__lead">A language model in an institution is not one threat model. Who is accountable, and when data are exposed, changes the controls.</p>
+        <h2 id="align-heading" class="section__title">AI alignment</h2>
+        <p class="section__lead">A language model inside an institution is not one threat model. Accountability and the timing of data exposure should change the controls. We organize attacks and defenses by those settings instead of treating every deployment as a generic chatbot.</p>
         <article class="paper-block">
           <h3>Not All Large Language Model Deployments Are Created Equal: A Taxonomy-Driven Survey of Security, Defense, and Governance</h3>
           <p class="paper-block__venue">Under review · Journal of Information Security and Applications</p>
-          <p>The taxonomy crosses who the user is accountable to with whether sensitive data are exposed at training time or continuously at inference. The four cells are a secured repository, a managed pipeline, a fortified service, and a contested interface. Attacks and controls are read against that cell, rather than against a generic chatbot.</p>
+          <p>The taxonomy crosses two axes: who the user is accountable to, and whether sensitive data are exposed only at training time or continuously at inference. The four cells are a secured repository, a managed pipeline, a fortified service, and a contested interface. Attacks and controls are evaluated in that cell.</p>
           <figure class="paper-block__fig">
             <img src="img/research/jisa-taxonomy.png" width="1600" height="874" alt="Taxonomy matrix of LLM deployments: user accountability against data-exposure timing, with four cells for secured repository, managed pipeline, fortified service, and contested interface." loading="lazy" decoding="async">
           </figure>
