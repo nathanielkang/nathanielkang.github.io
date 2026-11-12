@@ -29,8 +29,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="lab.css?v=20261112-math-v3">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="site-refinement.css?v=20261112-refinement">
 </head>
-<body>
+<body class="site-refined page-research">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header>
@@ -43,7 +45,7 @@
         <a href="members.html">Members</a>
         <a href="prospective.html">Prospective</a>
       </div>
-      <a class="site-nav__cta" href="prospective.html">Inquire</a>
+      <a class="site-nav__cta" href="prospective.html#inquire-heading">Inquire</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-panel-r" aria-label="Open menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M4 6h16M4 12h16M4 18h16"/>
@@ -51,109 +53,82 @@
       </button>
     </nav>
   </header>
-  <div id="mobile-panel-r" class="mobile-panel" hidden>
-    <a href="index.html">Home</a>
-    <a href="research.html" aria-current="page">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="members.html">Members</a>
-    <a href="prospective.html">Prospective</a>
-  </div>
+  <div id="mobile-panel-r" class="mobile-panel" hidden><a href="index.html">Home</a>
+<a aria-current="page" href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="members.html">Members</a>
+<a href="prospective.html">Prospective</a>
+<a class="mobile-panel__cta" href="prospective.html#inquire-heading">Inquire <span aria-hidden="true">↗</span></a></div>
 
   <main id="main">
-    <section class="section" aria-labelledby="research-page-title">
-      <div class="wrap">
-        <p class="section__eyebrow">SOCAL Lab · Kyungpook National University</p>
-        <h1 id="research-page-title" class="section__title">Research</h1>
-        <p class="section__lead">The lab develops statistical methods for tabular data across three lines of work: federated learning when tables cannot be pooled, imbalanced regression when the rare target matters, and AI alignment for deployed language models.</p>
-        <p class="research-jumps"><a href="#theme-fl">01 Federated learning &amp; privacy</a> · <a href="#theme-ir">02 Imbalanced regression</a> · <a href="#theme-align">03 AI alignment</a></p>
-      </div>
-    </section>
-
-    <section id="theme-fl" class="section section--tight-top" aria-labelledby="fl-heading">
-      <div class="wrap">
-        <p class="section__eyebrow">Theme 01</p>
-        <h2 id="fl-heading" class="section__title">Federated learning &amp; privacy</h2>
-        <p class="section__lead">When tables cannot leave a site, we develop statistical methods that share compressed, privacy-preserving summaries and synthesize usable tables without pooling the rows.</p>
-        <article class="paper-block">
-          <h3><a href="https://doi.org/10.1016/j.neucom.2026.134052">Orchestrating Federated Tabular Synthesis at Scale with Fault-Tolerant Pipeline Execution</a></h3>
-          <p class="paper-block__venue">Neurocomputing</p>
-          <p>Each client keeps its table and sends only compressed, noise-perturbed column summaries across an institutional boundary. A coordinator holds the party list, checkpoints, and analysis workload, then feeds the aggregated summaries to a synthesis engine built from a diffusion model, a workload-guided loss, and a cached set of those summaries. A quality monitor scores how close the synthetic table is to the real one, how well it supports downstream tasks, and how well it matches the workload; if a stage fails, checkpoints let the run resume instead of starting over.</p>
-          <figure class="paper-block__fig">
-            <img src="img/research/fedforge-architecture.png" width="1392" height="610" alt="FedForge architecture: party agents send perturbed marginals to a coordinator, which drives a synthesis engine and a quality monitor, with checkpoints between stages." loading="lazy" decoding="async">
-          </figure>
-        </article>
-      </div>
-    </section>
-
-    <section id="theme-ir" class="section section--tight-top" aria-labelledby="ir-heading">
-      <div class="wrap">
-        <p class="section__eyebrow">Theme 02</p>
-        <h2 id="ir-heading" class="section__title">Imbalanced regression</h2>
-        <p class="section__lead">A loss averaged over the whole sample is dominated by the dense part of the target. We develop statistical methods that reweight rare regions and generate additional tail rows so imbalanced tabular regression does not ignore the cases that matter.</p>
-        <article class="paper-block">
-          <h3><a href="publications.html">Taming the Tails: Why Distributionally Robust Optimization Needs New Theory for Imbalanced Regression</a></h3>
-          <p class="paper-block__venue">NeurIPS 2026 · Poster</p>
-          <p>A single robustness radius is usually set by the dense region, so ordinary DRO still underfits the tail. TC-DRO partitions the target into bins and lets that radius grow as local density falls. Inside each bin it solves a small dual problem that assigns a training weight to every sample. Rare bins receive weights larger than the usual uniform weight, and the model is trained by weighted stochastic gradient descent.</p>
-          <figure class="paper-block__fig">
-            <img src="img/research/tcdro-framework.png" width="1600" height="408" alt="TC-DRO pipeline: imbalanced data, target partitioning, a per-bin dual, adaptive weights, and weighted SGD." loading="lazy" decoding="async">
-          </figure>
-        </article>
-        <article class="paper-block">
-          <h3><a href="https://proceedings.mlr.press/v337/kang26a.html">Conditional Diffusion Models for Imbalanced Tabular Regression</a></h3>
-          <p class="paper-block__venue">UAI 2026 · Poster</p>
-          <p>A relevance score marks target values that the training density underrepresents. The denoiser is conditioned on the target (scale-and-shift of its features), and that score multiplies the noise-prediction loss. To generate data, the method draws a rare target, runs the reverse diffusion process, mixes the new rows with copies of real rare rows, and keeps the highest-scoring candidates.</p>
-          <figure class="paper-block__fig">
-            <img src="img/research/uai-pipeline.jpg" width="820" height="446" alt="UAI pipeline: a relevance function over the target, FiLM-conditioned diffusion, and a hybrid quality filter that mixes synthetic and real rare rows." loading="lazy" decoding="async">
-          </figure>
-        </article>
-      </div>
-    </section>
-
-    <section id="theme-align" class="section section--tight-top" aria-labelledby="align-heading">
-      <div class="wrap">
-        <p class="section__eyebrow">Theme 03</p>
-        <h2 id="align-heading" class="section__title">AI alignment</h2>
-        <p class="section__lead">A language model inside an institution is not one threat model. Accountability and the timing of data exposure should change the controls. We organize attacks and defenses by those settings instead of treating every deployment as a generic chatbot.</p>
-        <article class="paper-block">
-          <h3>Not All Large Language Model Deployments Are Created Equal: A Taxonomy-Driven Survey of Security, Defense, and Governance</h3>
-          <p class="paper-block__venue">Under review · Journal of Information Security and Applications</p>
-          <p>The taxonomy crosses two axes: who the user is accountable to, and whether sensitive data are exposed only at training time or continuously at inference. The four cells are a secured repository, a managed pipeline, a fortified service, and a contested interface. Attacks and controls are evaluated in that cell.</p>
-          <figure class="paper-block__fig">
-            <img src="img/research/jisa-taxonomy.png" width="1600" height="874" alt="Taxonomy matrix of LLM deployments: user accountability against data-exposure timing, with four cells for secured repository, managed pipeline, fortified service, and contested interface." loading="lazy" decoding="async">
-          </figure>
-          <p class="paper-block__more"><a href="publications.html">Publications →</a></p>
-        </article>
-      </div>
-    </section>
-  </main>
+<section aria-labelledby="research-page-title" class="section page-header">
+<div class="wrap">
+<p class="section__eyebrow">SOCAL Lab · Kyungpook National University</p>
+<h1 class="page-title" id="research-page-title">Research</h1>
+<p class="section__lead">The lab develops statistical methods for tabular data across three lines of work: federated learning when tables cannot be pooled, imbalanced regression when the rare target matters, and AI alignment for deployed language models.</p>
+<nav aria-label="Research themes" class="page-jumps"><a href="#theme-fl">01 Federated learning &amp; privacy</a><a href="#theme-ir">02 Imbalanced regression</a><a href="#theme-align">03 AI alignment</a></nav>
+</div>
+</section>
+<section aria-labelledby="fl-heading" class="section section--tight-top research-theme" id="theme-fl">
+<div class="wrap">
+<p class="section__eyebrow">Theme 01</p>
+<h2 class="section__title" id="fl-heading">Federated learning &amp; privacy</h2>
+<p class="section__lead">When tables cannot leave a site, we develop statistical methods that share compressed, privacy-preserving summaries and synthesize usable tables without pooling the rows.</p>
+<article class="paper-block">
+<h3><a href="https://doi.org/10.1016/j.neucom.2026.134052">Orchestrating Federated Tabular Synthesis at Scale with Fault-Tolerant Pipeline Execution</a></h3>
+<p class="paper-block__venue">Neurocomputing</p>
+<p>Each client keeps its table and sends only compressed, noise-perturbed column summaries across an institutional boundary. A coordinator holds the party list, checkpoints, and analysis workload, then feeds the aggregated summaries to a synthesis engine built from a diffusion model, a workload-guided loss, and a cached set of those summaries. A quality monitor scores how close the synthetic table is to the real one, how well it supports downstream tasks, and how well it matches the workload; if a stage fails, checkpoints let the run resume instead of starting over.</p>
+<figure class="paper-block__fig">
+<button aria-label="Open larger view: FedForge architecture: party agents send perturbed marginals to a coordinator, which drives a synthesis engine and a quality monitor, with checkpoints between stages." class="figure-zoom" type="button"><img alt="FedForge architecture: party agents send perturbed marginals to a coordinator, which drives a synthesis engine and a quality monitor, with checkpoints between stages." decoding="async" height="610" loading="lazy" src="img/research/fedforge-architecture.png" style="--figure-native-width:1392px" width="1392"/></button>
+<figcaption class="figure-caption"><span class="figure-caption__name">FedForge · System architecture</span><span class="figure-caption__zoom">View larger <span aria-hidden="true">↗</span></span></figcaption></figure>
+<p class="paper-block__more"><a href="https://doi.org/10.1016/j.neucom.2026.134052">Read paper <span aria-hidden="true">↗</span></a></p></article>
+</div>
+</section>
+<section aria-labelledby="ir-heading" class="section section--tight-top research-theme" id="theme-ir">
+<div class="wrap">
+<p class="section__eyebrow">Theme 02</p>
+<h2 class="section__title" id="ir-heading">Imbalanced regression</h2>
+<p class="section__lead">A loss averaged over the whole sample is dominated by the dense part of the target. We develop statistical methods that reweight rare regions and generate additional tail rows so imbalanced tabular regression does not ignore the cases that matter.</p>
+<article class="paper-block">
+<h3><a href="publications.html">Taming the Tails: Why Distributionally Robust Optimization Needs New Theory for Imbalanced Regression</a></h3>
+<p class="paper-block__venue">NeurIPS 2026 · Poster</p>
+<p>A single robustness radius is usually set by the dense region, so ordinary DRO still underfits the tail. TC-DRO partitions the target into bins and lets that radius grow as local density falls. Inside each bin it solves a small dual problem that assigns a training weight to every sample. Rare bins receive weights larger than the usual uniform weight, and the model is trained by weighted stochastic gradient descent.</p>
+<figure class="paper-block__fig">
+<button aria-label="Open larger view: TC-DRO pipeline: imbalanced data, target partitioning, a per-bin dual, adaptive weights, and weighted SGD." class="figure-zoom" type="button"><img alt="TC-DRO pipeline: imbalanced data, target partitioning, a per-bin dual, adaptive weights, and weighted SGD." decoding="async" height="408" loading="lazy" src="img/research/tcdro-framework.png" style="--figure-native-width:1600px" width="1600"/></button>
+<figcaption class="figure-caption"><span class="figure-caption__name">TC-DRO · Training pipeline</span><span class="figure-caption__zoom">View larger <span aria-hidden="true">↗</span></span></figcaption></figure>
+<p class="paper-block__more"><a href="publications.html">Read paper <span aria-hidden="true">↗</span></a></p></article>
+<article class="paper-block">
+<h3><a href="https://proceedings.mlr.press/v337/kang26a.html">Conditional Diffusion Models for Imbalanced Tabular Regression</a></h3>
+<p class="paper-block__venue">UAI 2026 · Poster</p>
+<p>A relevance score marks target values that the training density underrepresents. The denoiser is conditioned on the target (scale-and-shift of its features), and that score multiplies the noise-prediction loss. To generate data, the method draws a rare target, runs the reverse diffusion process, mixes the new rows with copies of real rare rows, and keeps the highest-scoring candidates.</p>
+<figure class="paper-block__fig">
+<button aria-label="Open larger view: UAI pipeline: a relevance function over the target, FiLM-conditioned diffusion, and a hybrid quality filter that mixes synthetic and real rare rows." class="figure-zoom" type="button"><img alt="UAI pipeline: a relevance function over the target, FiLM-conditioned diffusion, and a hybrid quality filter that mixes synthetic and real rare rows." decoding="async" height="446" loading="lazy" src="img/research/uai-pipeline.jpg" style="--figure-native-width:820px" width="820"/></button>
+<figcaption class="figure-caption"><span class="figure-caption__name">Conditional diffusion · Generation pipeline</span><span class="figure-caption__zoom">View larger <span aria-hidden="true">↗</span></span></figcaption></figure>
+<p class="paper-block__more"><a href="https://proceedings.mlr.press/v337/kang26a.html">Read paper <span aria-hidden="true">↗</span></a></p></article>
+</div>
+</section>
+<section aria-labelledby="align-heading" class="section section--tight-top research-theme" id="theme-align">
+<div class="wrap">
+<p class="section__eyebrow">Theme 03</p>
+<h2 class="section__title" id="align-heading">AI alignment</h2>
+<p class="section__lead">A language model inside an institution is not one threat model. Accountability and the timing of data exposure should change the controls. We organize attacks and defenses by those settings instead of treating every deployment as a generic chatbot.</p>
+<article class="paper-block">
+<h3>Not All Large Language Model Deployments Are Created Equal: A Taxonomy-Driven Survey of Security, Defense, and Governance</h3>
+<p class="paper-block__venue">Under review · Journal of Information Security and Applications</p>
+<p>The taxonomy crosses two axes: who the user is accountable to, and whether sensitive data are exposed only at training time or continuously at inference. The four cells are a secured repository, a managed pipeline, a fortified service, and a contested interface. Attacks and controls are evaluated in that cell.</p>
+<figure class="paper-block__fig">
+<button aria-label="Open larger view: Taxonomy matrix of LLM deployments: user accountability against data-exposure timing, with four cells for secured repository, managed pipeline, fortified service, and contested interface." class="figure-zoom" type="button"><img alt="Taxonomy matrix of LLM deployments: user accountability against data-exposure timing, with four cells for secured repository, managed pipeline, fortified service, and contested interface." decoding="async" height="874" loading="lazy" src="img/research/jisa-taxonomy.png" style="--figure-native-width:1600px" width="1600"/></button>
+<figcaption class="figure-caption"><span class="figure-caption__name">LLM deployments · Taxonomy</span><span class="figure-caption__zoom">View larger <span aria-hidden="true">↗</span></span></figcaption></figure>
+<p class="paper-block__more"><a href="publications.html">Publications →</a></p>
+</article>
+</div>
+</section>
+</main><dialog class="figure-dialog" aria-label="Enlarged research figure"><div class="figure-dialog__panel"><button class="figure-dialog__close" type="button" aria-label="Close enlarged figure">×</button><img alt=""><p class="figure-dialog__caption"></p></div></dialog>
 
 
-  <footer class="site-footer">
-    <p>&copy; 2026 SOCAL Lab · Kyungpook National University</p>
-    <p style="margin-top:0.5rem"><a href="index.html">Home</a> · <a href="publications.html">Publications</a> · <a href="prospective.html">Prospective</a></p>
-  </footer>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><a class="footer-brand" href="index.html">SOCAL<span>LAB</span></a><p>Statistical Optimization &amp;<br>Collaborative AI Learning</p><p>Kyungpook National University · CSE</p></div><nav aria-label="Footer"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="members.html">Members</a><a href="prospective.html">Prospective</a></nav><div class="footer-contact"><a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a><a href="https://scholar.google.com/citations?hl=en&amp;user=JAi7yE0AAAAJ">Google Scholar <span aria-hidden="true">↗</span></a><p>© 2026 SOCAL Lab</p></div></div></footer>
 
-  <script>
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var panel = document.getElementById('mobile-panel-r');
-    if (!btn || !panel) return;
-    btn.addEventListener('click', function () {
-      var open = !panel.classList.contains('is-open');
-      panel.classList.toggle('is-open', open);
-      panel.hidden = !open;
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    panel.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        panel.classList.remove('is-open');
-        panel.hidden = true;
-        btn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
-  })();
-  </script>
+
+<script src="site.js?v=20261112-refinement"></script>
 </body>
 </html>

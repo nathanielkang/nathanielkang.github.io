@@ -28,8 +28,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="lab.css?v=20261112-math-v3">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="site-refinement.css?v=20261112-refinement">
 </head>
-<body>
+<body class="site-refined page-prospective">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header>
@@ -42,7 +44,7 @@
         <a href="members.html">Members</a>
         <a href="prospective.html" aria-current="page">Prospective</a>
       </div>
-      <a class="site-nav__cta" href="prospective.html">Inquire</a>
+      <a class="site-nav__cta" href="prospective.html#inquire-heading">Inquire</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-panel-p" aria-label="Open menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M4 6h16M4 12h16M4 18h16"/>
@@ -50,202 +52,115 @@
       </button>
     </nav>
   </header>
-  <div id="mobile-panel-p" class="mobile-panel" hidden>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="members.html">Members</a>
-    <a href="prospective.html" aria-current="page">Prospective</a>
-  </div>
+  <div id="mobile-panel-p" class="mobile-panel" hidden><a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="members.html">Members</a>
+<a aria-current="page" href="prospective.html">Prospective</a>
+<a class="mobile-panel__cta" href="prospective.html#inquire-heading">Inquire <span aria-hidden="true">↗</span></a></div>
 
   <main id="main">
-    <section class="prospect-hero" aria-labelledby="prospective-title">
-      <div class="wrap prospect-hero__intro">
-        <p class="prospect-hero__kicker">SOCAL Lab · Kyungpook National University</p>
-        <h1 id="prospective-title" class="prospect-hero__title font-display">Prospective students</h1>
-      </div>
-    </section>
+<section aria-labelledby="prospective-title" class="page-header">
+<div class="wrap">
+<p class="section__eyebrow">SOCAL Lab · Kyungpook National University</p>
+<h1 class="page-title" id="prospective-title">Prospective students</h1>
+<p class="page-header__lead">Research directions, preparation, and the next step.</p><nav aria-label="Prospective student sections" class="page-jumps"><a href="#overview-heading">Mission &amp; fit</a><a href="#areas-heading">Research areas</a><a href="#expect-heading">Preparation</a><a href="#funding-heading">Funding</a><a class="page-jumps__action" href="#inquire-heading">How to inquire <span aria-hidden="true">↗</span></a></nav></div>
+</section>
+<section aria-labelledby="overview-heading" class="section section--tight-top">
+<div class="wrap">
+<div class="section__head">
+<p class="section__eyebrow">Overview</p>
+<h2 class="section__title" id="overview-heading">Mission and fit</h2>
+</div>
+<div class="prose">
 
-    <section class="section section--tight-top" aria-labelledby="overview-heading">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="section__eyebrow">Overview</p>
-          <h2 id="overview-heading" class="section__title">Mission and fit</h2>
-        </div>
-        <div class="prose">
-          <p>SOCAL Lab develops statistically principled methods for tabular data where standard ML pipelines fail: decentralized and privacy-sensitive records, imbalanced and long-tailed targets, and LLM accountability. We consider motivated Ph.D., M.S., and undergraduate researchers who combine careful theory with clear scientific communication and are prepared for a selective inquiry process.</p>
-          <p lang="ko">SOCAL Lab은 표준 기계학습으로 다루기 어려운 정형 데이터 — 분산·프라이버시, 불균형·꼬리 구간, LLM 책임성 — 에 대한 통계적 방법을 연구합니다. 이론과 과학적 글쓰기를 함께 갖추고, 선별적 문의 절차에 응할 석·박사 과정 및 학부 연구생을 검토합니다.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" aria-labelledby="figures-heading">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="section__eyebrow">Visual primer</p>
-          <h2 id="figures-heading" class="section__title">Two recurring settings</h2>
-          <p class="section__lead">Centralized vs. federated learning (raw rows stay local); synthetic augmentation to improve utility in low-density tail regions of tabular targets.</p>
-        </div>
-        <div class="prospect-figures">
-          <figure class="prospect-figure">
-            <button type="button" class="prospect-figure__trigger" aria-label="Open larger view: centralized vs. federated learning">
-              <img src="img/openlab_soccal_fig_fl_privacy_v23.jpg" width="1024" height="512" loading="lazy" decoding="async" alt="Where the data move: centralized learning pools raw records; federated learning keeps each site's data local and exchanges model updates.">
-            </button>
-            <figcaption>Centralized vs. federated learning: only model updates—not full raw rows—are aggregated centrally when local silos must be protected. <span class="prospect-figure__hint">Click image to enlarge.</span></figcaption>
-          </figure>
-          <figure class="prospect-figure">
-            <button type="button" class="prospect-figure__trigger" aria-label="Open larger view: synthetic tail augmentation">
-              <img src="img/openlab_soccal_fig_synthetic_imbalance_v23.jpg" width="1024" height="512" loading="lazy" decoding="async" alt="Synthetic data for rare cases: extra support for a rare class in classification, and for scarce target regions in regression.">
-            </button>
-            <figcaption>Synthetic tail augmentation: enriching sparse regions of the target distribution to improve model behavior where the original sample is thin. <span class="prospect-figure__hint">Click image to enlarge.</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+<div class="bilingual-pair"><div class="language-column"><p>SOCAL Lab develops statistically principled methods for tabular data where standard ML pipelines fail: decentralized and privacy-sensitive records, imbalanced and long-tailed targets, and LLM accountability. We consider motivated Ph.D., M.S., and undergraduate researchers who combine careful theory with clear scientific communication and are prepared for a selective inquiry process.</p></div><div class="language-column"><p lang="ko">SOCAL Lab은 표준 기계학습으로 다루기 어려운 정형 데이터 — 분산·프라이버시, 불균형·꼬리 구간, LLM 책임성 — 에 대한 통계적 방법을 연구합니다. 이론과 과학적 글쓰기를 함께 갖추고, 선별적 문의 절차에 응할 석·박사 과정 및 학부 연구생을 검토합니다.</p></div></div></div>
+</div>
+</section>
+<section aria-labelledby="figures-heading" class="section">
+<div class="wrap">
+<div class="section__head">
+<p class="section__eyebrow">Visual primer</p>
+<h2 class="section__title" id="figures-heading">Two recurring settings</h2>
+<p class="section__lead">Centralized vs. federated learning (raw rows stay local); synthetic augmentation to improve utility in low-density tail regions of tabular targets.</p>
+</div>
+<div class="prospect-figures">
+<figure class="prospect-figure">
+<button aria-label="Open larger view: centralized vs. federated learning" class="prospect-figure__trigger" type="button">
+<img alt="Where the data move: centralized learning pools raw records; federated learning keeps each site's data local and exchanges model updates." decoding="async" height="512" loading="lazy" src="img/openlab_soccal_fig_fl_privacy_v23.jpg" width="1024"/>
+</button>
+<figcaption>Centralized vs. federated learning: only model updates—not full raw rows—are aggregated centrally when local silos must be protected. <span class="prospect-figure__hint">Click image to enlarge.</span></figcaption>
+</figure>
+<figure class="prospect-figure">
+<button aria-label="Open larger view: synthetic tail augmentation" class="prospect-figure__trigger" type="button">
+<img alt="Synthetic data for rare cases: extra support for a rare class in classification, and for scarce target regions in regression." decoding="async" height="512" loading="lazy" src="img/openlab_soccal_fig_synthetic_imbalance_v23.jpg" width="1024"/>
+</button>
+<figcaption>Synthetic tail augmentation: enriching sparse regions of the target distribution to improve model behavior where the original sample is thin. <span class="prospect-figure__hint">Click image to enlarge.</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="areas-heading" class="section section--tight-top">
+<div class="wrap">
+<div class="section__head">
+<p class="section__eyebrow">Research areas</p>
+<h2 class="section__title" id="areas-heading">Representative directions</h2>
+</div>
+<div class="prose"><div class="direction-list"><article class="direction-entry"><span class="direction-entry__number">01</span><div><h3 class="prospect-subh">Federated learning (data privacy)</h3><p>Collaborative learning when raw records cannot be centralized, with emphasis on statistical behavior under client heterogeneity and privacy constraints.</p><ul class="prospect-topic-list">
+<li>Federated optimization and aggregation under <strong>non-IID</strong> partitions and <strong>distribution shift</strong>.</li>
+<li><strong>Privacy-preserving</strong> federated protocols (e.g., differential privacy, secure aggregation, and risk-aware design) and their interaction with model utility.</li>
+<li><strong>Communication- and computation-aware</strong> federated training under realistic deployment constraints (dropouts, stragglers).</li>
+</ul></div></article><article class="direction-entry"><span class="direction-entry__number">02</span><div><h3 class="prospect-subh">Synthetic data</h3><p>Generation and augmentation of tabular data when sensitive tables cannot be released, including federated and differentially private synthesis. This line is also how the lab attacks imbalanced regression: extra rows in the tail, evaluated beyond headline averages.</p><ul class="prospect-topic-list">
+<li><strong>High-fidelity tabular synthesis</strong> with semantic or structural constraints (including LLM-assisted constraint discovery where appropriate).</li>
+<li><strong>Federated</strong> or <strong>cross-party</strong> synthesis preserving correlations while limiting disclosure of raw private tables.</li>
+<li><strong>Augmentation and resampling</strong> to improve coverage in <strong>low-density / tail</strong> regions, with evaluation beyond headline averages.</li>
+</ul></div></article><article class="direction-entry"><span class="direction-entry__number">03</span><div><h3 class="prospect-subh">AI alignment (LLM)</h3><p>Evaluation- and governance-oriented work on <strong>large language models</strong> in institutional settings, emphasizing measurable risk and accountability.</p><ul class="prospect-topic-list">
+<li><strong>Privacy-aware evaluation</strong> and auditing workflows for deployed or procured LLM systems.</li>
+<li><strong>Security, defense, and governance</strong> perspectives on heterogeneous LLM deployments (structured surveys and taxonomies).</li>
+<li><strong>Policy–implementation gaps</strong> in public-sector technology procurement and post-deployment accountability.</li>
+</ul></div></article></div></div>
+</div>
+</section>
+<section aria-labelledby="expect-heading" class="section section--tight-top">
+<div class="wrap">
+<div class="section__head">
+<p class="section__eyebrow">Expectations</p>
+<h2 class="section__title" id="expect-heading">Mindset and preparation</h2>
+</div>
+<div class="prose">
+<div class="expectation-list"><article class="expectation-entry"><div class="bilingual-pair"><div class="language-column"><p><strong>Mindset and conduct.</strong> Members should be self-motivated and determined: research progress depends on sustained initiative through ambiguous phases. Communication skills matter—clear writing and spoken explanation of assumptions, limitations, and findings are part of the research product.</p></div><div class="language-column"><p lang="ko"><strong>연구 자세.</strong> 불확실한 구간에서도 스스로 밀어붙이는 태도가 필요합니다. 가정의 한계와 결과를 글과 말로 분명히 설명하는 것도 연구의 일부입니다.</p></div></div></article><article class="expectation-entry"><div class="bilingual-pair"><div class="language-column"><p><strong>Technical preparation.</strong> Strong probability and statistics, and scientific programming (for example Python), are required for most projects. Experience in machine learning, numerical linear algebra or optimization, and deep learning helps, depending on the research area. You should be comfortable reading primary papers and implementing ideas on your own.</p></div><div class="language-column"><p lang="ko"><strong>기술 준비.</strong> 확률·통계와 Python 등 프로그래밍은 대부분의 과제에서 필수입니다. 기계학습, 수치 선형대수·최적화, 딥러닝 경험은 주제에 따라 도움이 됩니다. 원문 논문을 읽고 아이디어를 스스로 구현할 수 있어야 합니다.</p></div></div></article><article class="expectation-entry"><div class="bilingual-pair"><div class="language-column"><p><strong>Collaboration.</strong> Members are expected to work collegially and to respect privacy and data-use agreements in applied work.</p></div><div class="language-column"><p lang="ko"><strong>협업.</strong> 동료와 맞춰 일하고, 응용 과제에서는 프라이버시와 데이터 사용 약속을 지킵니다.</p></div></div></article></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="funding-heading" class="section section--tight-top">
+<div class="wrap">
+<div class="section__head">
+<p class="section__eyebrow">Funding</p>
+<h2 class="section__title" id="funding-heading">Financial support</h2>
+</div>
+<div class="prose funding-panel">
 
-    <section class="section section--tight-top" aria-labelledby="areas-heading">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="section__eyebrow">Research areas</p>
-          <h2 id="areas-heading" class="section__title">Representative directions</h2>
-        </div>
-        <div class="prose">
-          <h3 class="prospect-subh">1. Federated learning (data privacy)</h3>
-          <p>Collaborative learning when raw records cannot be centralized, with emphasis on statistical behavior under client heterogeneity and privacy constraints.</p>
-          <ul class="prospect-topic-list">
-            <li>Federated optimization and aggregation under <strong>non-IID</strong> partitions and <strong>distribution shift</strong>.</li>
-            <li><strong>Privacy-preserving</strong> federated protocols (e.g., differential privacy, secure aggregation, and risk-aware design) and their interaction with model utility.</li>
-            <li><strong>Communication- and computation-aware</strong> federated training under realistic deployment constraints (dropouts, stragglers).</li>
-          </ul>
 
-          <h3 class="prospect-subh">2. Synthetic data</h3>
-          <p>Generation and augmentation of tabular data when sensitive tables cannot be released, including federated and differentially private synthesis. This line is also how the lab attacks imbalanced regression: extra rows in the tail, evaluated beyond headline averages.</p>
-          <ul class="prospect-topic-list">
-            <li><strong>High-fidelity tabular synthesis</strong> with semantic or structural constraints (including LLM-assisted constraint discovery where appropriate).</li>
-            <li><strong>Federated</strong> or <strong>cross-party</strong> synthesis preserving correlations while limiting disclosure of raw private tables.</li>
-            <li><strong>Augmentation and resampling</strong> to improve coverage in <strong>low-density / tail</strong> regions, with evaluation beyond headline averages.</li>
-          </ul>
+<div class="bilingual-pair"><div class="language-column"><p>Support depends on fit and degree level. Eligible members may receive Brain Korea (BK) scholarship support and PI personal research funding (tuition and living on funded lines, per university and grant rules). PI personal research funding backs research assistantships on active projects—not a guarantee for all applicants.</p></div><div class="language-column"><p lang="ko">지원은 적합성과 학위 과정에 따라 달라집니다. 선발된 구성원은 규정 안에서 <strong>BK 장학금</strong>과 <strong>교수 개인 연구비</strong>(등록금 및 생활비)를 받을 수 있습니다. 교수 개인 연구비는 진행 중인 과제의 RA에 쓰이며, 지원자 전원에게 보장되지 않습니다.</p></div></div></div>
+</div>
+</section>
+<section aria-labelledby="inquire-heading" class="section section--tight-top section--join">
+<div class="wrap">
+<div class="section__head">
+<p class="section__eyebrow">Next step</p>
+<h2 class="section__title" id="inquire-heading">How to inquire</h2>
+</div>
+<div class="prose"><div class="bilingual-pair inquiry-intro"><div class="language-column"><p>Email <a href="mailto:natekang@knu.ac.kr" style="color:var(--accent)">natekang@knu.ac.kr</a>. Please choose the path that matches your current enrollment.</p></div><div class="language-column"><p lang="ko">문의는 <a href="mailto:natekang@knu.ac.kr" style="color:var(--accent)">natekang@knu.ac.kr</a>로 보내 주시면 됩니다. 아래 중 본인 소속에 맞는 경로를 따라 주시면 됩니다.</p></div></div><div class="inquiry-paths"><article class="inquiry-path"><p class="inquiry-path__number">01</p><h3>Current KNU students</h3><p><strong>If you are a current KNU student:</strong> feel free to visit my office (<strong>IT Building 5, Room 258</strong>) or send a short email with your name, year (or program), and a few sentences on what you would like to work on. A CV or transcript is not required for a first conversation.</p><p class="email-subject"><span>Email subject</span><code>SOCAL Lab — KNU student</code></p><p lang="ko"><strong>경북대 재학생이시면</strong> IT 5호관 258호로 오셔도 됩니다. 메일로 연락하실 때는 이름, 학년(또는 과정), 관심 있는 주제를 짧게 적어 주시면 됩니다. CV나 성적표는 처음부터 보내지 않으셔도 됩니다. 제목은 <strong>SOCAL Lab — KNU student</strong>로 적어 주세요.</p></article><article class="inquiry-path"><p class="inquiry-path__number">02</p><h3>Students outside KNU</h3><div class="inquiry-requirements"><p><strong>If you are not currently enrolled at KNU:</strong> write the first email in English and include:</p><ol><li>A CV.</li><li>A transcript (or official transcript summary).</li><li>One or two topic bullets from this page.</li><li>Prior research or implementation experience (course projects are welcome) and why this lab—which thread and what problem you want to work on.</li></ol></div><p class="email-subject"><span>Email subject</span><code>SOCAL Lab — Prospective Student</code></p><p lang="ko"><strong>경북대에 재학 중이 아니시면</strong> 첫 메일은 영문으로 보내 주십시오. (i) CV, (ii) 성적표(또는 공식 성적 요약), (iii) 이 페이지에서 고른 주제 한두 가지, (iv) 이전 연구나 구현 경험(수업 프로젝트 가능)과 이 연구실에서 어떤 주제의 어떤 문제를 하고 싶은지를 넣어 주시면 됩니다. 제목은 <strong>SOCAL Lab — Prospective Student</strong>로 적어 주세요.</p></article></div><div class="bilingual-pair inquiry-process"><div class="language-column"><p><strong>Process:</strong> We review inquiries and invite shortlisted candidates to a conversation or interview (in person or video). We do not interview every inquiry.</p></div><div class="language-column"><p lang="ko"><strong>절차.</strong> 문의를 검토한 뒤 선발된 분에 한해 면담(대면 또는 화상)을 제안합니다. 모든 문의에 면담을 진행하지는 않습니다.</p></div></div><p class="inquiry-actions"><a class="btn btn--primary" href="mailto:natekang@knu.ac.kr">Send inquiry</a> <a class="btn btn--ghost" href="research.html">Research program</a></p></div>
+</div>
+</section>
+</main><dialog class="figure-dialog" aria-label="Enlarged research figure"><div class="figure-dialog__panel"><button class="figure-dialog__close" type="button" aria-label="Close enlarged figure">×</button><img alt=""><p class="figure-dialog__caption"></p></div></dialog>
 
-          <h3 class="prospect-subh">3. AI alignment (LLM)</h3>
-          <p>Evaluation- and governance-oriented work on <strong>large language models</strong> in institutional settings, emphasizing measurable risk and accountability.</p>
-          <ul class="prospect-topic-list">
-            <li><strong>Privacy-aware evaluation</strong> and auditing workflows for deployed or procured LLM systems.</li>
-            <li><strong>Security, defense, and governance</strong> perspectives on heterogeneous LLM deployments (structured surveys and taxonomies).</li>
-            <li><strong>Policy–implementation gaps</strong> in public-sector technology procurement and post-deployment accountability.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <section class="section section--tight-top" aria-labelledby="expect-heading">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="section__eyebrow">Expectations</p>
-          <h2 id="expect-heading" class="section__title">Mindset and preparation</h2>
-        </div>
-        <div class="prose">
-          <ul class="prospect-expect-list">
-            <li><strong>Mindset and conduct.</strong> Members should be self-motivated and determined: research progress depends on sustained initiative through ambiguous phases. Communication skills matter—clear writing and spoken explanation of assumptions, limitations, and findings are part of the research product.</li>
-            <li lang="ko"><strong>연구 자세.</strong> 불확실한 구간에서도 스스로 밀어붙이는 태도가 필요합니다. 가정의 한계와 결과를 글과 말로 분명히 설명하는 것도 연구의 일부입니다.</li>
-            <li><strong>Technical preparation.</strong> Strong probability and statistics, and scientific programming (for example Python), are required for most projects. Experience in machine learning, numerical linear algebra or optimization, and deep learning helps, depending on the research area. You should be comfortable reading primary papers and implementing ideas on your own.</li>
-            <li lang="ko"><strong>기술 준비.</strong> 확률·통계와 Python 등 프로그래밍은 대부분의 과제에서 필수입니다. 기계학습, 수치 선형대수·최적화, 딥러닝 경험은 주제에 따라 도움이 됩니다. 원문 논문을 읽고 아이디어를 스스로 구현할 수 있어야 합니다.</li>
-            <li><strong>Collaboration.</strong> Members are expected to work collegially and to respect privacy and data-use agreements in applied work.</li>
-            <li lang="ko"><strong>협업.</strong> 동료와 맞춰 일하고, 응용 과제에서는 프라이버시와 데이터 사용 약속을 지킵니다.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <section class="section section--tight-top" aria-labelledby="funding-heading">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="section__eyebrow">Funding</p>
-          <h2 id="funding-heading" class="section__title">Financial support</h2>
-        </div>
-        <div class="prose">
-          <p>Support depends on fit and degree level. Eligible members may receive Brain Korea (BK) scholarship support and PI personal research funding (tuition and living on funded lines, per university and grant rules). PI personal research funding backs research assistantships on active projects—not a guarantee for all applicants.</p>
-          <p lang="ko">지원은 적합성과 학위 과정에 따라 달라집니다. 선발된 구성원은 규정 안에서 <strong>BK 장학금</strong>과 <strong>교수 개인 연구비</strong>(등록금 및 생활비)를 받을 수 있습니다. 교수 개인 연구비는 진행 중인 과제의 RA에 쓰이며, 지원자 전원에게 보장되지 않습니다.</p>
-        </div>
-      </div>
-    </section>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><a class="footer-brand" href="index.html">SOCAL<span>LAB</span></a><p>Statistical Optimization &amp;<br>Collaborative AI Learning</p><p>Kyungpook National University · CSE</p></div><nav aria-label="Footer"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="members.html">Members</a><a href="prospective.html">Prospective</a></nav><div class="footer-contact"><a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a><a href="https://scholar.google.com/citations?hl=en&amp;user=JAi7yE0AAAAJ">Google Scholar <span aria-hidden="true">↗</span></a><p>© 2026 SOCAL Lab</p></div></div></footer>
 
-    <section class="section section--tight-top section--join" aria-labelledby="inquire-heading">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="section__eyebrow">Next step</p>
-          <h2 id="inquire-heading" class="section__title">How to inquire</h2>
-        </div>
-        <div class="prose">
-          <p>Email <a href="mailto:natekang@knu.ac.kr" style="color:var(--accent)">natekang@knu.ac.kr</a>. Please choose the path that matches your current enrollment.</p>
-          <p lang="ko">문의는 <a href="mailto:natekang@knu.ac.kr" style="color:var(--accent)">natekang@knu.ac.kr</a>로 보내 주시면 됩니다. 아래 중 본인 소속에 맞는 경로를 따라 주시면 됩니다.</p>
-          <p><strong>If you are a current KNU student:</strong> feel free to visit my office (<strong>IT Building 5, Room 258</strong>) or send a short email with your name, year (or program), and a few sentences on what you would like to work on. A CV or transcript is not required for a first conversation. Email subject: <strong>SOCAL Lab — KNU student</strong>.</p>
-          <p lang="ko"><strong>경북대 재학생이시면</strong> IT 5호관 258호로 오셔도 됩니다. 메일로 연락하실 때는 이름, 학년(또는 과정), 관심 있는 주제를 짧게 적어 주시면 됩니다. CV나 성적표는 처음부터 보내지 않으셔도 됩니다. 제목은 <strong>SOCAL Lab — KNU student</strong>로 적어 주세요.</p>
-          <p><strong>If you are not currently enrolled at KNU:</strong> write the first email in English and include (i) a CV; (ii) a transcript (or official transcript summary); (iii) one or two topic bullets from this page; (iv) prior research or implementation experience (course projects are welcome) and why this lab—which thread and what problem you want to work on. Email subject: <strong>SOCAL Lab — Prospective Student</strong>.</p>
-          <p lang="ko"><strong>경북대에 재학 중이 아니시면</strong> 첫 메일은 영문으로 보내 주십시오. (i) CV, (ii) 성적표(또는 공식 성적 요약), (iii) 이 페이지에서 고른 주제 한두 가지, (iv) 이전 연구나 구현 경험(수업 프로젝트 가능)과 이 연구실에서 어떤 주제의 어떤 문제를 하고 싶은지를 넣어 주시면 됩니다. 제목은 <strong>SOCAL Lab — Prospective Student</strong>로 적어 주세요.</p>
-          <p><strong>Process:</strong> We review inquiries and invite shortlisted candidates to a conversation or interview (in person or video). We do not interview every inquiry.</p>
-          <p lang="ko"><strong>절차.</strong> 문의를 검토한 뒤 선발된 분에 한해 면담(대면 또는 화상)을 제안합니다. 모든 문의에 면담을 진행하지는 않습니다.</p>
-          <p style="margin-top:1rem"><a class="btn btn--primary" href="mailto:natekang@knu.ac.kr">Send inquiry</a> <a class="btn btn--ghost" href="research.html">Research program</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <dialog id="prospect-lightbox" class="prospect-lightbox" aria-label="Enlarged figure">
-    <div class="prospect-lightbox__panel">
-      <button type="button" class="prospect-lightbox__close" aria-label="Close">&times;</button>
-      <img id="prospect-lightbox-img" class="prospect-lightbox__img" src="" alt="">
-    </div>
-  </dialog>
-
-  <footer class="site-footer">
-    <p>&copy; 2026 SOCAL Lab · Kyungpook National University</p>
-    <p style="margin-top:0.5rem"><a href="index.html">Home</a> · <a href="research.html">Research</a> · <a href="publications.html">Publications</a></p>
-  </footer>
-
-  <script>
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var panel = document.getElementById('mobile-panel-p');
-    if (!btn || !panel) return;
-    btn.addEventListener('click', function () {
-      var open = !panel.classList.contains('is-open');
-      panel.classList.toggle('is-open', open);
-      panel.hidden = !open;
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    panel.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        panel.classList.remove('is-open');
-        panel.hidden = true;
-        btn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
-  })();
-  (function () {
-    var dlg = document.getElementById('prospect-lightbox');
-    var imgEl = document.getElementById('prospect-lightbox-img');
-    if (!dlg || !imgEl) return;
-    var closeBtn = dlg.querySelector('.prospect-lightbox__close');
-    document.querySelectorAll('.prospect-figure__trigger').forEach(function (trigger) {
-      trigger.addEventListener('click', function () {
-        var im = trigger.querySelector('img');
-        if (!im) return;
-        imgEl.src = im.currentSrc || im.src;
-        imgEl.alt = im.alt || '';
-        if (typeof dlg.showModal === 'function') dlg.showModal();
-      });
-    });
-    dlg.addEventListener('close', function () {
-      imgEl.removeAttribute('src');
-      imgEl.alt = '';
-    });
-    if (closeBtn) closeBtn.addEventListener('click', function () { dlg.close(); });
-    dlg.addEventListener('click', function (e) {
-      if (e.target === dlg) dlg.close();
-    });
-  })();
-  </script>
+<script src="site.js?v=20261112-refinement"></script>
 </body>
 </html>

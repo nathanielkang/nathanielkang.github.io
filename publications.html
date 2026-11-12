@@ -25,8 +25,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="lab.css?v=20261112-math-v3">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="site-refinement.css?v=20261112-refinement">
 </head>
-<body>
+<body class="site-refined page-publications">
   <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <nav class="site-nav" aria-label="Primary">
@@ -38,159 +40,135 @@
         <a href="members.html">Members</a>
         <a href="prospective.html">Prospective</a>
       </div>
-      <a class="site-nav__cta" href="prospective.html">Inquire</a>
+      <a class="site-nav__cta" href="prospective.html#inquire-heading">Inquire</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-panel-pub" aria-label="Open menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </nav>
   </header>
-  <div id="mobile-panel-pub" class="mobile-panel" hidden>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html" aria-current="page">Publications</a>
-    <a href="members.html">Members</a>
-    <a href="prospective.html">Prospective</a>
-  </div>
+  <div id="mobile-panel-pub" class="mobile-panel" hidden><a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a aria-current="page" href="publications.html">Publications</a>
+<a href="members.html">Members</a>
+<a href="prospective.html">Prospective</a>
+<a class="mobile-panel__cta" href="prospective.html#inquire-heading">Inquire <span aria-hidden="true">↗</span></a></div>
   <main id="main">
-    <section class="section section--pubs">
-      <div class="wrap" style="max-width:1040px">
-        <div class="section__head">
-          <h1 class="section__title">Publications</h1>
-          <p class="section__lead">Selected peer-reviewed work. <strong class="author-me">N. Kang</strong> marks Nathaniel Kang. Full bibliography on Google Scholar.</p>
-        </div>
-        <h3 class="pub-year">2027</h3>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="pub-badge pub-badge--new">New</span><span class="if-badge">IF 8.2</span><span class="venue">Applied Soft Computing</span></div>
-          <h3 class="pub-title"><a href="https://doi.org/10.1016/j.asoc.2026.116733" rel="noopener noreferrer">Mending the Tail: Residual-Zero Students for Imbalanced Regression</a></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
+<section class="section section--pubs">
+<div class="wrap" style="max-width:1040px">
+<div class="section__head publications-header">
+<h1 class="page-title">Publications</h1>
+<p class="section__lead">Selected peer-reviewed work. <strong class="author-me">N. Kang</strong> marks Nathaniel Kang. Full bibliography on Google Scholar.</p>
+<nav aria-label="Publication sections" class="page-jumps page-jumps--compact"><a href="#published">Published work</a><a href="#working-papers">Working papers</a><a href="https://scholar.google.com/citations?hl=en&amp;user=JAi7yE0AAAAJ">Google Scholar <span aria-hidden="true">↗</span></a></nav></div>
+<h3 class="pub-year" id="published">2027</h3>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Applied Soft Computing</span><span class="pub-badges"><span class="pub-badge pub-badge--new">New</span><span class="if-badge">IF 8.2</span></span></div>
+<h3 class="pub-title"><a href="https://doi.org/10.1016/j.asoc.2026.116733" rel="noopener noreferrer">Mending the Tail: Residual-Zero Students for Imbalanced Regression</a></h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<h3 class="pub-year">2026</h3>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Neural Information Processing Systems (NeurIPS) 2026 · Poster</span><span class="pub-note" lang="ko">(BK21 CS 우수 국제학술대회)</span><span class="pub-badges"><span class="pub-badge pub-badge--new">New</span></span></div>
+<h3 class="pub-title">Taming the Tails: Why Distributionally Robust Optimization Needs New Theory for Imbalanced Regression</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Neurocomputing</span><span class="pub-badges"><span class="pub-badge pub-badge--new">New</span><span class="if-badge">IF 6.5</span></span></div>
+<h3 class="pub-title"><a href="https://doi.org/10.1016/j.neucom.2026.134638" rel="noopener noreferrer">Rare but Critical: Copula-Calibrated Augmentation for Imbalanced Tabular Regression</a></h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">The Conference on Uncertainty in Artificial Intelligence (UAI) 2026 · Poster</span><span class="pub-note" lang="ko">(BK21 CS 우수 국제학술대회)</span><span class="pub-badges"><span class="pub-badge pub-badge--new">New</span></span></div>
+<h3 class="pub-title"><a href="https://proceedings.mlr.press/v337/kang26a.html" rel="noopener noreferrer">Conditional Diffusion Models for Imbalanced Tabular Regression</a></h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Neurocomputing</span><span class="pub-badges"><span class="pub-badge pub-badge--new">New</span><span class="if-badge">IF 6.5</span></span></div>
+<h3 class="pub-title"><a href="https://doi.org/10.1016/j.neucom.2026.134052" rel="noopener noreferrer">Orchestrating Federated Tabular Synthesis at Scale with Fault-Tolerant Pipeline Execution</a></h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Pattern Recognition</span><span class="pub-badges"><span class="if-badge">IF 8.0</span></span></div>
+<h3 class="pub-title"><a href="https://doi.org/10.1016/j.patcog.2025.112610" rel="noopener noreferrer">Calibrated mixup for imbalanced regression on tabular data</a></h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong>, K. Lee, J. Im</p>
+</article>
+<h3 class="pub-year">2025</h3>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">IEEE Internet of Things Journal</span><span class="pub-badges"><span class="if-badge">IF 10.6</span></span></div>
+<h3 class="pub-title">Optimizing federated learning: Addressing key challenges in real-world applications</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong>, Y. Kim, J. Im</p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Applied Soft Computing</span><span class="pub-badges"><span class="if-badge">IF 8.2</span></span></div>
+<h3 class="pub-title">Generalized additive models for mixed-data regression using informal data</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong>, H. Kim, J. Im</p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Expert Systems</span><span class="pub-badges"><span class="if-badge">IF 2.3</span></span></div>
+<h3 class="pub-title">Re-sampling calibrated SNN loss: A robust approach to non-IID data in federated learning</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong>, J. Im</p>
+</article>
+<h3 class="pub-year">2024</h3>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">IEEE Transactions on Big Data</span><span class="pub-badges"><span class="if-badge">IF 7.2</span></span></div>
+<h3 class="pub-title">Online news-based economic sentiment index</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong>, D. Min, Y. Cho, D. W. Ko, H. H. Kim, J. Y. Choeh, J. Im</p>
+</article>
+<a class="scholar-link" href="https://scholar.google.com/citations?hl=en&amp;user=JAi7yE0AAAAJ">Full list on Google Scholar →</a>
+<h3 class="working-papers-title" id="working-papers">Working papers</h3>
+<p class="publication-note">A shortlist of manuscripts under review or in revision — titles and venues may change. Full inventory is not listed here.</p>
+<p class="publication-note"><strong>Journals:</strong> venues name the current target and may change after revision or resubmission. <strong>Conferences:</strong> while a paper is under anonymous (double-blind) review, we do <em>not</em> list the conference or track name on this page.</p>
+<h4 class="pub-year" style="margin-top:0.5rem;font-size:0.8rem">Under review (journals)</h4>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">International Journal of Data Mining and Bioinformatics</span></div>
+<h3 class="pub-title">Certifying Infeasible Federation: Differentially Private Cuts for Conflicting Hospital Policies</h3>
+<p class="pub-authors">C. Lyu, J. Kwon, E. Wang, <strong class="author-me">N. Kang</strong>, H. Shin</p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Journal of Information Security and Applications</span></div>
+<h3 class="pub-title">Not All Large Language Model Deployments Are Created Equal: A Taxonomy-Driven Survey of Security, Defense, and Governance</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong>, J. Im</p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Knowledge-Based Systems</span></div>
+<h3 class="pub-title">Rare Rows Need Anchors: Prototype-Guided Augmentation for Tabular Imbalanced Regression</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">IEEE Transactions on Information Forensics and Security</span></div>
+<h3 class="pub-title">One Privacy Budget to Rule Them All: Synthesizing Multi-Table Databases Under Differential Privacy</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">IEEE Transactions on Information Theory</span></div>
+<h3 class="pub-title">Noise That Hides Heterogeneity: Information Limits of Federated Learning under Stochastic Measurements</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">ACM Transactions on Knowledge Discovery from Data</span></div>
+<h3 class="pub-title">TailWeave: Radial-Angular Tail Synthesis for Imbalanced Tabular Regression</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Engineering Applications of Artificial Intelligence</span></div>
+<h3 class="pub-title">Doubly Robust Federated Learning under Selective Labeling</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Pattern Recognition</span></div>
+<h3 class="pub-title">Neighbors Know Best: Manifold Augmentation for Tabular Regression</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+<h4 class="pub-year" style="margin-top:1rem;font-size:0.8rem">Under review (conferences)</h4>
+<article class="pub-item">
+<div class="pub-meta"><span class="venue">Peer review — venue withheld (anonymity)</span></div>
+<h3 class="pub-title">Well-Calibrated Yet Unfair: How Standard Conformal Prediction Fails Along the Predicted-Value Range</h3>
+<p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
+</article>
+</div>
+</section>
+</main>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><a class="footer-brand" href="index.html">SOCAL<span>LAB</span></a><p>Statistical Optimization &amp;<br>Collaborative AI Learning</p><p>Kyungpook National University · CSE</p></div><nav aria-label="Footer"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="members.html">Members</a><a href="prospective.html">Prospective</a></nav><div class="footer-contact"><a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a><a href="https://scholar.google.com/citations?hl=en&amp;user=JAi7yE0AAAAJ">Google Scholar <span aria-hidden="true">↗</span></a><p>© 2026 SOCAL Lab</p></div></div></footer>
 
-        <h3 class="pub-year">2026</h3>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="pub-badge pub-badge--new">New</span><span class="venue">Neural Information Processing Systems (NeurIPS) 2026 · Poster</span><span class="pub-note" lang="ko">(BK21 CS 우수 국제학술대회)</span></div>
-          <h3 class="pub-title">Taming the Tails: Why Distributionally Robust Optimization Needs New Theory for Imbalanced Regression</h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="pub-badge pub-badge--new">New</span><span class="if-badge">IF 6.5</span><span class="venue">Neurocomputing</span></div>
-          <h3 class="pub-title"><a href="https://doi.org/10.1016/j.neucom.2026.134638" rel="noopener noreferrer">Rare but Critical: Copula-Calibrated Augmentation for Imbalanced Tabular Regression</a></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="pub-badge pub-badge--new">New</span><span class="venue">The Conference on Uncertainty in Artificial Intelligence (UAI) 2026 · Poster</span><span class="pub-note" lang="ko">(BK21 CS 우수 국제학술대회)</span></div>
-          <h3 class="pub-title"><a href="https://proceedings.mlr.press/v337/kang26a.html" rel="noopener noreferrer">Conditional Diffusion Models for Imbalanced Tabular Regression</a></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="pub-badge pub-badge--new">New</span><span class="if-badge">IF 6.5</span><span class="venue">Neurocomputing</span></div>
-          <h3 class="pub-title"><a href="https://doi.org/10.1016/j.neucom.2026.134052" rel="noopener noreferrer">Orchestrating Federated Tabular Synthesis at Scale with Fault-Tolerant Pipeline Execution</a></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="if-badge">IF 8.0</span><span class="venue">Pattern Recognition</span></div>
-          <h3 class="pub-title"><a href="https://doi.org/10.1016/j.patcog.2025.112610" rel="noopener noreferrer">Calibrated mixup for imbalanced regression on tabular data</a></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong>, K. Lee, J. Im</p>
-        </article>
-
-        <h3 class="pub-year">2025</h3>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="if-badge">IF 10.6</span><span class="venue">IEEE Internet of Things Journal</span></div>
-          <h3 class="pub-title">Optimizing federated learning: Addressing key challenges in real-world applications</h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong>, Y. Kim, J. Im</p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="if-badge">IF 8.2</span><span class="venue">Applied Soft Computing</span></div>
-          <h3 class="pub-title">Generalized additive models for mixed-data regression using informal data</h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong>, H. Kim, J. Im</p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="if-badge">IF 2.3</span><span class="venue">Expert Systems</span></div>
-          <h3 class="pub-title">Re-sampling calibrated SNN loss: A robust approach to non-IID data in federated learning</h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong>, J. Im</p>
-        </article>
-
-        <h3 class="pub-year">2024</h3>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="if-badge">IF 7.2</span><span class="venue">IEEE Transactions on Big Data</span></div>
-          <h3 class="pub-title">Online news-based economic sentiment index</h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong>, D. Min, Y. Cho, D. W. Ko, H. H. Kim, J. Y. Choeh, J. Im</p>
-        </article>
-
-        <a class="scholar-link" href="https://scholar.google.com/citations?hl=en&user=JAi7yE0AAAAJ">Full list on Google Scholar →</a>
-
-        <h3 class="subsec-title">Working papers</h3>
-        <p style="color:#64748b;font-size:0.92rem;margin:0 0 0.35rem">A shortlist of manuscripts under review or in revision — titles and venues may change. Full inventory is not listed here.</p>
-        <p style="color:#64748b;font-size:0.82rem;margin:0 0 1rem;line-height:1.55"><strong>Journals:</strong> venues name the current target and may change after revision or resubmission. <strong>Conferences:</strong> while a paper is under anonymous (double-blind) review, we do <em>not</em> list the conference or track name on this page.</p>
-
-        <h4 class="pub-year" style="margin-top:0.5rem;font-size:0.8rem">Under review (journals)</h4>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="venue">International Journal of Data Mining and Bioinformatics</span></div>
-          <h3 class="pub-title"><em>Certifying Infeasible Federation: Differentially Private Cuts for Conflicting Hospital Policies</em></h3>
-          <p class="pub-authors">C. Lyu, J. Kwon, E. Wang, <strong class="author-me">N. Kang</strong>, H. Shin</p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="venue">Journal of Information Security and Applications</span></div>
-          <h3 class="pub-title"><em>Not All Large Language Model Deployments Are Created Equal: A Taxonomy-Driven Survey of Security, Defense, and Governance</em></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong>, J. Im</p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="venue">Knowledge-Based Systems</span></div>
-          <h3 class="pub-title"><em>Rare Rows Need Anchors: Prototype-Guided Augmentation for Tabular Imbalanced Regression</em></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="venue">IEEE Transactions on Information Forensics and Security</span></div>
-          <h3 class="pub-title"><em>One Privacy Budget to Rule Them All: Synthesizing Multi-Table Databases Under Differential Privacy</em></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="venue">IEEE Transactions on Information Theory</span></div>
-          <h3 class="pub-title"><em>Noise That Hides Heterogeneity: Information Limits of Federated Learning under Stochastic Measurements</em></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="venue">ACM Transactions on Knowledge Discovery from Data</span></div>
-          <h3 class="pub-title"><em>TailWeave: Radial-Angular Tail Synthesis for Imbalanced Tabular Regression</em></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="venue">Engineering Applications of Artificial Intelligence</span></div>
-          <h3 class="pub-title"><em>Doubly Robust Federated Learning under Selective Labeling</em></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="venue">Pattern Recognition</span></div>
-          <h3 class="pub-title"><em>Neighbors Know Best: Manifold Augmentation for Tabular Regression</em></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-
-        <h4 class="pub-year" style="margin-top:1rem;font-size:0.8rem">Under review (conferences)</h4>
-        <article class="pub-item">
-          <div class="pub-meta"><span class="venue">Peer review — venue withheld (anonymity)</span></div>
-          <h3 class="pub-title"><em>Well-Calibrated Yet Unfair: How Standard Conformal Prediction Fails Along the Predicted-Value Range</em></h3>
-          <p class="pub-authors"><strong class="author-me">N. Kang</strong></p>
-        </article>
-
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <p>&copy; 2026 SOCAL Lab · Kyungpook National University</p>
-    <p style="margin-top:0.5rem"><a href="index.html">Home</a> · <a href="research.html">Research</a> · <a href="members.html">Members</a> · <a href="https://scholar.google.com/citations?hl=en&amp;user=JAi7yE0AAAAJ">Google Scholar</a></p>
-  </footer>
-  <script>
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var panel = document.getElementById('mobile-panel-pub');
-    if (!btn || !panel) return;
-    btn.addEventListener('click', function () {
-      var open = !panel.classList.contains('is-open');
-      panel.classList.toggle('is-open', open);
-      panel.hidden = !open;
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-  })();
-  </script>
+<script src="site.js?v=20261112-refinement"></script>
 </body>
 </html>

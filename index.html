@@ -28,6 +28,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="lab.css?v=20261112-math-v3">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="site-refinement.css?v=20261112-refinement">
 
   <script type="application/ld+json">
   {
@@ -57,7 +59,7 @@
   }
   </script>
 </head>
-<body>
+<body class="site-refined page-index">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header>
@@ -70,7 +72,7 @@
         <a href="members.html">Members</a>
         <a href="prospective.html">Prospective</a>
       </div>
-      <a class="site-nav__cta" href="prospective.html">Inquire</a>
+      <a class="site-nav__cta" href="prospective.html#inquire-heading">Inquire</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M4 6h16M4 12h16M4 18h16"/>
@@ -78,194 +80,167 @@
       </button>
     </nav>
   </header>
-  <div id="mobile-panel" class="mobile-panel" hidden>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="members.html">Members</a>
-    <a class="mobile-panel__cta" href="prospective.html">Prospective students</a>
-  </div>
+  <div id="mobile-panel" class="mobile-panel" hidden><a aria-current="page" href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="members.html">Members</a>
+<a href="prospective.html">Prospective</a>
+<a class="mobile-panel__cta" href="prospective.html#inquire-heading">Inquire <span aria-hidden="true">↗</span></a></div>
 
   <main id="main">
-    <section class="lab-hero" aria-labelledby="hero-title">
-      <div class="lab-hero__frame">
-        <div class="atmosphere-carousel lab-hero__carousel" data-interval="3000" role="region" aria-roledescription="carousel" aria-label="Mathematics and statistics">
-          <div class="atmosphere-carousel__viewport" id="atmosphere-slides">
-            <figure class="atmosphere-carousel__slide is-active" aria-label="1 of 9: Singular value decomposition" data-slide="svd">
-              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/svd.webp" width="1672" height="941" decoding="async" fetchpriority="high" alt="Concrete university corridor in warm afternoon light.">
-              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 132px">
-                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/svd.svg?v=20261112-padding" width="132" height="31" alt="A equals U Sigma V transpose."></picture>
-                <span class="atmosphere-carousel__formula-label">Singular value decomposition</span>
-              </figcaption>
-            </figure>
-            <figure class="atmosphere-carousel__slide" aria-label="2 of 9: Chebyshev’s inequality" data-slide="chebyshev">
-              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/chebyshev.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Snow and golden ginkgo trees on a campus avenue.">
-              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 314px">
-                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/chebyshev.svg" width="314" height="74" alt="Probability that the absolute deviation of X from mu is at least k sigma is at most one over k squared."></picture>
-                <span class="atmosphere-carousel__formula-label">Chebyshev’s inequality</span>
-              </figcaption>
-            </figure>
-            <figure class="atmosphere-carousel__slide" aria-label="3 of 9: Kantorovich–Rubinstein theorem" data-slide="kantorovich">
-              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/kantorovich.webp" width="1672" height="941" decoding="async" loading="lazy" alt="An autumn campus avenue lined with golden trees.">
-              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 461px">
-                <picture><source media="(max-width: 699px)" srcset="img/atmosphere/v3/kantorovich-mobile.svg"><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/kantorovich.svg" width="461" height="67" alt="Wasserstein one distance equals the supremum over one-Lipschitz functions of the difference in expectations."></picture>
-                <span class="atmosphere-carousel__formula-label">Kantorovich–Rubinstein theorem</span>
-              </figcaption>
-            </figure>
-            <figure class="atmosphere-carousel__slide" aria-label="4 of 9: Central limit theorem" data-slide="clt">
-              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/clt.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Indigo and amber dusk above a university skyline.">
-              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 338px">
-                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/clt.svg" width="338" height="50" alt="Square root of n times the centered sample mean converges in distribution to a normal distribution with variance sigma squared."></picture>
-                <span class="atmosphere-carousel__formula-label">Central limit theorem</span>
-              </figcaption>
-            </figure>
-            <figure class="atmosphere-carousel__slide" aria-label="5 of 9: Cauchy–Schwarz inequality" data-slide="cauchy-schwarz">
-              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/cauchy-schwarz.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Concentric concrete walls around a circular atrium skylight.">
-              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 258px">
-                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/cauchy-schwarz.svg" width="258" height="33" alt="Absolute inner product of x and y is at most the product of their norms."></picture>
-                <span class="atmosphere-carousel__formula-label">Cauchy–Schwarz inequality</span>
-              </figcaption>
-            </figure>
-            <figure class="atmosphere-carousel__slide" aria-label="6 of 9: Differential privacy" data-slide="dp">
-              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/dp.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Blue-hour glass atrium with warm amber reflections.">
-              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 506px">
-                <picture><source media="(max-width: 699px)" srcset="img/atmosphere/v3/dp-mobile.svg"><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/dp.svg" width="506" height="35" alt="Probability of M of D in S is at most e to epsilon times the probability of M of adjacent D prime in S, plus delta."></picture>
-                <span class="atmosphere-carousel__formula-label">Differential privacy</span>
-              </figcaption>
-            </figure>
-            <figure class="atmosphere-carousel__slide" aria-label="7 of 9: Spectral theorem" data-slide="spectral">
-              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/spectral.webp" width="1672" height="941" decoding="async" loading="lazy" alt="A softly lit glass atrium with a subtle rainbow on the floor.">
-              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 274px">
-                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/spectral.svg?v=20261112-padding" width="274" height="36" alt="A real symmetric matrix A equals Q Lambda Q transpose."></picture>
-                <span class="atmosphere-carousel__formula-label">Spectral theorem</span>
-              </figcaption>
-            </figure>
-            <figure class="atmosphere-carousel__slide" aria-label="8 of 9: Bayes’ theorem" data-slide="bayes">
-              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/bayes.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Teal and amber lights through rain-streaked glass.">
-              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 345px">
-                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/bayes.svg" width="345" height="85" alt="Posterior equals likelihood times prior divided by evidence."></picture>
-                <span class="atmosphere-carousel__formula-label">Bayes’ theorem</span>
-              </figcaption>
-            </figure>
-            <figure class="atmosphere-carousel__slide" aria-label="9 of 9: Sklar’s theorem" data-slide="sklar">
-              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/sklar.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Spring trees and brick arcades reflected in a courtyard pool.">
-              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 330px">
-                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/sklar.svg" width="330" height="34" alt="The joint cumulative distribution equals the copula evaluated at its marginal cumulative distributions."></picture>
-                <span class="atmosphere-carousel__formula-label">Sklar’s theorem</span>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="atmosphere-carousel__controls" role="group" aria-label="Slideshow controls" hidden>
-            <button type="button" data-carousel="previous" aria-label="Previous slide" aria-controls="atmosphere-slides">←</button>
-            <span class="atmosphere-carousel__count" aria-live="off">01 / 09</span>
-            <button type="button" data-carousel="next" aria-label="Next slide" aria-controls="atmosphere-slides">→</button>
-            <button type="button" class="atmosphere-carousel__pause" data-carousel="pause" aria-label="Pause slideshow" aria-pressed="false">Pause</button>
-          </div>
-          <p class="sr-only atmosphere-carousel__status" aria-live="polite" aria-atomic="true"></p>
-        </div>
-        <div class="lab-hero__inner">
-          <p class="lab-hero__kicker">Kyungpook National University · CSE</p>
-          <h1 id="hero-title" class="font-display">SOCAL Lab</h1>
-          <p class="lab-hero__sub">Statistical Optimization &amp; Collaborative AI Learning</p>
-        </div>
-      </div>
-    </section>
+<section aria-labelledby="hero-title" class="lab-hero">
+<div class="lab-hero__frame">
+<div aria-label="Mathematics and statistics" aria-roledescription="carousel" class="atmosphere-carousel lab-hero__carousel" data-interval="3000" role="region">
+<div class="atmosphere-carousel__viewport" id="atmosphere-slides">
+<figure aria-label="1 of 9: Singular value decomposition" class="atmosphere-carousel__slide is-active" data-slide="svd">
+<img alt="Concrete university corridor in warm afternoon light." class="atmosphere-carousel__photo" decoding="async" fetchpriority="high" height="941" src="img/atmosphere/v3/svd.webp" width="1672"/>
+<figcaption class="atmosphere-carousel__formula" style="--equation-width: 132px">
+<picture><img alt="A equals U Sigma V transpose." class="atmosphere-carousel__equation" height="31" src="img/atmosphere/v3/svd.svg?v=20261112-padding" width="132"/></picture>
+<span class="atmosphere-carousel__formula-label">Singular value decomposition</span>
+</figcaption>
+</figure>
+<figure aria-label="2 of 9: Chebyshev’s inequality" class="atmosphere-carousel__slide" data-slide="chebyshev">
+<img alt="Snow and golden ginkgo trees on a campus avenue." class="atmosphere-carousel__photo" decoding="async" height="941" loading="lazy" src="img/atmosphere/v3/chebyshev.webp" width="1672"/>
+<figcaption class="atmosphere-carousel__formula" style="--equation-width: 314px">
+<picture><img alt="Probability that the absolute deviation of X from mu is at least k sigma is at most one over k squared." class="atmosphere-carousel__equation" height="74" src="img/atmosphere/v3/chebyshev.svg" width="314"/></picture>
+<span class="atmosphere-carousel__formula-label">Chebyshev’s inequality</span>
+</figcaption>
+</figure>
+<figure aria-label="3 of 9: Kantorovich–Rubinstein theorem" class="atmosphere-carousel__slide" data-slide="kantorovich">
+<img alt="An autumn campus avenue lined with golden trees." class="atmosphere-carousel__photo" decoding="async" height="941" loading="lazy" src="img/atmosphere/v3/kantorovich.webp" width="1672"/>
+<figcaption class="atmosphere-carousel__formula" style="--equation-width: 461px">
+<picture><source media="(max-width: 699px)" srcset="img/atmosphere/v3/kantorovich-mobile.svg"/><img alt="Wasserstein one distance equals the supremum over one-Lipschitz functions of the difference in expectations." class="atmosphere-carousel__equation" height="67" src="img/atmosphere/v3/kantorovich.svg" width="461"/></picture>
+<span class="atmosphere-carousel__formula-label">Kantorovich–Rubinstein theorem</span>
+</figcaption>
+</figure>
+<figure aria-label="4 of 9: Central limit theorem" class="atmosphere-carousel__slide" data-slide="clt">
+<img alt="Indigo and amber dusk above a university skyline." class="atmosphere-carousel__photo" decoding="async" height="941" loading="lazy" src="img/atmosphere/v3/clt.webp" width="1672"/>
+<figcaption class="atmosphere-carousel__formula" style="--equation-width: 338px">
+<picture><img alt="Square root of n times the centered sample mean converges in distribution to a normal distribution with variance sigma squared." class="atmosphere-carousel__equation" height="50" src="img/atmosphere/v3/clt.svg" width="338"/></picture>
+<span class="atmosphere-carousel__formula-label">Central limit theorem</span>
+</figcaption>
+</figure>
+<figure aria-label="5 of 9: Cauchy–Schwarz inequality" class="atmosphere-carousel__slide" data-slide="cauchy-schwarz">
+<img alt="Concentric concrete walls around a circular atrium skylight." class="atmosphere-carousel__photo" decoding="async" height="941" loading="lazy" src="img/atmosphere/v3/cauchy-schwarz.webp" width="1672"/>
+<figcaption class="atmosphere-carousel__formula" style="--equation-width: 258px">
+<picture><img alt="Absolute inner product of x and y is at most the product of their norms." class="atmosphere-carousel__equation" height="33" src="img/atmosphere/v3/cauchy-schwarz.svg" width="258"/></picture>
+<span class="atmosphere-carousel__formula-label">Cauchy–Schwarz inequality</span>
+</figcaption>
+</figure>
+<figure aria-label="6 of 9: Differential privacy" class="atmosphere-carousel__slide" data-slide="dp">
+<img alt="Blue-hour glass atrium with warm amber reflections." class="atmosphere-carousel__photo" decoding="async" height="941" loading="lazy" src="img/atmosphere/v3/dp.webp" width="1672"/>
+<figcaption class="atmosphere-carousel__formula" style="--equation-width: 506px">
+<picture><source media="(max-width: 699px)" srcset="img/atmosphere/v3/dp-mobile.svg"/><img alt="Probability of M of D in S is at most e to epsilon times the probability of M of adjacent D prime in S, plus delta." class="atmosphere-carousel__equation" height="35" src="img/atmosphere/v3/dp.svg" width="506"/></picture>
+<span class="atmosphere-carousel__formula-label">Differential privacy</span>
+</figcaption>
+</figure>
+<figure aria-label="7 of 9: Spectral theorem" class="atmosphere-carousel__slide" data-slide="spectral">
+<img alt="A softly lit glass atrium with a subtle rainbow on the floor." class="atmosphere-carousel__photo" decoding="async" height="941" loading="lazy" src="img/atmosphere/v3/spectral.webp" width="1672"/>
+<figcaption class="atmosphere-carousel__formula" style="--equation-width: 274px">
+<picture><img alt="A real symmetric matrix A equals Q Lambda Q transpose." class="atmosphere-carousel__equation" height="36" src="img/atmosphere/v3/spectral.svg?v=20261112-padding" width="274"/></picture>
+<span class="atmosphere-carousel__formula-label">Spectral theorem</span>
+</figcaption>
+</figure>
+<figure aria-label="8 of 9: Bayes’ theorem" class="atmosphere-carousel__slide" data-slide="bayes">
+<img alt="Teal and amber lights through rain-streaked glass." class="atmosphere-carousel__photo" decoding="async" height="941" loading="lazy" src="img/atmosphere/v3/bayes.webp" width="1672"/>
+<figcaption class="atmosphere-carousel__formula" style="--equation-width: 345px">
+<picture><img alt="Posterior equals likelihood times prior divided by evidence." class="atmosphere-carousel__equation" height="85" src="img/atmosphere/v3/bayes.svg" width="345"/></picture>
+<span class="atmosphere-carousel__formula-label">Bayes’ theorem</span>
+</figcaption>
+</figure>
+<figure aria-label="9 of 9: Sklar’s theorem" class="atmosphere-carousel__slide" data-slide="sklar">
+<img alt="Spring trees and brick arcades reflected in a courtyard pool." class="atmosphere-carousel__photo" decoding="async" height="941" loading="lazy" src="img/atmosphere/v3/sklar.webp" width="1672"/>
+<figcaption class="atmosphere-carousel__formula" style="--equation-width: 330px">
+<picture><img alt="The joint cumulative distribution equals the copula evaluated at its marginal cumulative distributions." class="atmosphere-carousel__equation" height="34" src="img/atmosphere/v3/sklar.svg" width="330"/></picture>
+<span class="atmosphere-carousel__formula-label">Sklar’s theorem</span>
+</figcaption>
+</figure>
+</div>
+<div aria-label="Slideshow controls" class="atmosphere-carousel__controls" hidden="" role="group">
+<button aria-controls="atmosphere-slides" aria-label="Previous slide" data-carousel="previous" type="button">←</button>
+<span aria-live="off" class="atmosphere-carousel__count">01 / 09</span>
+<button aria-controls="atmosphere-slides" aria-label="Next slide" data-carousel="next" type="button">→</button>
+<button aria-label="Pause slideshow" aria-pressed="false" class="atmosphere-carousel__pause" data-carousel="pause" type="button">Pause</button>
+</div>
+<p aria-atomic="true" aria-live="polite" class="sr-only atmosphere-carousel__status"></p>
+</div>
+<div class="lab-hero__inner">
+<p class="lab-hero__kicker">Kyungpook National University · CSE</p>
+<h1 class="font-display" id="hero-title">SOCAL Lab</h1>
+<p class="lab-hero__sub">Statistical Optimization &amp; Collaborative AI Learning</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="lab-intro" class="section section--tight-top">
+<div class="wrap home-intro">
+<h2 class="section__title" id="lab-intro">The lab</h2>
 
-    <section class="section section--tight-top" aria-labelledby="lab-intro">
-      <div class="wrap home-intro">
-        <h2 id="lab-intro" class="section__title">The lab</h2>
-        <p>The SOCAL Lab, led by Nathaniel Kang in the Department of Computer Science and Engineering (CSE), Kyungpook National University, develops statistical tools and methods for tabular data. While vision and language receive substantial attention, tabular domains remain underexplored despite presenting steep practical challenges: sample sizes are often small, columns combine categorical and numerical features, and values are frequently missing. To address these difficulties, we design statistical methods—including synthetic data generation and federated learning—tailored to settings where sensitive tables cannot be pooled across sites, regression targets concentrate in rare tail distributions, and deployed models require dependable AI alignment.</p>
-        <p>We are actively recruiting motivated Master's and Ph.D. students. If you are interested, please review our <a href="prospective.html">Prospective Students</a> page and contact <a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a>.</p>
-        <p lang="ko">경북대학교 컴퓨터학부 SOCAL Lab에서는 연합학습, 합성 데이터, 불균형 회귀, AI 정렬을 연구합니다. 석·박사 과정 신입생을 모집 중이오니, 관심 있는 분은 <a href="prospective.html">Prospective</a> 페이지를 참고하신 후 <a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a>로 문의 부탁드립니다.</p>
-      </div>
-    </section>
 
-    <section class="section section--tight-top" aria-labelledby="threads-heading">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="section__eyebrow">Research</p>
-          <h2 id="threads-heading" class="section__title">What we work on</h2>
-        </div>
-        <div class="home-threads">
-          <a href="research.html#theme-fl"><span>01</span><strong>Federated learning &amp; privacy</strong><em>Learning when data never leave the device.</em></a>
-          <a href="research.html#theme-ir"><span>02</span><strong>Imbalanced regression</strong><em>Calibration and synthesis when the tail matters.</em></a>
-          <a href="research.html#theme-align"><span>03</span><strong>AI alignment</strong><em>Auditing language models as they move into the wild.</em></a>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" aria-labelledby="news-heading">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="section__eyebrow">Latest</p>
-          <h2 id="news-heading" class="section__title">Recent acceptances</h2>
-        </div>
-        <div class="news-grid">
-          <a class="news-card" href="https://doi.org/10.1016/j.asoc.2026.116733" rel="noopener noreferrer">
-            <img src="img/logos/applied-soft-computing.jpg" width="576" height="768" alt="Applied Soft Computing journal cover">
-            <div class="news-card__body">
-              <p class="news-card__venue">Applied Soft Computing</p>
-              <h3>Mending the Tail</h3>
-              <p>Residual-zero students for imbalanced regression.</p>
-            </div>
-          </a>
-          <a class="news-card" href="publications.html">
-            <img src="img/logos/NeurIPS_logo.png?v=20261019-right" width="1000" height="448" alt="NeurIPS">
-            <div class="news-card__body">
-              <p class="news-card__venue">NeurIPS 2026 · Poster</p>
-              <h3>Taming the Tails</h3>
-              <p>Distributionally robust optimization for imbalanced regression.</p>
-            </div>
-          </a>
-          <a class="news-card" href="publications.html">
-            <img src="img/logos/uailogo_square.png?v=20261019-right" width="200" height="200" alt="UAI">
-            <div class="news-card__body">
-              <p class="news-card__venue">UAI 2026 · Poster</p>
-              <h3>Conditional diffusion for tabular regression</h3>
-              <p>Imbalanced tabular regression, in the UAI proceedings.</p>
-            </div>
-          </a>
-          <a class="news-card" href="publications.html">
-            <img src="img/logos/neurocomputing.jpg" width="576" height="768" alt="Neurocomputing journal cover">
-            <div class="news-card__body">
-              <p class="news-card__venue">Neurocomputing</p>
-              <h3>Rare but critical</h3>
-              <p>Copula-calibrated augmentation for imbalanced tabular regression.</p>
-            </div>
-          </a>
-        </div>
-        <p class="home-more"><a href="publications.html">All publications →</a></p>
-      </div>
-    </section>
-  </main>
+<div class="home-intro__grid"><div class="home-intro__english"><p class="language-label">About the lab</p><p>The SOCAL Lab, led by Nathaniel Kang in the Department of Computer Science and Engineering (CSE), Kyungpook National University, develops statistical tools and methods for tabular data. While vision and language receive substantial attention, tabular domains remain underexplored despite presenting steep practical challenges: sample sizes are often small, columns combine categorical and numerical features, and values are frequently missing. To address these difficulties, we design statistical methods—including synthetic data generation and federated learning—tailored to settings where sensitive tables cannot be pooled across sites, regression targets concentrate in rare tail distributions, and deployed models require dependable AI alignment.</p><p>We are actively recruiting motivated Master's and Ph.D. students. If you are interested, please review our <a href="prospective.html">Prospective Students</a> page and contact <a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a>.</p></div><aside aria-label="한국어 소개" class="home-intro__korean"><p lang="ko">경북대학교 컴퓨터학부 SOCAL Lab에서는 연합학습, 합성 데이터, 불균형 회귀, AI 정렬을 연구합니다. 석·박사 과정 신입생을 모집 중이오니, 관심 있는 분은 <a href="prospective.html">Prospective</a> 페이지를 참고하신 후 <a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a>로 문의 부탁드립니다.</p></aside></div></div>
+</section>
+<section aria-labelledby="threads-heading" class="section section--tight-top">
+<div class="wrap">
+<div class="section__head">
+<p class="section__eyebrow">Research</p>
+<h2 class="section__title" id="threads-heading">What we work on</h2>
+</div>
+<div class="home-threads">
+<a href="research.html#theme-fl"><span>01</span><strong>Federated learning &amp; privacy</strong><em>Learning when data never leave the device.</em><span aria-hidden="true" class="home-thread__link">Explore research <span>↗</span></span></a>
+<a href="research.html#theme-ir"><span>02</span><strong>Imbalanced regression</strong><em>Calibration and synthesis when the tail matters.</em><span aria-hidden="true" class="home-thread__link">Explore research <span>↗</span></span></a>
+<a href="research.html#theme-align"><span>03</span><strong>AI alignment</strong><em>Auditing language models as they move into the wild.</em><span aria-hidden="true" class="home-thread__link">Explore research <span>↗</span></span></a>
+</div>
+</div>
+</section>
+<section aria-labelledby="news-heading" class="section">
+<div class="wrap">
+<div class="section__head">
+<p class="section__eyebrow">Latest</p>
+<h2 class="section__title" id="news-heading">Recent acceptances</h2>
+</div>
+<div class="news-grid">
+<a class="news-card" href="https://doi.org/10.1016/j.asoc.2026.116733" rel="noopener noreferrer">
+<img alt="Applied Soft Computing journal cover" class="venue-image venue-image--cover" height="768" src="img/logos/applied-soft-computing.jpg" width="576"/>
+<div class="news-card__body">
+<p class="news-card__venue">Applied Soft Computing</p>
+<h3>Mending the Tail</h3>
+<p>Residual-zero students for imbalanced regression.</p>
+</div>
+</a>
+<a class="news-card" href="publications.html">
+<img alt="NeurIPS" class="venue-image venue-image--logo" height="448" src="img/logos/NeurIPS_logo.png?v=20261019-right" width="1000"/>
+<div class="news-card__body">
+<p class="news-card__venue">NeurIPS 2026 · Poster</p>
+<h3>Taming the Tails</h3>
+<p>Distributionally robust optimization for imbalanced regression.</p>
+</div>
+</a>
+<a class="news-card" href="publications.html">
+<img alt="UAI" class="venue-image venue-image--logo" height="200" src="img/logos/uailogo_square.png?v=20261019-right" width="200"/>
+<div class="news-card__body">
+<p class="news-card__venue">UAI 2026 · Poster</p>
+<h3>Conditional diffusion for tabular regression</h3>
+<p>Imbalanced tabular regression, in the UAI proceedings.</p>
+</div>
+</a>
+<a class="news-card" href="publications.html">
+<img alt="Neurocomputing journal cover" class="venue-image venue-image--cover" height="768" src="img/logos/neurocomputing.jpg" width="576"/>
+<div class="news-card__body">
+<p class="news-card__venue">Neurocomputing</p>
+<h3>Rare but critical</h3>
+<p>Copula-calibrated augmentation for imbalanced tabular regression.</p>
+</div>
+</a>
+</div>
+<p class="home-more"><a href="publications.html">All publications →</a></p>
+</div>
+</section>
+</main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 SOCAL Lab · Kyungpook National University · From Irvine to Daegu</p>
-    <p style="margin-top:0.5rem"><a href="https://scholar.google.com/citations?hl=en&user=JAi7yE0AAAAJ">Google Scholar</a></p>
-  </footer>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><a class="footer-brand" href="index.html">SOCAL<span>LAB</span></a><p>Statistical Optimization &amp;<br>Collaborative AI Learning</p><p>Kyungpook National University · CSE</p></div><nav aria-label="Footer"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="members.html">Members</a><a href="prospective.html">Prospective</a></nav><div class="footer-contact"><a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a><a href="https://scholar.google.com/citations?hl=en&amp;user=JAi7yE0AAAAJ">Google Scholar <span aria-hidden="true">↗</span></a><p>© 2026 SOCAL Lab</p></div></div></footer>
 
   <script src="atmosphere-carousel.js?v=20261112-math-v3"></script>
-  <script>
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var panel = document.getElementById('mobile-panel');
-    if (!btn || !panel) return;
-    btn.addEventListener('click', function () {
-      var open = !panel.classList.contains('is-open');
-      panel.classList.toggle('is-open', open);
-      panel.hidden = !open;
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    panel.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        panel.classList.remove('is-open');
-        panel.hidden = true;
-        btn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
-  })();
-  </script>
+
+<script src="site.js?v=20261112-refinement"></script>
 </body>
 </html>

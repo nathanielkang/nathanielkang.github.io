@@ -28,8 +28,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="lab.css?v=20261112-math-v3">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="site-refinement.css?v=20261112-refinement">
 </head>
-<body>
+<body class="site-refined page-members">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header>
@@ -42,7 +44,7 @@
         <a href="members.html" aria-current="page">Members</a>
         <a href="prospective.html">Prospective</a>
       </div>
-      <a class="site-nav__cta" href="prospective.html">Inquire</a>
+      <a class="site-nav__cta" href="prospective.html#inquire-heading">Inquire</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-panel-m" aria-label="Open menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M4 6h16M4 12h16M4 18h16"/>
@@ -50,111 +52,26 @@
       </button>
     </nav>
   </header>
-  <div id="mobile-panel-m" class="mobile-panel" hidden>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="members.html" aria-current="page">Members</a>
-    <a href="prospective.html">Prospective</a>
-  </div>
+  <div id="mobile-panel-m" class="mobile-panel" hidden><a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a aria-current="page" href="members.html">Members</a>
+<a href="prospective.html">Prospective</a>
+<a class="mobile-panel__cta" href="prospective.html#inquire-heading">Inquire <span aria-hidden="true">↗</span></a></div>
 
-  <main id="main">
-    <section class="prospect-hero" aria-labelledby="members-title">
-      <div class="wrap prospect-hero__intro">
-        <p class="prospect-hero__kicker">SOCAL Lab · Kyungpook National University</p>
-        <h1 id="members-title" class="prospect-hero__title font-display">Members</h1>
-        <p class="prospect-hero__deck">Current members of the Statistical Optimization &amp; Collaborative AI Learning research group.</p>
-        <p lang="ko" class="prospect-hero__deck" style="margin-top:0.5rem;font-size:0.95rem;color:#64748b">연구실 구성원</p>
-      </div>
-    </section>
+  <main id="main"><section aria-labelledby="page-title" class="page-header"><div class="wrap"><p class="section__eyebrow">SOCAL Lab · Kyungpook National University</p><h1 id="page-title">Members</h1></div></section><section aria-labelledby="profile-heading" class="section profile-details"><div class="wrap"><div class="section__head"><p class="section__eyebrow">Background &amp; contact</p><h2 class="section__title" id="profile-heading">Nathaniel Kang</h2><p class="section__lead">Assistant Professor · Computer Science and Engineering<br/>IT Building 5, Room 258 · <a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a></p></div><div class="profile-details__grid"><div class="profile-education"><h3>Education</h3><ul class="pi-cv">
+<li>B.A., UCLA</li>
+<li>M.S., UCLA</li>
+<li>Ph.D., Yonsei University</li>
+</ul></div><div class="profile-experience"><h3>Professional experience</h3><ul class="pi-cv">
+<li>(2026–present) Assistant Professor, Kyungpook National University, Daegu, Korea</li>
+<li>(2025–2026) Postdoctoral Researcher, Yonsei University, Seoul, Korea</li>
+<li>(2018–2021) Researcher, University of California, Los Angeles (UCLA)</li>
+</ul></div></div></div></section><section aria-labelledby="current-members" class="section member-section"><div class="wrap"><div class="section__head"><p class="section__eyebrow">Our team</p><h2 class="section__title" id="current-members">Current members</h2></div><div class="member-directory"><article aria-labelledby="member-nathaniel" class="member-entry"><p class="member-entry__role">Principal investigator</p><h3 class="member-entry__name" id="member-nathaniel">Nathaniel Kang <span lang="ko">강네이트</span></h3><div class="member-entry__focus"><p class="member-entry__label">Research focus</p><ul><li>Federated Learning (Data Privacy)</li><li>Imbalanced Regression</li><li>AI Alignment</li></ul></div></article><article aria-labelledby="member-chansol" class="member-entry"><p class="member-entry__role">Graduate researcher</p><h3 class="member-entry__name" id="member-chansol">Chan Sol Lyu <span lang="ko">류찬솔</span></h3><div class="member-entry__focus"><p class="member-entry__label">Research focus</p><ul><li>Federated Learning (Data Privacy)</li></ul></div></article><article aria-labelledby="member-hyojae" class="member-entry"><p class="member-entry__role">Undergraduate researcher</p><h3 class="member-entry__name" id="member-hyojae">Hyojae Shin <span lang="ko">신효재</span></h3><div class="member-entry__focus"><p class="member-entry__label">Research focus</p><ul><li>Imbalanced Regression</li></ul></div></article><article aria-labelledby="member-jinhyun" class="member-entry"><p class="member-entry__role">Undergraduate researcher</p><h3 class="member-entry__name" id="member-jinhyun">Jinhyun Kwon <span lang="ko">권진현</span></h3><div class="member-entry__focus"><p class="member-entry__label">Research focus</p><ul><li>Federated Learning (Data Privacy)</li></ul></div></article></div></div></section><section aria-labelledby="alumni-heading" class="section alumni-section"><div class="wrap alumni-directory"><h2 class="section__title" id="alumni-heading">Alumni</h2><ul class="member-name-list"><li>Junseong Hwang <span lang="ko">황준성</span></li></ul></div></section></main>
 
-    <section class="section section--tight-top" aria-labelledby="pi-heading">
-      <div class="wrap" style="max-width:760px">
-        <div class="section__head">
-          <p class="section__eyebrow">Principal investigator</p>
-          <h2 id="pi-heading" class="section__title">Principal investigator</h2>
-        </div>
-        <p class="pi-line">Nathaniel Kang <span lang="ko">강네이트</span></p>
-        <p class="pi-role">Assistant Professor · Computer Science and Engineering</p>
-        <p class="pi-role"><a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a> · IT Building 5, Room 258</p>
-        <h3 class="pi-subh">Education</h3>
-        <ul class="pi-cv">
-          <li>B.A., UCLA</li>
-          <li>M.S., UCLA</li>
-          <li>Ph.D., Yonsei University</li>
-        </ul>
-        <h3 class="pi-subh">Professional experience</h3>
-        <ul class="pi-cv">
-          <li>(2026–present) Assistant Professor, Kyungpook National University, Daegu, Korea</li>
-          <li>(2025–2026) Postdoctoral Researcher, Yonsei University, Seoul, Korea</li>
-          <li>(2018–2021) Researcher, University of California, Los Angeles (UCLA)</li>
-        </ul>
-      </div>
-    </section>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><a class="footer-brand" href="index.html">SOCAL<span>LAB</span></a><p>Statistical Optimization &amp;<br>Collaborative AI Learning</p><p>Kyungpook National University · CSE</p></div><nav aria-label="Footer"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="members.html">Members</a><a href="prospective.html">Prospective</a></nav><div class="footer-contact"><a href="mailto:natekang@knu.ac.kr">natekang@knu.ac.kr</a><a href="https://scholar.google.com/citations?hl=en&amp;user=JAi7yE0AAAAJ">Google Scholar <span aria-hidden="true">↗</span></a><p>© 2026 SOCAL Lab</p></div></div></footer>
 
-    <section class="section section--tight-top" aria-labelledby="grad-heading">
-      <div class="wrap" style="max-width:760px">
-        <div class="section__head">
-          <p class="section__eyebrow">Graduate</p>
-          <h2 id="grad-heading" class="section__title">Graduate researchers (M.S./Ph.D.)</h2>
-        </div>
-        <ul class="member-name-list">
-          <li>Chan Sol Lyu <span lang="ko">류찬솔</span></li>
-        </ul>
-      </div>
-    </section>
 
-    <section class="section section--tight-top" aria-labelledby="undergrad-heading">
-      <div class="wrap" style="max-width:760px">
-        <div class="section__head">
-          <p class="section__eyebrow">Undergraduate</p>
-          <h2 id="undergrad-heading" class="section__title">Undergraduate researchers (학부연구생)</h2>
-        </div>
-        <ul class="member-name-list">
-          <li>Hyojae Shin <span lang="ko">신효재</span></li>
-          <li>Jinhyun Kwon <span lang="ko">권진현</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section--tight-top" aria-labelledby="alumni-heading">
-      <div class="wrap" style="max-width:760px">
-        <div class="section__head">
-          <h2 id="alumni-heading" class="section__title">Alumni</h2>
-        </div>
-        <ul class="member-name-list">
-          <li>Junseong Hwang <span lang="ko">황준성</span></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2026 SOCAL Lab · Kyungpook National University</p>
-    <p style="margin-top:0.5rem"><a href="index.html">Home</a> · <a href="research.html">Research</a> · <a href="prospective.html">Prospective students</a></p>
-  </footer>
-
-  <script>
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var panel = document.getElementById('mobile-panel-m');
-    if (!btn || !panel) return;
-    btn.addEventListener('click', function () {
-      var open = !panel.classList.contains('is-open');
-      panel.classList.toggle('is-open', open);
-      panel.hidden = !open;
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    panel.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        panel.classList.remove('is-open');
-        panel.hidden = true;
-        btn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
-  })();
-  </script>
+<script src="site.js?v=20261112-refinement"></script>
 </body>
 </html>
