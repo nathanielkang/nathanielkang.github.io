@@ -1997,6 +1997,144 @@ body.theme-dark {
   font-size: 1.15rem;
   color: #e2e8f0;
 }
+
+/* Photographs and vector mathematics remain separate at every viewport size. */
+.lab-hero .atmosphere-carousel__slide {
+  transition: opacity 0.6s ease;
+}
+.lab-hero .atmosphere-carousel__slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(0deg, rgba(7, 13, 24, 0.86), rgba(7, 13, 24, 0.03) 76%),
+    linear-gradient(90deg, rgba(8, 17, 29, 0.12) 40%, rgba(8, 17, 29, 0.44));
+}
+.lab-hero .atmosphere-carousel__formula {
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  right: max(1.5rem, calc((100% - 1200px) / 2 + 1.25rem));
+  width: min(44%, 34rem);
+  transform: translateY(-50%);
+  text-align: right;
+  color: #f5f7fc;
+}
+.atmosphere-carousel__formula picture {
+  display: block;
+}
+.lab-hero .atmosphere-carousel__equation {
+  display: block;
+  width: calc(var(--equation-width) * 1.15);
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
+}
+.atmosphere-carousel__formula-label {
+  display: block;
+  margin-top: 1.1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.025em;
+  color: #eef2f7;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+.atmosphere-carousel__formula-label::before {
+  content: "";
+  display: inline-block;
+  width: 1.3rem;
+  height: 1px;
+  margin: 0 0.6rem 0.28em 0;
+  background: #e3c382;
+}
+.lab-hero__inner { z-index: 3; pointer-events: none; }
+.lab-hero__sub { max-width: 31rem; }
+.atmosphere-carousel__controls {
+  position: absolute;
+  z-index: 4;
+  right: max(1.5rem, calc((100% - 1200px) / 2 + 1.25rem));
+  bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #f5f7fc;
+}
+.atmosphere-carousel__controls[hidden] { display: none; }
+.atmosphere-carousel__controls button {
+  min-width: 2.6rem;
+  min-height: 2.6rem;
+  padding: 0.4rem;
+  border: 1px solid rgba(235, 241, 250, 0.28);
+  border-radius: 50%;
+  background: rgba(10, 19, 32, 0.3);
+  color: inherit;
+  font: 500 1rem var(--font-body);
+  cursor: pointer;
+}
+.atmosphere-carousel__controls button:hover {
+  background: rgba(235, 241, 250, 0.15);
+  border-color: rgba(235, 241, 250, 0.7);
+}
+.atmosphere-carousel__controls button:focus-visible {
+  outline: 2px solid #e3c382;
+  outline-offset: 4px;
+}
+.atmosphere-carousel__count {
+  min-width: 3.9rem;
+  text-align: center;
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+}
+.atmosphere-carousel__controls .atmosphere-carousel__pause {
+  min-width: 3.8rem;
+  border-radius: 2rem;
+  margin-left: 0.35rem;
+  padding-inline: 0.8rem;
+  font-size: 0.78rem;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 699px) {
+  .lab-hero__frame { min-height: 35rem; }
+  .lab-hero .atmosphere-carousel__formula {
+    left: 1.25rem;
+    right: 1.25rem;
+    top: 26%;
+    width: auto;
+  }
+  .lab-hero .atmosphere-carousel__equation {
+    max-width: 100%;
+    max-height: 7.5rem;
+  }
+  .atmosphere-carousel__formula-label {
+    font-size: 0.82rem;
+    margin-top: 0.9rem;
+  }
+  .lab-hero__inner { bottom: 5.5rem; }
+  .lab-hero__kicker { font-size: 0.66rem; letter-spacing: 0.1em; }
+  .lab-hero h1 { font-size: clamp(3.2rem, 13vw, 5rem); }
+  .lab-hero__sub { font-size: 1.02rem; max-width: 23rem; }
+  .atmosphere-carousel__controls { bottom: 1.2rem; right: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lab-hero .atmosphere-carousel__slide { transition: none; }
+}
 .home-intro {
   max-width: 1120px;
 }

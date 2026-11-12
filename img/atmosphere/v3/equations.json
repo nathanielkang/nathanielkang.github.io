@@ -1,0 +1,13 @@
+{
+  "svd": "A = U\\Sigma V^{\\mathsf T}",
+  "chebyshev": "\\Pr\\!\\left(|X-\\mu|\\geq k\\sigma\\right)\\leq \\frac{1}{k^2}",
+  "kantorovich": "W_1(P,Q)=\\sup_{\\|f\\|_{\\mathrm{Lip}}\\leq 1}\\!\\left(\\mathbb E_P[f]-\\mathbb E_Q[f]\\right)",
+  "clt": "\\sqrt{n}\\,(\\overline X_n-\\mu)\\xrightarrow{\\mathrm d}\\mathcal N(0,\\sigma^2)",
+  "cauchy-schwarz": "|\\langle x,y\\rangle|\\leq\\|x\\|\\,\\|y\\|",
+  "dp": "\\Pr[M(D)\\in S]\\leq e^\\varepsilon\\Pr[M(D')\\in S]+\\delta",
+  "spectral": "A = Q\\Lambda Q^{\\mathsf T},\\quad A=A^{\\mathsf T}",
+  "bayes": "P(A\\mid B)=\\frac{P(B\\mid A)\\,P(A)}{P(B)}",
+  "sklar": "F(x,y)=C\\!\\left(F_X(x),F_Y(y)\\right)",
+  "dp-mobile": "\\begin{gathered}\\Pr[M(D)\\in S]\\\\{}\\leq e^\\varepsilon\\Pr[M(D')\\in S]+\\delta\\end{gathered}",
+  "kantorovich-mobile": "\\begin{gathered}W_1(P,Q)=\\\\\\sup_{\\|f\\|_{\\mathrm{Lip}}\\leq 1}\\!\\left(\\mathbb E_P[f]-\\mathbb E_Q[f]\\right)\\end{gathered}"
+}

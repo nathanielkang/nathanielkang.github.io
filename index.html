@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="lab.css?v=20261101-wide">
+  <link rel="stylesheet" href="lab.css?v=20261112-math-v3">
 
   <script type="application/ld+json">
   {
@@ -90,37 +90,79 @@
     <section class="lab-hero" aria-labelledby="hero-title">
       <div class="lab-hero__frame">
         <div class="atmosphere-carousel lab-hero__carousel" data-interval="3000" role="region" aria-roledescription="carousel" aria-label="Mathematics and statistics">
-          <div class="atmosphere-carousel__viewport">
-            <figure class="atmosphere-carousel__slide is-active">
-              <img src="img/atmosphere/socal-atmosphere-svd.png?v=20261019-right" width="1920" height="1080" alt="Singular value decomposition on a university corridor at golden hour.">
+          <div class="atmosphere-carousel__viewport" id="atmosphere-slides">
+            <figure class="atmosphere-carousel__slide is-active" aria-label="1 of 9: Singular value decomposition" data-slide="svd">
+              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/svd.webp" width="1672" height="941" decoding="async" fetchpriority="high" alt="Concrete university corridor in warm afternoon light.">
+              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 132px">
+                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/svd.svg" width="132" height="31" alt="A equals U Sigma V transpose."></picture>
+                <span class="atmosphere-carousel__formula-label">Singular value decomposition</span>
+              </figcaption>
             </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-chebyshev.png?v=20261019-right" width="1920" height="1080" alt="Chebyshev inequality on a snow-covered campus path.">
+            <figure class="atmosphere-carousel__slide" aria-label="2 of 9: Chebyshev’s inequality" data-slide="chebyshev">
+              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/chebyshev.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Snow and golden ginkgo trees on a campus avenue.">
+              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 314px">
+                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/chebyshev.svg" width="314" height="74" alt="Probability that the absolute deviation of X from mu is at least k sigma is at most one over k squared."></picture>
+                <span class="atmosphere-carousel__formula-label">Chebyshev’s inequality</span>
+              </figcaption>
             </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-kantorovich.png?v=20261019-right" width="1280" height="720" alt="Kantorovich-Rubinstein theorem on an autumn campus plaza in low light.">
+            <figure class="atmosphere-carousel__slide" aria-label="3 of 9: Kantorovich–Rubinstein theorem" data-slide="kantorovich">
+              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/kantorovich.webp" width="1672" height="941" decoding="async" loading="lazy" alt="An autumn campus avenue lined with golden trees.">
+              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 461px">
+                <picture><source media="(max-width: 699px)" srcset="img/atmosphere/v3/kantorovich-mobile.svg"><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/kantorovich.svg" width="461" height="67" alt="Wasserstein one distance equals the supremum over one-Lipschitz functions of the difference in expectations."></picture>
+                <span class="atmosphere-carousel__formula-label">Kantorovich–Rubinstein theorem</span>
+              </figcaption>
             </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-clt.png?v=20261019-right" width="1920" height="1080" alt="Central limit theorem over a dusk campus skyline.">
+            <figure class="atmosphere-carousel__slide" aria-label="4 of 9: Central limit theorem" data-slide="clt">
+              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/clt.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Indigo and amber dusk above a university skyline.">
+              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 338px">
+                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/clt.svg" width="338" height="50" alt="Square root of n times the centered sample mean converges in distribution to a normal distribution with variance sigma squared."></picture>
+                <span class="atmosphere-carousel__formula-label">Central limit theorem</span>
+              </figcaption>
             </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-cauchy-schwarz.png?v=20261019-right" width="1920" height="1080" alt="Cauchy-Schwarz inequality inside a spiral concrete atrium.">
+            <figure class="atmosphere-carousel__slide" aria-label="5 of 9: Cauchy–Schwarz inequality" data-slide="cauchy-schwarz">
+              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/cauchy-schwarz.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Concentric concrete walls around a circular atrium skylight.">
+              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 258px">
+                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/cauchy-schwarz.svg" width="258" height="33" alt="Absolute inner product of x and y is at most the product of their norms."></picture>
+                <span class="atmosphere-carousel__formula-label">Cauchy–Schwarz inequality</span>
+              </figcaption>
             </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-dp.png?v=20261019-right" width="1280" height="720" alt="Differential privacy on a glass bridge at night, warm interior light against a blue exterior.">
+            <figure class="atmosphere-carousel__slide" aria-label="6 of 9: Differential privacy" data-slide="dp">
+              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/dp.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Blue-hour glass atrium with warm amber reflections.">
+              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 506px">
+                <picture><source media="(max-width: 699px)" srcset="img/atmosphere/v3/dp-mobile.svg"><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/dp.svg" width="506" height="35" alt="Probability of M of D in S is at most e to epsilon times the probability of M of adjacent D prime in S, plus delta."></picture>
+                <span class="atmosphere-carousel__formula-label">Differential privacy</span>
+              </figcaption>
             </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-spectral.png?v=20261019-right" width="1920" height="1080" alt="Spectral theorem in a glass atrium.">
+            <figure class="atmosphere-carousel__slide" aria-label="7 of 9: Spectral theorem" data-slide="spectral">
+              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/spectral.webp" width="1672" height="941" decoding="async" loading="lazy" alt="A softly lit glass atrium with a subtle rainbow on the floor.">
+              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 274px">
+                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/spectral.svg" width="274" height="36" alt="A real symmetric matrix A equals Q Lambda Q transpose."></picture>
+                <span class="atmosphere-carousel__formula-label">Spectral theorem</span>
+              </figcaption>
             </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-bayes.png?v=20261019-right" width="1920" height="1080" alt="Bayes theorem on rain-streaked glass at night.">
+            <figure class="atmosphere-carousel__slide" aria-label="8 of 9: Bayes’ theorem" data-slide="bayes">
+              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/bayes.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Teal and amber lights through rain-streaked glass.">
+              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 345px">
+                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/bayes.svg" width="345" height="85" alt="Posterior equals likelihood times prior divided by evidence."></picture>
+                <span class="atmosphere-carousel__formula-label">Bayes’ theorem</span>
+              </figcaption>
             </figure>
-            <figure class="atmosphere-carousel__slide">
-              <img src="img/atmosphere/socal-atmosphere-sklar.png?v=20261019-right" width="1280" height="720" alt="Sklar's theorem over a spring reflecting pool in a brick courtyard.">
+            <figure class="atmosphere-carousel__slide" aria-label="9 of 9: Sklar’s theorem" data-slide="sklar">
+              <img class="atmosphere-carousel__photo" src="img/atmosphere/v3/sklar.webp" width="1672" height="941" decoding="async" loading="lazy" alt="Spring trees and brick arcades reflected in a courtyard pool.">
+              <figcaption class="atmosphere-carousel__formula" style="--equation-width: 330px">
+                <picture><img class="atmosphere-carousel__equation" src="img/atmosphere/v3/sklar.svg" width="330" height="34" alt="The joint cumulative distribution equals the copula evaluated at its marginal cumulative distributions."></picture>
+                <span class="atmosphere-carousel__formula-label">Sklar’s theorem</span>
+              </figcaption>
             </figure>
           </div>
+          <div class="atmosphere-carousel__controls" role="group" aria-label="Slideshow controls" hidden>
+            <button type="button" data-carousel="previous" aria-label="Previous slide" aria-controls="atmosphere-slides">←</button>
+            <span class="atmosphere-carousel__count" aria-live="off">01 / 09</span>
+            <button type="button" data-carousel="next" aria-label="Next slide" aria-controls="atmosphere-slides">→</button>
+            <button type="button" class="atmosphere-carousel__pause" data-carousel="pause" aria-label="Pause slideshow" aria-pressed="false">Pause</button>
+          </div>
+          <p class="sr-only atmosphere-carousel__status" aria-live="polite" aria-atomic="true"></p>
         </div>
-        <div class="lab-hero__shade"></div>
         <div class="lab-hero__inner">
           <p class="lab-hero__kicker">Kyungpook National University · CSE</p>
           <h1 id="hero-title" class="font-display">SOCAL Lab</h1>
@@ -202,7 +244,7 @@
     <p style="margin-top:0.5rem"><a href="https://scholar.google.com/citations?hl=en&user=JAi7yE0AAAAJ">Google Scholar</a></p>
   </footer>
 
-  <script src="atmosphere-carousel.js?v=20261019-hero"></script>
+  <script src="atmosphere-carousel.js?v=20261112-math-v3"></script>
   <script>
   (function () {
     var btn = document.querySelector('.nav-toggle');
