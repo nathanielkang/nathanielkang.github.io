@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | SOCAL Lab — KNU</title>
-  <meta name="description" content="SOCAL Lab research program: statistical methods for tabular data — federated learning and privacy, imbalanced regression, and AI alignment. Kyungpook National University.">
+  <meta name="description" content="SOCAL Lab research program: statistical methods for tabular data — federated learning and privacy, imbalanced regression, and AI safety and alignment. Kyungpook National University.">
   <!-- Canonical manuscript list + paths: sibling folder KNU/Research/docs/PAPER_MASTER_INVENTORY.md and INDEX.md -->
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE88Q89RCG"></script>
@@ -16,13 +16,13 @@
   </script>
 
   <meta property="og:title" content="Research | SOCAL Lab">
-  <meta property="og:description" content="Statistical methods for tabular data: federated learning, imbalanced regression, and AI alignment — SOCAL Lab, KNU.">
+  <meta property="og:description" content="Statistical methods for tabular data: federated learning, imbalanced regression, and AI safety and alignment — SOCAL Lab, KNU.">
   <meta property="og:image" content="https://nathanielkang.github.io/preview.png">
   <meta property="og:url" content="https://nathanielkang.github.io/research.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Research | SOCAL Lab">
-  <meta name="twitter:description" content="Three research themes: federated learning and privacy, imbalanced regression, and AI alignment.">
+  <meta name="twitter:description" content="Three research themes: federated learning and privacy, imbalanced regression, and AI safety and alignment.">
   <meta name="twitter:image" content="https://nathanielkang.github.io/preview.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="lab.css?v=20261112-math-v3">
   <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="site-refinement.css?v=20261112-refinement">
+  <link rel="stylesheet" href="site-refinement.css?v=20261122-sac-v2">
 </head>
 <body class="site-refined page-research">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -65,8 +65,8 @@
 <div class="wrap">
 <p class="section__eyebrow">SOCAL Lab · Kyungpook National University</p>
 <h1 class="page-title" id="research-page-title">Research</h1>
-<p class="section__lead">The lab develops statistical methods for tabular data across three lines of work: federated learning when tables cannot be pooled, imbalanced regression when the rare target matters, and AI alignment for deployed language models.</p>
-<nav aria-label="Research themes" class="page-jumps"><a href="#theme-fl">01 Federated learning &amp; privacy</a><a href="#theme-ir">02 Imbalanced regression</a><a href="#theme-align">03 AI alignment</a></nav>
+<p class="section__lead">The lab develops statistical methods for tabular data across three lines of work: federated learning when tables cannot be pooled, imbalanced regression when the rare target matters, and AI safety and alignment through reliable prediction and accountable deployment.</p>
+<nav aria-label="Research themes" class="page-jumps"><a href="#theme-fl">01 Federated learning &amp; privacy</a><a href="#theme-ir">02 Imbalanced regression</a><a href="#theme-align">03 AI Safety &amp; Alignment</a></nav>
 </div>
 </section>
 <section aria-labelledby="fl-heading" class="section section--tight-top research-theme" id="theme-fl">
@@ -105,17 +105,31 @@
 <button aria-label="Open larger view: UAI pipeline: a relevance function over the target, FiLM-conditioned diffusion, and a hybrid quality filter that mixes synthetic and real rare rows." class="figure-zoom" type="button"><img alt="UAI pipeline: a relevance function over the target, FiLM-conditioned diffusion, and a hybrid quality filter that mixes synthetic and real rare rows." decoding="async" height="446" loading="lazy" src="img/research/uai-pipeline.jpg" style="--figure-native-width:820px" width="820"/></button>
 <figcaption class="figure-caption"><span class="figure-caption__name">Conditional diffusion · Generation pipeline</span><span class="figure-caption__zoom">View larger <span aria-hidden="true">↗</span></span></figcaption></figure>
 <p class="paper-block__more"><a href="https://proceedings.mlr.press/v337/kang26a.html">Read paper <span aria-hidden="true">↗</span></a></p></article>
+<p class="research-related">Related work: <a href="#densitycal-research">DensityCal studies prediction-interval coverage across the predicted-value range.</a></p>
 </div>
 </section>
 <section aria-labelledby="align-heading" class="section section--tight-top research-theme" id="theme-align">
 <div class="wrap">
 <p class="section__eyebrow">Theme 03</p>
-<h2 class="section__title" id="align-heading">AI alignment</h2>
-<p class="section__lead">A language model inside an institution is not one threat model. Accountability and the timing of data exposure should change the controls. We organize attacks and defenses by those settings instead of treating every deployment as a generic chatbot.</p>
+<h2 class="section__title" id="align-heading">AI Safety &amp; Alignment</h2>
+<p class="section__lead">We study whether a model’s predictions and deployment controls deserve trust. Our work connects reliable uncertainty estimates for tabular regression with the security, governance, and accountability of language models in institutions.</p>
+<article class="paper-block" id="densitycal-research">
+<p class="paper-block__area">Reliable prediction &amp; uncertainty</p>
+<h3><a href="publications.html#densitycal">Well-Calibrated Yet Unfair: How Standard Conformal Prediction Fails Along the Predicted-Value Range</a></h3>
+<p class="paper-block__venue">ACM SAC 2027 · Full paper · Safe, Secure and Robust AI (S2RAI)</p>
+<p>A prediction interval can meet its overall coverage target while missing systematically in parts of the predicted-value range. DensityCal groups calibration residuals into equal-width bins of the predicted value, estimates a local residual quantile, and blends it toward the global quantile when a bin has few observations. A global floor ensures that the resulting intervals only widen relative to split conformal, preserving its marginal coverage guarantee under exchangeability while improving coverage balance across strata in our experiments. The point predictor stays fixed.</p>
+<p>Here, “unfair” refers to differences in interval coverage across predicted-value strata.</p>
+<figure class="paper-block__fig">
+<button aria-label="Open larger view: DensityCal calibration and prediction pipeline" class="figure-zoom" type="button"><img alt="DensityCal: group calibration residuals by predicted value, blend local and global quantiles by bin occupancy, and floor the half-width at the global quantile. At prediction time, the predicted value selects the bin and its calibrated interval." decoding="async" height="724" loading="lazy" src="img/research/densitycal-pipeline.png" style="--figure-native-width:2172px" width="2172"/></button>
+<figcaption class="figure-caption"><span class="figure-caption__name">DensityCal · Calibration and prediction</span><span class="figure-caption__zoom">View larger <span aria-hidden="true">↗</span></span></figcaption>
+</figure>
+<p class="paper-block__more"><a href="publications.html#densitycal">Publication details</a></p>
+</article>
 <article class="paper-block">
+<p class="paper-block__area">Alignment, security &amp; governance</p>
 <h3>Not All Large Language Model Deployments Are Created Equal: A Taxonomy-Driven Survey of Security, Defense, and Governance</h3>
 <p class="paper-block__venue">Under review · Journal of Information Security and Applications</p>
-<p>The taxonomy crosses two axes: who the user is accountable to, and whether sensitive data are exposed only at training time or continuously at inference. The four cells are a secured repository, a managed pipeline, a fortified service, and a contested interface. Attacks and controls are evaluated in that cell.</p>
+<p>A language model inside an institution is not one threat model. The taxonomy crosses two axes: who the user is accountable to, and whether sensitive data are exposed only at training time or continuously at inference. The four cells are a secured repository, a managed pipeline, a fortified service, and a contested interface. Attacks and controls are evaluated in that cell.</p>
 <figure class="paper-block__fig">
 <button aria-label="Open larger view: Taxonomy matrix of LLM deployments: user accountability against data-exposure timing, with four cells for secured repository, managed pipeline, fortified service, and contested interface." class="figure-zoom" type="button"><img alt="Taxonomy matrix of LLM deployments: user accountability against data-exposure timing, with four cells for secured repository, managed pipeline, fortified service, and contested interface." decoding="async" height="874" loading="lazy" src="img/research/jisa-taxonomy.png" style="--figure-native-width:1600px" width="1600"/></button>
 <figcaption class="figure-caption"><span class="figure-caption__name">LLM deployments · Taxonomy</span><span class="figure-caption__zoom">View larger <span aria-hidden="true">↗</span></span></figcaption></figure>

@@ -98,6 +98,7 @@ html { scroll-padding-top: 96px; }
 .site-refined .news-card__venue { color: #526277; font-size: 0.7rem; line-height: 1.5; min-height: 2.1rem; font-weight: 600; letter-spacing: 0.04em; }
 .site-refined .news-card h3 { font-family: var(--font-display); font-size: 1.12rem; line-height: 1.3; font-weight: 600; min-height: 2.9em; }
 .site-refined .news-card__body p:last-child { font-size: 0.92rem; color: var(--muted); }
+.site-refined .news-card__body > p:not(.news-card__venue):not(.news-card__track) { font-size: 0.92rem; color: var(--muted); }
 .site-refined .home-more { font-size: 0.9rem; font-weight: 600; margin-top: 1.4rem; }
 
 /* Equal member entries: role, name and focus use one visual specification. */
@@ -119,6 +120,12 @@ html { scroll-padding-top: 96px; }
 .site-refined .member-name-list { font-size: 1.1rem; font-weight: 600; margin-top: 0; }
 
 /* Research papers and complete, zoomable scientific figures. */
+.site-refined .paper-block .paper-block__area { font-size: 0.85rem; font-weight: 600; color: #1d4ed8; margin: 0 0 0.7rem; }
+.site-refined .research-related { border-top: 1px solid var(--line); padding-top: 1.2rem; margin-top: 2rem; font-size: 0.95rem; }
+.site-refined .news-card .news-card__track { font-size: 0.8rem; line-height: 1.5; color: #526277; margin-top: 0.8rem; }
+.pub-track, .pub-correspondence { font-size: 0.85rem; line-height: 1.5; color: #526277; margin: 0.25rem 0 0.5rem; }
+.pub-correspondence { margin-top: 0.4rem; margin-bottom: 0; }
+.pub-authors sup { font-size: 0.75em; line-height: 0; }
 .research-theme > .wrap { border-top: 1px solid var(--line); padding-top: 2.25rem; }
 .research-theme:first-of-type > .wrap { border-top: 0; }
 .site-refined .paper-block { margin-top: 2rem; }
@@ -241,6 +248,7 @@ html { scroll-padding-top: 96px; }
   .site-refined .news-card h3 { min-height: 0; font-size: 1.05rem; }
   .site-refined .news-card__venue { min-height: 0; margin-bottom: 0.45rem; font-size: 0.64rem; }
   .site-refined .news-card__body p:last-child { font-size: 0.86rem; }
+  .site-refined .news-card__body > p:not(.news-card__venue):not(.news-card__track) { font-size: 0.86rem; }
   .member-directory { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 0.9rem; }
   .member-entry { padding: 1.35rem; }
   .member-entry__name { font-size: 1.35rem; }
